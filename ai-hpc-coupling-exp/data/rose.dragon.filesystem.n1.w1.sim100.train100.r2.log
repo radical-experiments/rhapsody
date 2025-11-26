@@ -1,0 +1,629 @@
+2025-11-18 12:02:10.037 │ INFO │ [root] │ Logger configured successfully - Console: INFO, File: rose.dragon.filesystem.n1.w1.sim100.train100.r2.log (N/A), Structured: disabled, Style: modern
+2025-11-18 12:02:10.037 │ INFO │ [main] │ ======================================================================
+2025-11-18 12:02:10.037 │ INFO │ [main] │ COUPLING BENCHMARK: FILESYSTEM
+2025-11-18 12:02:10.037 │ INFO │ [main] │   Nodes: 1
+2025-11-18 12:02:10.037 │ INFO │ [main] │   Simulations: 100
+2025-11-18 12:02:10.037 │ INFO │ [main] │   Training steps: 100
+2025-11-18 12:02:10.037 │ INFO │ [main] │   Payload size: 4000
+2025-11-18 12:02:10.037 │ INFO │ [main] │ ======================================================================
+2025-11-18 12:02:10.040 │ INFO │ [main] │   Shared dir: /tmp/coupling_benchmark_data
+2025-11-18 12:02:10.040 │ INFO │ [main] │ 
+Launching tasks...
+2025-11-18 12:02:10.040 │ INFO │ [execution.backend(dragon)] │ Starting parallel scheduler with 32 scheduler workers
+2025-11-18 12:02:10.040 │ INFO │ [execution.backend(dragon)] │ Scheduler worker pool active with 32 workers
+2025-11-18 12:02:10.041 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:10.042 │ INFO │ [workflow_manager] │ task.000001 is in RUNNING state
+2025-11-18 12:02:11.126 │ INFO │ [workflow_manager] │ task.000001 is in DONE state
+2025-11-18 12:02:11.126 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:11.128 │ INFO │ [workflow_manager] │ task.000002 is in RUNNING state
+2025-11-18 12:02:11.209 │ INFO │ [workflow_manager] │ task.000002 is in DONE state
+2025-11-18 12:02:11.209 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:11.209 │ INFO │ [workflow_manager] │ task.000003 is in RUNNING state
+2025-11-18 12:02:11.369 │ INFO │ [workflow_manager] │ task.000003 is in DONE state
+2025-11-18 12:02:11.369 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:11.370 │ INFO │ [workflow_manager] │ task.000004 is in RUNNING state
+2025-11-18 12:02:11.455 │ INFO │ [workflow_manager] │ task.000004 is in DONE state
+2025-11-18 12:02:11.455 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:11.456 │ INFO │ [workflow_manager] │ task.000005 is in RUNNING state
+2025-11-18 12:02:11.608 │ INFO │ [workflow_manager] │ task.000005 is in DONE state
+2025-11-18 12:02:11.608 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:11.609 │ INFO │ [workflow_manager] │ task.000006 is in RUNNING state
+2025-11-18 12:02:11.727 │ INFO │ [workflow_manager] │ task.000006 is in DONE state
+2025-11-18 12:02:11.728 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:11.729 │ INFO │ [workflow_manager] │ task.000007 is in RUNNING state
+2025-11-18 12:02:11.773 │ INFO │ [workflow_manager] │ task.000007 is in DONE state
+2025-11-18 12:02:11.773 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:11.774 │ INFO │ [workflow_manager] │ task.000008 is in RUNNING state
+2025-11-18 12:02:11.909 │ INFO │ [workflow_manager] │ task.000008 is in DONE state
+2025-11-18 12:02:11.910 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:11.910 │ INFO │ [workflow_manager] │ task.000009 is in RUNNING state
+2025-11-18 12:02:12.049 │ INFO │ [workflow_manager] │ task.000009 is in DONE state
+2025-11-18 12:02:12.049 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:12.049 │ INFO │ [workflow_manager] │ task.000010 is in RUNNING state
+2025-11-18 12:02:12.139 │ INFO │ [workflow_manager] │ task.000010 is in DONE state
+2025-11-18 12:02:12.139 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:12.140 │ INFO │ [workflow_manager] │ task.000011 is in RUNNING state
+2025-11-18 12:02:12.250 │ INFO │ [workflow_manager] │ task.000011 is in DONE state
+2025-11-18 12:02:12.250 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:12.250 │ INFO │ [workflow_manager] │ task.000012 is in RUNNING state
+2025-11-18 12:02:12.349 │ INFO │ [workflow_manager] │ task.000012 is in DONE state
+2025-11-18 12:02:12.350 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:12.350 │ INFO │ [workflow_manager] │ task.000013 is in RUNNING state
+2025-11-18 12:02:12.389 │ INFO │ [workflow_manager] │ task.000013 is in DONE state
+2025-11-18 12:02:12.389 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:12.390 │ INFO │ [workflow_manager] │ task.000014 is in RUNNING state
+2025-11-18 12:02:12.460 │ INFO │ [workflow_manager] │ task.000014 is in DONE state
+2025-11-18 12:02:12.460 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:12.460 │ INFO │ [workflow_manager] │ task.000015 is in RUNNING state
+2025-11-18 12:02:12.600 │ INFO │ [workflow_manager] │ task.000015 is in DONE state
+2025-11-18 12:02:12.600 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:12.601 │ INFO │ [workflow_manager] │ task.000016 is in RUNNING state
+2025-11-18 12:02:12.612 │ INFO │ [workflow_manager] │ task.000016 is in DONE state
+2025-11-18 12:02:12.612 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:12.612 │ INFO │ [workflow_manager] │ task.000017 is in RUNNING state
+2025-11-18 12:02:12.655 │ INFO │ [workflow_manager] │ task.000017 is in DONE state
+2025-11-18 12:02:12.655 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:12.656 │ INFO │ [workflow_manager] │ task.000018 is in RUNNING state
+2025-11-18 12:02:12.666 │ INFO │ [workflow_manager] │ task.000018 is in DONE state
+2025-11-18 12:02:12.667 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:12.667 │ INFO │ [workflow_manager] │ task.000019 is in RUNNING state
+2025-11-18 12:02:12.708 │ INFO │ [workflow_manager] │ task.000019 is in DONE state
+2025-11-18 12:02:12.708 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:12.708 │ INFO │ [workflow_manager] │ task.000020 is in RUNNING state
+2025-11-18 12:02:12.718 │ INFO │ [workflow_manager] │ task.000020 is in DONE state
+2025-11-18 12:02:12.718 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:12.719 │ INFO │ [workflow_manager] │ task.000021 is in RUNNING state
+2025-11-18 12:02:12.759 │ INFO │ [workflow_manager] │ task.000021 is in DONE state
+2025-11-18 12:02:12.759 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:12.760 │ INFO │ [workflow_manager] │ task.000022 is in RUNNING state
+2025-11-18 12:02:12.770 │ INFO │ [workflow_manager] │ task.000022 is in DONE state
+2025-11-18 12:02:12.771 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:12.771 │ INFO │ [workflow_manager] │ task.000023 is in RUNNING state
+2025-11-18 12:02:12.906 │ INFO │ [workflow_manager] │ task.000023 is in DONE state
+2025-11-18 12:02:12.906 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:12.907 │ INFO │ [workflow_manager] │ task.000024 is in RUNNING state
+2025-11-18 12:02:12.918 │ INFO │ [workflow_manager] │ task.000024 is in DONE state
+2025-11-18 12:02:12.918 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:12.918 │ INFO │ [workflow_manager] │ task.000025 is in RUNNING state
+2025-11-18 12:02:12.957 │ INFO │ [workflow_manager] │ task.000025 is in DONE state
+2025-11-18 12:02:12.957 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:12.957 │ INFO │ [workflow_manager] │ task.000026 is in RUNNING state
+2025-11-18 12:02:12.967 │ INFO │ [workflow_manager] │ task.000026 is in DONE state
+2025-11-18 12:02:12.968 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:12.968 │ INFO │ [workflow_manager] │ task.000027 is in RUNNING state
+2025-11-18 12:02:13.009 │ INFO │ [workflow_manager] │ task.000027 is in DONE state
+2025-11-18 12:02:13.009 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:13.010 │ INFO │ [workflow_manager] │ task.000028 is in RUNNING state
+2025-11-18 12:02:13.020 │ INFO │ [workflow_manager] │ task.000028 is in DONE state
+2025-11-18 12:02:13.020 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:13.020 │ INFO │ [workflow_manager] │ task.000029 is in RUNNING state
+2025-11-18 12:02:13.116 │ INFO │ [workflow_manager] │ task.000029 is in DONE state
+2025-11-18 12:02:13.116 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:13.117 │ INFO │ [workflow_manager] │ task.000030 is in RUNNING state
+2025-11-18 12:02:13.203 │ INFO │ [workflow_manager] │ task.000030 is in DONE state
+2025-11-18 12:02:13.204 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:13.204 │ INFO │ [workflow_manager] │ task.000031 is in RUNNING state
+2025-11-18 12:02:13.316 │ INFO │ [workflow_manager] │ task.000031 is in DONE state
+2025-11-18 12:02:13.316 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:13.316 │ INFO │ [workflow_manager] │ task.000032 is in RUNNING state
+2025-11-18 12:02:13.328 │ INFO │ [workflow_manager] │ task.000032 is in DONE state
+2025-11-18 12:02:13.328 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:13.328 │ INFO │ [workflow_manager] │ task.000033 is in RUNNING state
+2025-11-18 12:02:13.369 │ INFO │ [workflow_manager] │ task.000033 is in DONE state
+2025-11-18 12:02:13.369 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:13.369 │ INFO │ [workflow_manager] │ task.000034 is in RUNNING state
+2025-11-18 12:02:13.380 │ INFO │ [workflow_manager] │ task.000034 is in DONE state
+2025-11-18 12:02:13.380 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:13.380 │ INFO │ [workflow_manager] │ task.000035 is in RUNNING state
+2025-11-18 12:02:13.420 │ INFO │ [workflow_manager] │ task.000035 is in DONE state
+2025-11-18 12:02:13.420 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:13.421 │ INFO │ [workflow_manager] │ task.000036 is in RUNNING state
+2025-11-18 12:02:13.431 │ INFO │ [workflow_manager] │ task.000036 is in DONE state
+2025-11-18 12:02:13.431 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:13.431 │ INFO │ [workflow_manager] │ task.000037 is in RUNNING state
+2025-11-18 12:02:13.472 │ INFO │ [workflow_manager] │ task.000037 is in DONE state
+2025-11-18 12:02:13.473 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:13.473 │ INFO │ [workflow_manager] │ task.000038 is in RUNNING state
+2025-11-18 12:02:13.484 │ INFO │ [workflow_manager] │ task.000038 is in DONE state
+2025-11-18 12:02:13.484 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:13.485 │ INFO │ [workflow_manager] │ task.000039 is in RUNNING state
+2025-11-18 12:02:13.523 │ INFO │ [workflow_manager] │ task.000039 is in DONE state
+2025-11-18 12:02:13.523 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:13.524 │ INFO │ [workflow_manager] │ task.000040 is in RUNNING state
+2025-11-18 12:02:13.534 │ INFO │ [workflow_manager] │ task.000040 is in DONE state
+2025-11-18 12:02:13.534 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:13.534 │ INFO │ [workflow_manager] │ task.000041 is in RUNNING state
+2025-11-18 12:02:13.573 │ INFO │ [workflow_manager] │ task.000041 is in DONE state
+2025-11-18 12:02:13.573 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:13.574 │ INFO │ [workflow_manager] │ task.000042 is in RUNNING state
+2025-11-18 12:02:13.584 │ INFO │ [workflow_manager] │ task.000042 is in DONE state
+2025-11-18 12:02:13.584 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:13.584 │ INFO │ [workflow_manager] │ task.000043 is in RUNNING state
+2025-11-18 12:02:13.622 │ INFO │ [workflow_manager] │ task.000043 is in DONE state
+2025-11-18 12:02:13.622 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:13.622 │ INFO │ [workflow_manager] │ task.000044 is in RUNNING state
+2025-11-18 12:02:13.632 │ INFO │ [workflow_manager] │ task.000044 is in DONE state
+2025-11-18 12:02:13.632 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:13.633 │ INFO │ [workflow_manager] │ task.000045 is in RUNNING state
+2025-11-18 12:02:13.670 │ INFO │ [workflow_manager] │ task.000045 is in DONE state
+2025-11-18 12:02:13.670 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:13.671 │ INFO │ [workflow_manager] │ task.000046 is in RUNNING state
+2025-11-18 12:02:13.680 │ INFO │ [workflow_manager] │ task.000046 is in DONE state
+2025-11-18 12:02:13.681 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:13.682 │ INFO │ [workflow_manager] │ task.000047 is in RUNNING state
+2025-11-18 12:02:13.719 │ INFO │ [workflow_manager] │ task.000047 is in DONE state
+2025-11-18 12:02:13.719 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:13.720 │ INFO │ [workflow_manager] │ task.000048 is in RUNNING state
+2025-11-18 12:02:13.784 │ INFO │ [workflow_manager] │ task.000048 is in DONE state
+2025-11-18 12:02:13.784 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:13.784 │ INFO │ [workflow_manager] │ task.000049 is in RUNNING state
+2025-11-18 12:02:13.823 │ INFO │ [workflow_manager] │ task.000049 is in DONE state
+2025-11-18 12:02:13.823 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:13.823 │ INFO │ [workflow_manager] │ task.000050 is in RUNNING state
+2025-11-18 12:02:13.833 │ INFO │ [workflow_manager] │ task.000050 is in DONE state
+2025-11-18 12:02:13.834 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:13.834 │ INFO │ [workflow_manager] │ task.000051 is in RUNNING state
+2025-11-18 12:02:13.872 │ INFO │ [workflow_manager] │ task.000051 is in DONE state
+2025-11-18 12:02:13.873 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:13.873 │ INFO │ [workflow_manager] │ task.000052 is in RUNNING state
+2025-11-18 12:02:13.884 │ INFO │ [workflow_manager] │ task.000052 is in DONE state
+2025-11-18 12:02:13.884 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:13.884 │ INFO │ [workflow_manager] │ task.000053 is in RUNNING state
+2025-11-18 12:02:14.004 │ INFO │ [workflow_manager] │ task.000053 is in DONE state
+2025-11-18 12:02:14.004 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:14.004 │ INFO │ [workflow_manager] │ task.000054 is in RUNNING state
+2025-11-18 12:02:14.016 │ INFO │ [workflow_manager] │ task.000054 is in DONE state
+2025-11-18 12:02:14.016 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:14.016 │ INFO │ [workflow_manager] │ task.000055 is in RUNNING state
+2025-11-18 12:02:14.054 │ INFO │ [workflow_manager] │ task.000055 is in DONE state
+2025-11-18 12:02:14.055 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:14.055 │ INFO │ [workflow_manager] │ task.000056 is in RUNNING state
+2025-11-18 12:02:14.065 │ INFO │ [workflow_manager] │ task.000056 is in DONE state
+2025-11-18 12:02:14.065 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:14.066 │ INFO │ [workflow_manager] │ task.000057 is in RUNNING state
+2025-11-18 12:02:14.107 │ INFO │ [workflow_manager] │ task.000057 is in DONE state
+2025-11-18 12:02:14.107 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:14.107 │ INFO │ [workflow_manager] │ task.000058 is in RUNNING state
+2025-11-18 12:02:14.117 │ INFO │ [workflow_manager] │ task.000058 is in DONE state
+2025-11-18 12:02:14.117 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:14.118 │ INFO │ [workflow_manager] │ task.000059 is in RUNNING state
+2025-11-18 12:02:14.158 │ INFO │ [workflow_manager] │ task.000059 is in DONE state
+2025-11-18 12:02:14.158 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:14.159 │ INFO │ [workflow_manager] │ task.000060 is in RUNNING state
+2025-11-18 12:02:14.169 │ INFO │ [workflow_manager] │ task.000060 is in DONE state
+2025-11-18 12:02:14.169 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:14.169 │ INFO │ [workflow_manager] │ task.000061 is in RUNNING state
+2025-11-18 12:02:14.208 │ INFO │ [workflow_manager] │ task.000061 is in DONE state
+2025-11-18 12:02:14.209 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:14.209 │ INFO │ [workflow_manager] │ task.000062 is in RUNNING state
+2025-11-18 12:02:14.219 │ INFO │ [workflow_manager] │ task.000062 is in DONE state
+2025-11-18 12:02:14.219 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:14.220 │ INFO │ [workflow_manager] │ task.000063 is in RUNNING state
+2025-11-18 12:02:14.260 │ INFO │ [workflow_manager] │ task.000063 is in DONE state
+2025-11-18 12:02:14.260 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:14.261 │ INFO │ [workflow_manager] │ task.000064 is in RUNNING state
+2025-11-18 12:02:14.271 │ INFO │ [workflow_manager] │ task.000064 is in DONE state
+2025-11-18 12:02:14.271 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:14.271 │ INFO │ [workflow_manager] │ task.000065 is in RUNNING state
+2025-11-18 12:02:14.309 │ INFO │ [workflow_manager] │ task.000065 is in DONE state
+2025-11-18 12:02:14.309 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:14.310 │ INFO │ [workflow_manager] │ task.000066 is in RUNNING state
+2025-11-18 12:02:14.320 │ INFO │ [workflow_manager] │ task.000066 is in DONE state
+2025-11-18 12:02:14.320 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:14.320 │ INFO │ [workflow_manager] │ task.000067 is in RUNNING state
+2025-11-18 12:02:14.358 │ INFO │ [workflow_manager] │ task.000067 is in DONE state
+2025-11-18 12:02:14.358 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:14.358 │ INFO │ [workflow_manager] │ task.000068 is in RUNNING state
+2025-11-18 12:02:14.368 │ INFO │ [workflow_manager] │ task.000068 is in DONE state
+2025-11-18 12:02:14.368 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:14.369 │ INFO │ [workflow_manager] │ task.000069 is in RUNNING state
+2025-11-18 12:02:14.409 │ INFO │ [workflow_manager] │ task.000069 is in DONE state
+2025-11-18 12:02:14.409 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:14.409 │ INFO │ [workflow_manager] │ task.000070 is in RUNNING state
+2025-11-18 12:02:14.419 │ INFO │ [workflow_manager] │ task.000070 is in DONE state
+2025-11-18 12:02:14.420 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:14.420 │ INFO │ [workflow_manager] │ task.000071 is in RUNNING state
+2025-11-18 12:02:14.458 │ INFO │ [workflow_manager] │ task.000071 is in DONE state
+2025-11-18 12:02:14.458 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:14.459 │ INFO │ [workflow_manager] │ task.000072 is in RUNNING state
+2025-11-18 12:02:14.469 │ INFO │ [workflow_manager] │ task.000072 is in DONE state
+2025-11-18 12:02:14.469 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:14.469 │ INFO │ [workflow_manager] │ task.000073 is in RUNNING state
+2025-11-18 12:02:14.507 │ INFO │ [workflow_manager] │ task.000073 is in DONE state
+2025-11-18 12:02:14.507 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:14.508 │ INFO │ [workflow_manager] │ task.000074 is in RUNNING state
+2025-11-18 12:02:14.518 │ INFO │ [workflow_manager] │ task.000074 is in DONE state
+2025-11-18 12:02:14.518 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:14.519 │ INFO │ [workflow_manager] │ task.000075 is in RUNNING state
+2025-11-18 12:02:14.557 │ INFO │ [workflow_manager] │ task.000075 is in DONE state
+2025-11-18 12:02:14.557 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:14.557 │ INFO │ [workflow_manager] │ task.000076 is in RUNNING state
+2025-11-18 12:02:14.568 │ INFO │ [workflow_manager] │ task.000076 is in DONE state
+2025-11-18 12:02:14.568 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:14.568 │ INFO │ [workflow_manager] │ task.000077 is in RUNNING state
+2025-11-18 12:02:14.606 │ INFO │ [workflow_manager] │ task.000077 is in DONE state
+2025-11-18 12:02:14.606 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:14.606 │ INFO │ [workflow_manager] │ task.000078 is in RUNNING state
+2025-11-18 12:02:14.617 │ INFO │ [workflow_manager] │ task.000078 is in DONE state
+2025-11-18 12:02:14.617 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:14.617 │ INFO │ [workflow_manager] │ task.000079 is in RUNNING state
+2025-11-18 12:02:14.658 │ INFO │ [workflow_manager] │ task.000079 is in DONE state
+2025-11-18 12:02:14.658 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:14.658 │ INFO │ [workflow_manager] │ task.000080 is in RUNNING state
+2025-11-18 12:02:14.668 │ INFO │ [workflow_manager] │ task.000080 is in DONE state
+2025-11-18 12:02:14.668 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:14.669 │ INFO │ [workflow_manager] │ task.000081 is in RUNNING state
+2025-11-18 12:02:14.709 │ INFO │ [workflow_manager] │ task.000081 is in DONE state
+2025-11-18 12:02:14.709 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:14.709 │ INFO │ [workflow_manager] │ task.000082 is in RUNNING state
+2025-11-18 12:02:14.719 │ INFO │ [workflow_manager] │ task.000082 is in DONE state
+2025-11-18 12:02:14.720 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:14.720 │ INFO │ [workflow_manager] │ task.000083 is in RUNNING state
+2025-11-18 12:02:14.834 │ INFO │ [workflow_manager] │ task.000083 is in DONE state
+2025-11-18 12:02:14.834 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:14.835 │ INFO │ [workflow_manager] │ task.000084 is in RUNNING state
+2025-11-18 12:02:14.845 │ INFO │ [workflow_manager] │ task.000084 is in DONE state
+2025-11-18 12:02:14.845 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:14.846 │ INFO │ [workflow_manager] │ task.000085 is in RUNNING state
+2025-11-18 12:02:14.884 │ INFO │ [workflow_manager] │ task.000085 is in DONE state
+2025-11-18 12:02:14.885 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:14.885 │ INFO │ [workflow_manager] │ task.000086 is in RUNNING state
+2025-11-18 12:02:14.896 │ INFO │ [workflow_manager] │ task.000086 is in DONE state
+2025-11-18 12:02:14.896 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:14.897 │ INFO │ [workflow_manager] │ task.000087 is in RUNNING state
+2025-11-18 12:02:14.938 │ INFO │ [workflow_manager] │ task.000087 is in DONE state
+2025-11-18 12:02:14.938 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:14.938 │ INFO │ [workflow_manager] │ task.000088 is in RUNNING state
+2025-11-18 12:02:14.948 │ INFO │ [workflow_manager] │ task.000088 is in DONE state
+2025-11-18 12:02:14.948 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:14.949 │ INFO │ [workflow_manager] │ task.000089 is in RUNNING state
+2025-11-18 12:02:14.990 │ INFO │ [workflow_manager] │ task.000089 is in DONE state
+2025-11-18 12:02:14.990 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:14.990 │ INFO │ [workflow_manager] │ task.000090 is in RUNNING state
+2025-11-18 12:02:15.000 │ INFO │ [workflow_manager] │ task.000090 is in DONE state
+2025-11-18 12:02:15.000 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:15.001 │ INFO │ [workflow_manager] │ task.000091 is in RUNNING state
+2025-11-18 12:02:15.040 │ INFO │ [workflow_manager] │ task.000091 is in DONE state
+2025-11-18 12:02:15.041 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:15.041 │ INFO │ [workflow_manager] │ task.000092 is in RUNNING state
+2025-11-18 12:02:15.051 │ INFO │ [workflow_manager] │ task.000092 is in DONE state
+2025-11-18 12:02:15.051 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:15.052 │ INFO │ [workflow_manager] │ task.000093 is in RUNNING state
+2025-11-18 12:02:15.089 │ INFO │ [workflow_manager] │ task.000093 is in DONE state
+2025-11-18 12:02:15.089 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:15.090 │ INFO │ [workflow_manager] │ task.000094 is in RUNNING state
+2025-11-18 12:02:15.100 │ INFO │ [workflow_manager] │ task.000094 is in DONE state
+2025-11-18 12:02:15.100 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:15.100 │ INFO │ [workflow_manager] │ task.000095 is in RUNNING state
+2025-11-18 12:02:15.138 │ INFO │ [workflow_manager] │ task.000095 is in DONE state
+2025-11-18 12:02:15.138 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:15.138 │ INFO │ [workflow_manager] │ task.000096 is in RUNNING state
+2025-11-18 12:02:15.149 │ INFO │ [workflow_manager] │ task.000096 is in DONE state
+2025-11-18 12:02:15.149 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:15.149 │ INFO │ [workflow_manager] │ task.000097 is in RUNNING state
+2025-11-18 12:02:15.187 │ INFO │ [workflow_manager] │ task.000097 is in DONE state
+2025-11-18 12:02:15.187 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:15.187 │ INFO │ [workflow_manager] │ task.000098 is in RUNNING state
+2025-11-18 12:02:15.197 │ INFO │ [workflow_manager] │ task.000098 is in DONE state
+2025-11-18 12:02:15.197 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:15.198 │ INFO │ [workflow_manager] │ task.000099 is in RUNNING state
+2025-11-18 12:02:15.237 │ INFO │ [workflow_manager] │ task.000099 is in DONE state
+2025-11-18 12:02:15.238 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:15.238 │ INFO │ [workflow_manager] │ task.000100 is in RUNNING state
+2025-11-18 12:02:15.248 │ INFO │ [workflow_manager] │ task.000100 is in DONE state
+2025-11-18 12:02:15.248 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:15.249 │ INFO │ [workflow_manager] │ task.000101 is in RUNNING state
+2025-11-18 12:02:15.288 │ INFO │ [workflow_manager] │ task.000101 is in DONE state
+2025-11-18 12:02:15.288 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:15.288 │ INFO │ [workflow_manager] │ task.000102 is in RUNNING state
+2025-11-18 12:02:15.298 │ INFO │ [workflow_manager] │ task.000102 is in DONE state
+2025-11-18 12:02:15.298 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:15.299 │ INFO │ [workflow_manager] │ task.000103 is in RUNNING state
+2025-11-18 12:02:15.340 │ INFO │ [workflow_manager] │ task.000103 is in DONE state
+2025-11-18 12:02:15.340 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:15.340 │ INFO │ [workflow_manager] │ task.000104 is in RUNNING state
+2025-11-18 12:02:15.350 │ INFO │ [workflow_manager] │ task.000104 is in DONE state
+2025-11-18 12:02:15.350 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:15.351 │ INFO │ [workflow_manager] │ task.000105 is in RUNNING state
+2025-11-18 12:02:15.389 │ INFO │ [workflow_manager] │ task.000105 is in DONE state
+2025-11-18 12:02:15.390 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:15.390 │ INFO │ [workflow_manager] │ task.000106 is in RUNNING state
+2025-11-18 12:02:15.400 │ INFO │ [workflow_manager] │ task.000106 is in DONE state
+2025-11-18 12:02:15.400 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:15.401 │ INFO │ [workflow_manager] │ task.000107 is in RUNNING state
+2025-11-18 12:02:15.439 │ INFO │ [workflow_manager] │ task.000107 is in DONE state
+2025-11-18 12:02:15.439 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:15.440 │ INFO │ [workflow_manager] │ task.000108 is in RUNNING state
+2025-11-18 12:02:15.450 │ INFO │ [workflow_manager] │ task.000108 is in DONE state
+2025-11-18 12:02:15.450 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:15.450 │ INFO │ [workflow_manager] │ task.000109 is in RUNNING state
+2025-11-18 12:02:15.489 │ INFO │ [workflow_manager] │ task.000109 is in DONE state
+2025-11-18 12:02:15.489 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:15.490 │ INFO │ [workflow_manager] │ task.000110 is in RUNNING state
+2025-11-18 12:02:15.500 │ INFO │ [workflow_manager] │ task.000110 is in DONE state
+2025-11-18 12:02:15.500 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:15.500 │ INFO │ [workflow_manager] │ task.000111 is in RUNNING state
+2025-11-18 12:02:15.539 │ INFO │ [workflow_manager] │ task.000111 is in DONE state
+2025-11-18 12:02:15.539 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:15.539 │ INFO │ [workflow_manager] │ task.000112 is in RUNNING state
+2025-11-18 12:02:15.606 │ INFO │ [workflow_manager] │ task.000112 is in DONE state
+2025-11-18 12:02:15.606 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:15.606 │ INFO │ [workflow_manager] │ task.000113 is in RUNNING state
+2025-11-18 12:02:15.645 │ INFO │ [workflow_manager] │ task.000113 is in DONE state
+2025-11-18 12:02:15.645 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:15.646 │ INFO │ [workflow_manager] │ task.000114 is in RUNNING state
+2025-11-18 12:02:15.656 │ INFO │ [workflow_manager] │ task.000114 is in DONE state
+2025-11-18 12:02:15.656 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:15.656 │ INFO │ [workflow_manager] │ task.000115 is in RUNNING state
+2025-11-18 12:02:15.695 │ INFO │ [workflow_manager] │ task.000115 is in DONE state
+2025-11-18 12:02:15.695 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:15.696 │ INFO │ [workflow_manager] │ task.000116 is in RUNNING state
+2025-11-18 12:02:15.706 │ INFO │ [workflow_manager] │ task.000116 is in DONE state
+2025-11-18 12:02:15.706 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:15.706 │ INFO │ [workflow_manager] │ task.000117 is in RUNNING state
+2025-11-18 12:02:15.745 │ INFO │ [workflow_manager] │ task.000117 is in DONE state
+2025-11-18 12:02:15.745 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:15.745 │ INFO │ [workflow_manager] │ task.000118 is in RUNNING state
+2025-11-18 12:02:15.755 │ INFO │ [workflow_manager] │ task.000118 is in DONE state
+2025-11-18 12:02:15.756 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:15.756 │ INFO │ [workflow_manager] │ task.000119 is in RUNNING state
+2025-11-18 12:02:15.794 │ INFO │ [workflow_manager] │ task.000119 is in DONE state
+2025-11-18 12:02:15.794 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:15.794 │ INFO │ [workflow_manager] │ task.000120 is in RUNNING state
+2025-11-18 12:02:15.804 │ INFO │ [workflow_manager] │ task.000120 is in DONE state
+2025-11-18 12:02:15.804 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:15.805 │ INFO │ [workflow_manager] │ task.000121 is in RUNNING state
+2025-11-18 12:02:15.842 │ INFO │ [workflow_manager] │ task.000121 is in DONE state
+2025-11-18 12:02:15.842 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:15.843 │ INFO │ [workflow_manager] │ task.000122 is in RUNNING state
+2025-11-18 12:02:15.853 │ INFO │ [workflow_manager] │ task.000122 is in DONE state
+2025-11-18 12:02:15.853 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:15.853 │ INFO │ [workflow_manager] │ task.000123 is in RUNNING state
+2025-11-18 12:02:15.891 │ INFO │ [workflow_manager] │ task.000123 is in DONE state
+2025-11-18 12:02:15.891 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:15.892 │ INFO │ [workflow_manager] │ task.000124 is in RUNNING state
+2025-11-18 12:02:15.902 │ INFO │ [workflow_manager] │ task.000124 is in DONE state
+2025-11-18 12:02:15.902 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:15.902 │ INFO │ [workflow_manager] │ task.000125 is in RUNNING state
+2025-11-18 12:02:15.940 │ INFO │ [workflow_manager] │ task.000125 is in DONE state
+2025-11-18 12:02:15.940 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:15.940 │ INFO │ [workflow_manager] │ task.000126 is in RUNNING state
+2025-11-18 12:02:15.950 │ INFO │ [workflow_manager] │ task.000126 is in DONE state
+2025-11-18 12:02:15.950 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:15.951 │ INFO │ [workflow_manager] │ task.000127 is in RUNNING state
+2025-11-18 12:02:15.988 │ INFO │ [workflow_manager] │ task.000127 is in DONE state
+2025-11-18 12:02:15.989 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:15.989 │ INFO │ [workflow_manager] │ task.000128 is in RUNNING state
+2025-11-18 12:02:15.999 │ INFO │ [workflow_manager] │ task.000128 is in DONE state
+2025-11-18 12:02:15.999 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:16.000 │ INFO │ [workflow_manager] │ task.000129 is in RUNNING state
+2025-11-18 12:02:16.038 │ INFO │ [workflow_manager] │ task.000129 is in DONE state
+2025-11-18 12:02:16.038 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:16.039 │ INFO │ [workflow_manager] │ task.000130 is in RUNNING state
+2025-11-18 12:02:16.055 │ INFO │ [workflow_manager] │ task.000130 is in DONE state
+2025-11-18 12:02:16.056 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:16.059 │ INFO │ [workflow_manager] │ task.000131 is in RUNNING state
+2025-11-18 12:02:16.099 │ INFO │ [workflow_manager] │ task.000131 is in DONE state
+2025-11-18 12:02:16.099 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:16.099 │ INFO │ [workflow_manager] │ task.000132 is in RUNNING state
+2025-11-18 12:02:16.109 │ INFO │ [workflow_manager] │ task.000132 is in DONE state
+2025-11-18 12:02:16.109 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:16.110 │ INFO │ [workflow_manager] │ task.000133 is in RUNNING state
+2025-11-18 12:02:16.148 │ INFO │ [workflow_manager] │ task.000133 is in DONE state
+2025-11-18 12:02:16.148 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:16.148 │ INFO │ [workflow_manager] │ task.000134 is in RUNNING state
+2025-11-18 12:02:16.158 │ INFO │ [workflow_manager] │ task.000134 is in DONE state
+2025-11-18 12:02:16.158 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:16.159 │ INFO │ [workflow_manager] │ task.000135 is in RUNNING state
+2025-11-18 12:02:16.197 │ INFO │ [workflow_manager] │ task.000135 is in DONE state
+2025-11-18 12:02:16.197 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:16.197 │ INFO │ [workflow_manager] │ task.000136 is in RUNNING state
+2025-11-18 12:02:16.207 │ INFO │ [workflow_manager] │ task.000136 is in DONE state
+2025-11-18 12:02:16.207 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:16.208 │ INFO │ [workflow_manager] │ task.000137 is in RUNNING state
+2025-11-18 12:02:16.245 │ INFO │ [workflow_manager] │ task.000137 is in DONE state
+2025-11-18 12:02:16.245 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:16.246 │ INFO │ [workflow_manager] │ task.000138 is in RUNNING state
+2025-11-18 12:02:16.256 │ INFO │ [workflow_manager] │ task.000138 is in DONE state
+2025-11-18 12:02:16.256 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:16.257 │ INFO │ [workflow_manager] │ task.000139 is in RUNNING state
+2025-11-18 12:02:16.294 │ INFO │ [workflow_manager] │ task.000139 is in DONE state
+2025-11-18 12:02:16.294 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:16.295 │ INFO │ [workflow_manager] │ task.000140 is in RUNNING state
+2025-11-18 12:02:16.305 │ INFO │ [workflow_manager] │ task.000140 is in DONE state
+2025-11-18 12:02:16.305 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:16.306 │ INFO │ [workflow_manager] │ task.000141 is in RUNNING state
+2025-11-18 12:02:16.343 │ INFO │ [workflow_manager] │ task.000141 is in DONE state
+2025-11-18 12:02:16.343 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:16.343 │ INFO │ [workflow_manager] │ task.000142 is in RUNNING state
+2025-11-18 12:02:16.354 │ INFO │ [workflow_manager] │ task.000142 is in DONE state
+2025-11-18 12:02:16.354 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:16.354 │ INFO │ [workflow_manager] │ task.000143 is in RUNNING state
+2025-11-18 12:02:16.392 │ INFO │ [workflow_manager] │ task.000143 is in DONE state
+2025-11-18 12:02:16.392 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:16.392 │ INFO │ [workflow_manager] │ task.000144 is in RUNNING state
+2025-11-18 12:02:16.402 │ INFO │ [workflow_manager] │ task.000144 is in DONE state
+2025-11-18 12:02:16.403 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:16.403 │ INFO │ [workflow_manager] │ task.000145 is in RUNNING state
+2025-11-18 12:02:16.441 │ INFO │ [workflow_manager] │ task.000145 is in DONE state
+2025-11-18 12:02:16.441 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:16.441 │ INFO │ [workflow_manager] │ task.000146 is in RUNNING state
+2025-11-18 12:02:16.451 │ INFO │ [workflow_manager] │ task.000146 is in DONE state
+2025-11-18 12:02:16.451 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:16.452 │ INFO │ [workflow_manager] │ task.000147 is in RUNNING state
+2025-11-18 12:02:16.489 │ INFO │ [workflow_manager] │ task.000147 is in DONE state
+2025-11-18 12:02:16.489 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:16.490 │ INFO │ [workflow_manager] │ task.000148 is in RUNNING state
+2025-11-18 12:02:16.499 │ INFO │ [workflow_manager] │ task.000148 is in DONE state
+2025-11-18 12:02:16.501 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:16.501 │ INFO │ [workflow_manager] │ task.000149 is in RUNNING state
+2025-11-18 12:02:16.538 │ INFO │ [workflow_manager] │ task.000149 is in DONE state
+2025-11-18 12:02:16.538 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:16.539 │ INFO │ [workflow_manager] │ task.000150 is in RUNNING state
+2025-11-18 12:02:16.549 │ INFO │ [workflow_manager] │ task.000150 is in DONE state
+2025-11-18 12:02:16.549 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:16.550 │ INFO │ [workflow_manager] │ task.000151 is in RUNNING state
+2025-11-18 12:02:16.588 │ INFO │ [workflow_manager] │ task.000151 is in DONE state
+2025-11-18 12:02:16.588 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:16.589 │ INFO │ [workflow_manager] │ task.000152 is in RUNNING state
+2025-11-18 12:02:16.598 │ INFO │ [workflow_manager] │ task.000152 is in DONE state
+2025-11-18 12:02:16.599 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:16.600 │ INFO │ [workflow_manager] │ task.000153 is in RUNNING state
+2025-11-18 12:02:16.637 │ INFO │ [workflow_manager] │ task.000153 is in DONE state
+2025-11-18 12:02:16.637 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:16.638 │ INFO │ [workflow_manager] │ task.000154 is in RUNNING state
+2025-11-18 12:02:16.648 │ INFO │ [workflow_manager] │ task.000154 is in DONE state
+2025-11-18 12:02:16.648 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:16.649 │ INFO │ [workflow_manager] │ task.000155 is in RUNNING state
+2025-11-18 12:02:16.686 │ INFO │ [workflow_manager] │ task.000155 is in DONE state
+2025-11-18 12:02:16.686 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:16.687 │ INFO │ [workflow_manager] │ task.000156 is in RUNNING state
+2025-11-18 12:02:16.696 │ INFO │ [workflow_manager] │ task.000156 is in DONE state
+2025-11-18 12:02:16.697 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:16.698 │ INFO │ [workflow_manager] │ task.000157 is in RUNNING state
+2025-11-18 12:02:16.735 │ INFO │ [workflow_manager] │ task.000157 is in DONE state
+2025-11-18 12:02:16.735 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:16.736 │ INFO │ [workflow_manager] │ task.000158 is in RUNNING state
+2025-11-18 12:02:16.746 │ INFO │ [workflow_manager] │ task.000158 is in DONE state
+2025-11-18 12:02:16.746 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:16.747 │ INFO │ [workflow_manager] │ task.000159 is in RUNNING state
+2025-11-18 12:02:16.784 │ INFO │ [workflow_manager] │ task.000159 is in DONE state
+2025-11-18 12:02:16.784 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:16.785 │ INFO │ [workflow_manager] │ task.000160 is in RUNNING state
+2025-11-18 12:02:16.795 │ INFO │ [workflow_manager] │ task.000160 is in DONE state
+2025-11-18 12:02:16.795 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:16.796 │ INFO │ [workflow_manager] │ task.000161 is in RUNNING state
+2025-11-18 12:02:16.833 │ INFO │ [workflow_manager] │ task.000161 is in DONE state
+2025-11-18 12:02:16.833 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:16.834 │ INFO │ [workflow_manager] │ task.000162 is in RUNNING state
+2025-11-18 12:02:16.844 │ INFO │ [workflow_manager] │ task.000162 is in DONE state
+2025-11-18 12:02:16.844 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:16.844 │ INFO │ [workflow_manager] │ task.000163 is in RUNNING state
+2025-11-18 12:02:16.882 │ INFO │ [workflow_manager] │ task.000163 is in DONE state
+2025-11-18 12:02:16.882 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:16.882 │ INFO │ [workflow_manager] │ task.000164 is in RUNNING state
+2025-11-18 12:02:16.892 │ INFO │ [workflow_manager] │ task.000164 is in DONE state
+2025-11-18 12:02:16.893 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:16.893 │ INFO │ [workflow_manager] │ task.000165 is in RUNNING state
+2025-11-18 12:02:16.931 │ INFO │ [workflow_manager] │ task.000165 is in DONE state
+2025-11-18 12:02:16.931 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:16.931 │ INFO │ [workflow_manager] │ task.000166 is in RUNNING state
+2025-11-18 12:02:16.941 │ INFO │ [workflow_manager] │ task.000166 is in DONE state
+2025-11-18 12:02:16.942 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:16.942 │ INFO │ [workflow_manager] │ task.000167 is in RUNNING state
+2025-11-18 12:02:16.979 │ INFO │ [workflow_manager] │ task.000167 is in DONE state
+2025-11-18 12:02:16.980 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:16.980 │ INFO │ [workflow_manager] │ task.000168 is in RUNNING state
+2025-11-18 12:02:16.990 │ INFO │ [workflow_manager] │ task.000168 is in DONE state
+2025-11-18 12:02:16.990 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:16.991 │ INFO │ [workflow_manager] │ task.000169 is in RUNNING state
+2025-11-18 12:02:17.028 │ INFO │ [workflow_manager] │ task.000169 is in DONE state
+2025-11-18 12:02:17.029 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:17.029 │ INFO │ [workflow_manager] │ task.000170 is in RUNNING state
+2025-11-18 12:02:17.039 │ INFO │ [workflow_manager] │ task.000170 is in DONE state
+2025-11-18 12:02:17.039 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:17.040 │ INFO │ [workflow_manager] │ task.000171 is in RUNNING state
+2025-11-18 12:02:17.077 │ INFO │ [workflow_manager] │ task.000171 is in DONE state
+2025-11-18 12:02:17.077 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:17.078 │ INFO │ [workflow_manager] │ task.000172 is in RUNNING state
+2025-11-18 12:02:17.088 │ INFO │ [workflow_manager] │ task.000172 is in DONE state
+2025-11-18 12:02:17.088 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:17.088 │ INFO │ [workflow_manager] │ task.000173 is in RUNNING state
+2025-11-18 12:02:17.126 │ INFO │ [workflow_manager] │ task.000173 is in DONE state
+2025-11-18 12:02:17.126 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:17.127 │ INFO │ [workflow_manager] │ task.000174 is in RUNNING state
+2025-11-18 12:02:17.137 │ INFO │ [workflow_manager] │ task.000174 is in DONE state
+2025-11-18 12:02:17.137 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:17.137 │ INFO │ [workflow_manager] │ task.000175 is in RUNNING state
+2025-11-18 12:02:17.175 │ INFO │ [workflow_manager] │ task.000175 is in DONE state
+2025-11-18 12:02:17.175 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:17.175 │ INFO │ [workflow_manager] │ task.000176 is in RUNNING state
+2025-11-18 12:02:17.185 │ INFO │ [workflow_manager] │ task.000176 is in DONE state
+2025-11-18 12:02:17.186 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:17.186 │ INFO │ [workflow_manager] │ task.000177 is in RUNNING state
+2025-11-18 12:02:17.224 │ INFO │ [workflow_manager] │ task.000177 is in DONE state
+2025-11-18 12:02:17.224 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:17.224 │ INFO │ [workflow_manager] │ task.000178 is in RUNNING state
+2025-11-18 12:02:17.234 │ INFO │ [workflow_manager] │ task.000178 is in DONE state
+2025-11-18 12:02:17.235 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:17.235 │ INFO │ [workflow_manager] │ task.000179 is in RUNNING state
+2025-11-18 12:02:17.272 │ INFO │ [workflow_manager] │ task.000179 is in DONE state
+2025-11-18 12:02:17.273 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:17.273 │ INFO │ [workflow_manager] │ task.000180 is in RUNNING state
+2025-11-18 12:02:17.283 │ INFO │ [workflow_manager] │ task.000180 is in DONE state
+2025-11-18 12:02:17.283 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:17.284 │ INFO │ [workflow_manager] │ task.000181 is in RUNNING state
+2025-11-18 12:02:17.322 │ INFO │ [workflow_manager] │ task.000181 is in DONE state
+2025-11-18 12:02:17.322 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:17.322 │ INFO │ [workflow_manager] │ task.000182 is in RUNNING state
+2025-11-18 12:02:17.332 │ INFO │ [workflow_manager] │ task.000182 is in DONE state
+2025-11-18 12:02:17.332 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:17.333 │ INFO │ [workflow_manager] │ task.000183 is in RUNNING state
+2025-11-18 12:02:17.370 │ INFO │ [workflow_manager] │ task.000183 is in DONE state
+2025-11-18 12:02:17.370 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:17.371 │ INFO │ [workflow_manager] │ task.000184 is in RUNNING state
+2025-11-18 12:02:17.381 │ INFO │ [workflow_manager] │ task.000184 is in DONE state
+2025-11-18 12:02:17.381 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:17.381 │ INFO │ [workflow_manager] │ task.000185 is in RUNNING state
+2025-11-18 12:02:17.419 │ INFO │ [workflow_manager] │ task.000185 is in DONE state
+2025-11-18 12:02:17.419 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:17.420 │ INFO │ [workflow_manager] │ task.000186 is in RUNNING state
+2025-11-18 12:02:17.430 │ INFO │ [workflow_manager] │ task.000186 is in DONE state
+2025-11-18 12:02:17.430 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:17.430 │ INFO │ [workflow_manager] │ task.000187 is in RUNNING state
+2025-11-18 12:02:17.468 │ INFO │ [workflow_manager] │ task.000187 is in DONE state
+2025-11-18 12:02:17.468 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:17.468 │ INFO │ [workflow_manager] │ task.000188 is in RUNNING state
+2025-11-18 12:02:17.478 │ INFO │ [workflow_manager] │ task.000188 is in DONE state
+2025-11-18 12:02:17.478 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:17.479 │ INFO │ [workflow_manager] │ task.000189 is in RUNNING state
+2025-11-18 12:02:17.517 │ INFO │ [workflow_manager] │ task.000189 is in DONE state
+2025-11-18 12:02:17.517 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:17.517 │ INFO │ [workflow_manager] │ task.000190 is in RUNNING state
+2025-11-18 12:02:17.527 │ INFO │ [workflow_manager] │ task.000190 is in DONE state
+2025-11-18 12:02:17.527 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:17.528 │ INFO │ [workflow_manager] │ task.000191 is in RUNNING state
+2025-11-18 12:02:17.565 │ INFO │ [workflow_manager] │ task.000191 is in DONE state
+2025-11-18 12:02:17.565 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:17.566 │ INFO │ [workflow_manager] │ task.000192 is in RUNNING state
+2025-11-18 12:02:17.576 │ INFO │ [workflow_manager] │ task.000192 is in DONE state
+2025-11-18 12:02:17.576 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:17.576 │ INFO │ [workflow_manager] │ task.000193 is in RUNNING state
+2025-11-18 12:02:17.614 │ INFO │ [workflow_manager] │ task.000193 is in DONE state
+2025-11-18 12:02:17.614 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:17.615 │ INFO │ [workflow_manager] │ task.000194 is in RUNNING state
+2025-11-18 12:02:17.625 │ INFO │ [workflow_manager] │ task.000194 is in DONE state
+2025-11-18 12:02:17.625 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:17.625 │ INFO │ [workflow_manager] │ task.000195 is in RUNNING state
+2025-11-18 12:02:17.663 │ INFO │ [workflow_manager] │ task.000195 is in DONE state
+2025-11-18 12:02:17.663 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:17.663 │ INFO │ [workflow_manager] │ task.000196 is in RUNNING state
+2025-11-18 12:02:17.673 │ INFO │ [workflow_manager] │ task.000196 is in DONE state
+2025-11-18 12:02:17.674 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:17.674 │ INFO │ [workflow_manager] │ task.000197 is in RUNNING state
+2025-11-18 12:02:17.712 │ INFO │ [workflow_manager] │ task.000197 is in DONE state
+2025-11-18 12:02:17.712 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:17.712 │ INFO │ [workflow_manager] │ task.000198 is in RUNNING state
+2025-11-18 12:02:17.722 │ INFO │ [workflow_manager] │ task.000198 is in DONE state
+2025-11-18 12:02:17.722 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:17.723 │ INFO │ [workflow_manager] │ task.000199 is in RUNNING state
+2025-11-18 12:02:17.760 │ INFO │ [workflow_manager] │ task.000199 is in DONE state
+2025-11-18 12:02:17.760 │ INFO │ [workflow_manager] │ Submitting batch of 1 tasks to the execution backend
+2025-11-18 12:02:17.761 │ INFO │ [workflow_manager] │ task.000200 is in RUNNING state
+2025-11-18 12:02:17.807 │ INFO │ [workflow_manager] │ task.000200 is in DONE state
+2025-11-18 12:02:17.807 │ INFO │ [main] │ ✅ Completed in 7.77s
+2025-11-18 12:02:17.831 │ INFO │ [main] │ 
+Results saved to results/filesystem_nodes1_run2.json
+2025-11-18 12:02:17.831 │ INFO │ [main] │   Wall-clock: 7.767s
+2025-11-18 12:02:17.831 │ INFO │ [main] │   Data transfer: 52.7%
+2025-11-18 12:02:17.831 │ INFO │ [main] │   Computation: 8.6%
+2025-11-18 12:02:17.831 │ INFO │ [main] │   WRITE latency: 0.320ms ± 0.384ms
+2025-11-18 12:02:17.831 │ INFO │ [main] │   READ latency: 0.090ms ± 0.381ms
+2025-11-18 12:02:18.207 │ INFO │ [workflow_manager] │ Initiating shutdown
+2025-11-18 12:02:18.208 │ INFO │ [execution.backend(dragon)] │ Starting Dragon backend shutdown...
+2025-11-18 12:02:18.208 │ INFO │ [execution.backend(dragon)] │ Shutdown signal received, stopping scheduler workers...
+2025-11-18 12:02:18.308 │ INFO │ [execution.backend(dragon)] │ All scheduler workers stopped
+2025-11-18 12:02:18.308 │ INFO │ [execution.backend(dragon)] │ Initiating worker pool shutdown...
+2025-11-18 12:02:18.893 │ INFO │ [execution.backend(dragon)] │ Worker pool shutdown complete
+2025-11-18 12:02:18.929 │ INFO │ [execution.backend(dragon)] │ Dragon backend shutdown complete
+2025-11-18 12:02:18.929 │ INFO │ [workflow_manager] │ Shutdown completed for all components.
