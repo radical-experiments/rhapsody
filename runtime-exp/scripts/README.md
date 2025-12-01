@@ -2,9 +2,11 @@
 
 ### Installation:
 
-1- Setup your env: `python3 -m "venv" dragon`
-2- Activate your env: `source dragon-asyncflow/bin/activate`
-3- Install the required packages: `pip install -e ".[rhapsody-runtime]"`
+1-Setup your env: `python3 -m "venv" dragon`
+
+2-Activate your env: `source dragon/bin/activate`
+
+3-Install the required packages: `pip install -e ".[rhapsody-runtime]"`
 
 
 ### Steps to the complete experiment 
