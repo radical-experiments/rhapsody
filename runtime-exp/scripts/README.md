@@ -6,7 +6,7 @@
 
 2-Activate your env: `source dragon/bin/activate`
 
-3-Install the required packages: `pip install -e ".[rhapsody-runtime]"`
+3-Install the required packages: `pip install -e "..[rhapsody-runtime]"`
 
 
 ### Steps to the complete experiment 

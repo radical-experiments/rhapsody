@@ -9,7 +9,7 @@ Note: This exp. assumes that you have a redis image (if you run on HPC it should
 
 2-Activate your env: `source dragon/bin/activate`
 
-3-Install the required packages: `pip install -e ".[rhapsody-ai-hpc]"`
+3-Install the required packages: `pip install -e "..[rhapsody-ai-hpc]"`
 
 
 ### Steps to the complete experiment 
