@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rhapsody-experiments"
+version = "0.1.0"
+description = "RHAPSODY experiments environments setup"
+requires-python = ">=3.9"
+
+# --------------------
+# Common dependencies
+# --------------------
+dependencies = [
+    "dragonhpc",
+    "asyncflow @ git+https://github.com/radical-cybertools/radical.asyncflow.git@prototype/dragon",
+]
+
+# --------------------
+# Optional dependencies for tutorials
+# --------------------
+[project.optional-dependencies]
+rhapsody-runtime = [
+    "dragonhpc",
+    "numpy",
+]
+
+rhapsody-ai-hpc = [
+    "smartredis",
+    "rose @ git+https://github.com/radical-cybertools/rose.git@integration/smartsim",
+]

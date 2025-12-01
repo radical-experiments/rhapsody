@@ -1,6 +1,14 @@
+
 # ROSE + SmartSim + RHAPSODY (Dragon V2) AI-HPC Coupling Exp.
 
 Note: This exp. assumes that you have a redis image (if you run on HPC it should be redis-ai.sif) on your file system. 
+
+### Installation:
+
+1- Setup your env: `python3 -m "venv" dragon`
+2- Activate your env: `source dragon/bin/activate`
+3- Install the required packages: `pip install -e ".[rhapsody-ai-hpc]"`
+
 
 ### Steps to the complete experiment 
 

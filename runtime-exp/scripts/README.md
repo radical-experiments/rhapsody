@@ -1,5 +1,12 @@
 # RHAPSODY + DRAGON Runtime system Weak and Strong Scaling
 
+### Installation:
+
+1- Setup your env: `python3 -m "venv" dragon`
+2- Activate your env: `source dragon-asyncflow/bin/activate`
+3- Install the required packages: `pip install -e ".[rhapsody-runtime]"`
+
+
 ### Steps to the complete experiment 
 
 1-16 nodes for each datapoint we do X3 times run
