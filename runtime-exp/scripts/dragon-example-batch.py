@@ -9,7 +9,7 @@ import asyncio
 import logging
 import time
 import argparse
-from radical.asyncflow import DragonExecutionBackend, WorkflowEngine
+from radical.asyncflow import DragonExecutionBackendV3, WorkflowEngine
 
 from radical.asyncflow.logging import init_default_logger
 logger = logging.getLogger(__name__)
@@ -40,8 +40,8 @@ async def main():
     # Create backend and workflow
     mp.set_start_method("dragon")
     # Create Dragon Batch backend
-    backend = DragonExecutionBackend(num_workers=args.nodes * 128,
-                                     disable_background_batching=False)
+    backend = DragonExecutionBackendV3(num_workers=args.nodes * 128,
+                                       disable_background_batching=False)
     init_default_logger(logging.INFO, output_file=f'{args.mode}.n{args.nodes}.t{args.tasks}.{args.run_id}.log')
     # Create workflow engine with Dragon Batch backend
     flow = await WorkflowEngine.create(backend=backend)
