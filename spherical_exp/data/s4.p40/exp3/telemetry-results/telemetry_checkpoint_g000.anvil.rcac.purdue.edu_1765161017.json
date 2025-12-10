@@ -1,0 +1,69 @@
+{
+  "checkpoint_metadata": {
+    "hostname": "g000.anvil.rcac.purdue.edu",
+    "timestamp": 1765161017,
+    "collection_rate": 1.0,
+    "metric_prefix": "infer-asyncflow",
+    "checkpoint_id": 10,
+    "num_samples": 3
+  },
+  "metrics": [
+    {
+      "timestamp": 1765161014,
+      "hostname": "g000.anvil.rcac.purdue.edu",
+      "metrics": {
+        "cpu_percent": 1.2,
+        "load_average_1m": 6.33,
+        "load_average_5m": 10.15,
+        "load_average_15m": 7.12,
+        "memory_percent": 6.8,
+        "memory_available_gb": 469.3156929016113,
+        "memory_used_gb": 17.722164154052734,
+        "memory_total_gb": 503.4778289794922,
+        "gpu_0_utilization": 0,
+        "gpu_0_memory_percent": 1.259307861328125,
+        "gpu_0_memory_used_gb": 0.50372314453125,
+        "gpu_0_memory_total_gb": 40.0,
+        "gpu_0_power_watts": 51.6
+      }
+    },
+    {
+      "timestamp": 1765161015,
+      "hostname": "g000.anvil.rcac.purdue.edu",
+      "metrics": {
+        "cpu_percent": 1.2,
+        "load_average_1m": 5.91,
+        "load_average_5m": 9.99,
+        "load_average_15m": 7.09,
+        "memory_percent": 6.8,
+        "memory_available_gb": 469.3160972595215,
+        "memory_used_gb": 17.721759796142578,
+        "memory_total_gb": 503.4778289794922,
+        "gpu_0_utilization": 0,
+        "gpu_0_memory_percent": 1.259307861328125,
+        "gpu_0_memory_used_gb": 0.50372314453125,
+        "gpu_0_memory_total_gb": 40.0,
+        "gpu_0_power_watts": 51.357
+      }
+    },
+    {
+      "timestamp": 1765161016,
+      "hostname": "g000.anvil.rcac.purdue.edu",
+      "metrics": {
+        "cpu_percent": 1.2,
+        "load_average_1m": 5.91,
+        "load_average_5m": 9.99,
+        "load_average_15m": 7.09,
+        "memory_percent": 6.8,
+        "memory_available_gb": 469.3164978027344,
+        "memory_used_gb": 17.721359252929688,
+        "memory_total_gb": 503.4778289794922,
+        "gpu_0_utilization": 0,
+        "gpu_0_memory_percent": 1.259307861328125,
+        "gpu_0_memory_used_gb": 0.50372314453125,
+        "gpu_0_memory_total_gb": 40.0,
+        "gpu_0_power_watts": 51.357
+      }
+    }
+  ]
+}

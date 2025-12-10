@@ -1,0 +1,1094 @@
+2025-12-07 11:07:06.412 │ INFO │ [root] │ Logger configured successfully - Console: INFO, File: s4.p40.log (N/A), Structured: disabled, Style: modern
+2025-12-07 11:07:06.412 │ INFO │ [main] │ ============================================================
+2025-12-07 11:07:06.412 │ INFO │ [main] │ Dragon V3: Multi-Service VLLM Workflow (Node-Partitioned)
+2025-12-07 11:07:06.412 │ INFO │ [main] │ ============================================================
+2025-12-07 11:07:06.412 │ INFO │ [main] │ Creating 4 VLLM services...
+2025-12-07 11:07:06.412 │ INFO │ [main] │ Service 1: port=8000, offset=0, num_nodes=1
+2025-12-07 11:07:06.412 │ INFO │ [main] │ Service 2: port=8001, offset=1, num_nodes=1
+2025-12-07 11:07:06.412 │ INFO │ [main] │ Service 3: port=8002, offset=2, num_nodes=1
+2025-12-07 11:07:06.412 │ INFO │ [main] │ Service 4: port=8003, offset=3, num_nodes=1
+2025-12-07 11:07:06.412 │ INFO │ [main] │ Initializing all 4 services concurrently...
+2025-12-07 11:07:06.412 │ INFO │ [vllm] │ Initializing VLLM service on g012.anvil.rcac.purdue.edu...
+2025-12-07 11:07:06.412 │ INFO │ [vllm] │ Batching: max_size=1024, max_wait=500ms
+2025-12-07 11:07:06.419 │ INFO │ [vllm] │ Initializing VLLM pipeline...
+2025-12-07 11:07:06.419 │ INFO │ [vllm] │ Initializing VLLM service on g012.anvil.rcac.purdue.edu...
+2025-12-07 11:07:06.419 │ INFO │ [vllm] │ Batching: max_size=1024, max_wait=500ms
+2025-12-07 11:07:06.425 │ INFO │ [vllm] │ Initializing VLLM pipeline...
+2025-12-07 11:07:06.426 │ INFO │ [vllm] │ Initializing VLLM service on g012.anvil.rcac.purdue.edu...
+2025-12-07 11:07:06.426 │ INFO │ [vllm] │ Batching: max_size=1024, max_wait=500ms
+2025-12-07 11:07:06.432 │ INFO │ [vllm] │ Initializing VLLM pipeline...
+2025-12-07 11:07:06.433 │ INFO │ [vllm] │ Initializing VLLM service on g012.anvil.rcac.purdue.edu...
+2025-12-07 11:07:06.433 │ INFO │ [vllm] │ Batching: max_size=1024, max_wait=500ms
+2025-12-07 11:07:06.440 │ INFO │ [vllm] │ Initializing VLLM pipeline...
+2025-12-07 11:08:27.175 │ INFO │ [vllm] │ VLLM pipeline initialized!
+2025-12-07 11:08:27.177 │ INFO │ [vllm] │ HTTP server started on g012.anvil.rcac.purdue.edu:8000
+2025-12-07 11:08:27.177 │ INFO │ [vllm] │ Service ready at http://g012.anvil.rcac.purdue.edu:8000
+2025-12-07 11:08:27.177 │ INFO │ [vllm] │ GET  http://g012.anvil.rcac.purdue.edu:8000/health
+2025-12-07 11:08:27.177 │ INFO │ [vllm] │ POST http://g012.anvil.rcac.purdue.edu:8000/generate
+2025-12-07 11:08:27.453 │ INFO │ [vllm] │ VLLM pipeline initialized!
+2025-12-07 11:08:27.454 │ INFO │ [vllm] │ HTTP server started on g012.anvil.rcac.purdue.edu:8003
+2025-12-07 11:08:27.454 │ INFO │ [vllm] │ Service ready at http://g012.anvil.rcac.purdue.edu:8003
+2025-12-07 11:08:27.454 │ INFO │ [vllm] │ GET  http://g012.anvil.rcac.purdue.edu:8003/health
+2025-12-07 11:08:27.454 │ INFO │ [vllm] │ POST http://g012.anvil.rcac.purdue.edu:8003/generate
+2025-12-07 11:08:27.497 │ INFO │ [vllm] │ VLLM pipeline initialized!
+2025-12-07 11:08:27.497 │ INFO │ [vllm] │ HTTP server started on g012.anvil.rcac.purdue.edu:8002
+2025-12-07 11:08:27.497 │ INFO │ [vllm] │ Service ready at http://g012.anvil.rcac.purdue.edu:8002
+2025-12-07 11:08:27.497 │ INFO │ [vllm] │ GET  http://g012.anvil.rcac.purdue.edu:8002/health
+2025-12-07 11:08:27.498 │ INFO │ [vllm] │ POST http://g012.anvil.rcac.purdue.edu:8002/generate
+2025-12-07 11:08:27.549 │ INFO │ [vllm] │ VLLM pipeline initialized!
+2025-12-07 11:08:27.550 │ INFO │ [vllm] │ HTTP server started on g012.anvil.rcac.purdue.edu:8001
+2025-12-07 11:08:27.550 │ INFO │ [vllm] │ Service ready at http://g012.anvil.rcac.purdue.edu:8001
+2025-12-07 11:08:27.550 │ INFO │ [vllm] │ GET  http://g012.anvil.rcac.purdue.edu:8001/health
+2025-12-07 11:08:27.550 │ INFO │ [vllm] │ POST http://g012.anvil.rcac.purdue.edu:8001/generate
+2025-12-07 15:55:42.888 │ INFO │ [root] │ Logger configured successfully - Console: INFO, File: s4.p40.log (N/A), Structured: disabled, Style: modern
+2025-12-07 15:55:42.890 │ INFO │ [main] │ ============================================================
+2025-12-07 15:55:42.890 │ INFO │ [main] │ Dragon V3: Multi-Service VLLM Workflow (Node-Partitioned)
+2025-12-07 15:55:42.890 │ INFO │ [main] │ ============================================================
+2025-12-07 15:55:42.890 │ INFO │ [main] │ Creating 4 VLLM services...
+2025-12-07 15:55:42.890 │ INFO │ [main] │ Service 1: port=8000, offset=0, num_nodes=1
+2025-12-07 15:55:42.890 │ INFO │ [main] │ Service 2: port=8001, offset=1, num_nodes=1
+2025-12-07 15:55:42.890 │ INFO │ [main] │ Service 3: port=8002, offset=2, num_nodes=1
+2025-12-07 15:55:42.890 │ INFO │ [main] │ Service 4: port=8003, offset=3, num_nodes=1
+2025-12-07 15:55:42.890 │ INFO │ [main] │ Initializing all 4 services concurrently...
+2025-12-07 15:55:42.890 │ INFO │ [vllm] │ Initializing VLLM service on g005.anvil.rcac.purdue.edu...
+2025-12-07 15:55:42.890 │ INFO │ [vllm] │ Batching: max_size=1024, max_wait=500ms
+2025-12-07 15:55:42.897 │ INFO │ [vllm] │ Initializing VLLM pipeline...
+2025-12-07 15:55:42.897 │ INFO │ [vllm] │ Initializing VLLM service on g005.anvil.rcac.purdue.edu...
+2025-12-07 15:55:42.897 │ INFO │ [vllm] │ Batching: max_size=1024, max_wait=500ms
+2025-12-07 15:55:42.903 │ INFO │ [vllm] │ Initializing VLLM pipeline...
+2025-12-07 15:55:42.904 │ INFO │ [vllm] │ Initializing VLLM service on g005.anvil.rcac.purdue.edu...
+2025-12-07 15:55:42.904 │ INFO │ [vllm] │ Batching: max_size=1024, max_wait=500ms
+2025-12-07 15:55:42.910 │ INFO │ [vllm] │ Initializing VLLM pipeline...
+2025-12-07 15:55:42.910 │ INFO │ [vllm] │ Initializing VLLM service on g005.anvil.rcac.purdue.edu...
+2025-12-07 15:55:42.911 │ INFO │ [vllm] │ Batching: max_size=1024, max_wait=500ms
+2025-12-07 15:55:42.918 │ INFO │ [vllm] │ Initializing VLLM pipeline...
+2025-12-07 15:57:01.501 │ INFO │ [vllm] │ VLLM pipeline initialized!
+2025-12-07 15:57:01.503 │ INFO │ [vllm] │ HTTP server started on g005.anvil.rcac.purdue.edu:8000
+2025-12-07 15:57:01.503 │ INFO │ [vllm] │ Service ready at http://g005.anvil.rcac.purdue.edu:8000
+2025-12-07 15:57:01.503 │ INFO │ [vllm] │ GET  http://g005.anvil.rcac.purdue.edu:8000/health
+2025-12-07 15:57:01.503 │ INFO │ [vllm] │ POST http://g005.anvil.rcac.purdue.edu:8000/generate
+2025-12-07 16:28:15.133 │ INFO │ [root] │ Logger configured successfully - Console: INFO, File: s4.p40.log (N/A), Structured: disabled, Style: modern
+2025-12-07 16:28:15.134 │ INFO │ [main] │ ============================================================
+2025-12-07 16:28:15.134 │ INFO │ [main] │ Dragon V3: Multi-Service VLLM Workflow (Node-Partitioned)
+2025-12-07 16:28:15.134 │ INFO │ [main] │ ============================================================
+2025-12-07 16:28:15.134 │ INFO │ [main] │ Creating 4 VLLM services...
+2025-12-07 16:28:15.134 │ INFO │ [main] │ Service 1: port=8000, offset=0, num_nodes=1
+2025-12-07 16:28:15.135 │ INFO │ [main] │ Service 2: port=8001, offset=1, num_nodes=1
+2025-12-07 16:28:15.135 │ INFO │ [main] │ Service 3: port=8002, offset=2, num_nodes=1
+2025-12-07 16:28:15.135 │ INFO │ [main] │ Service 4: port=8003, offset=3, num_nodes=1
+2025-12-07 16:28:15.135 │ INFO │ [main] │ Initializing all 4 services concurrently...
+2025-12-07 16:28:15.135 │ INFO │ [vllm] │ Initializing VLLM service on g005.anvil.rcac.purdue.edu...
+2025-12-07 16:28:15.135 │ INFO │ [vllm] │ Batching: max_size=1024, max_wait=500ms
+2025-12-07 16:28:15.141 │ INFO │ [vllm] │ Initializing VLLM pipeline...
+2025-12-07 16:28:15.142 │ INFO │ [vllm] │ Initializing VLLM service on g005.anvil.rcac.purdue.edu...
+2025-12-07 16:28:15.142 │ INFO │ [vllm] │ Batching: max_size=1024, max_wait=500ms
+2025-12-07 16:28:15.148 │ INFO │ [vllm] │ Initializing VLLM pipeline...
+2025-12-07 16:28:15.148 │ INFO │ [vllm] │ Initializing VLLM service on g005.anvil.rcac.purdue.edu...
+2025-12-07 16:28:15.149 │ INFO │ [vllm] │ Batching: max_size=1024, max_wait=500ms
+2025-12-07 16:28:15.156 │ INFO │ [vllm] │ Initializing VLLM pipeline...
+2025-12-07 16:28:15.157 │ INFO │ [vllm] │ Initializing VLLM service on g005.anvil.rcac.purdue.edu...
+2025-12-07 16:28:15.157 │ INFO │ [vllm] │ Batching: max_size=1024, max_wait=500ms
+2025-12-07 16:28:15.165 │ INFO │ [vllm] │ Initializing VLLM pipeline...
+2025-12-07 16:31:57.178 │ INFO │ [root] │ Logger configured successfully - Console: INFO, File: s4.p40.log (N/A), Structured: disabled, Style: modern
+2025-12-07 16:31:57.179 │ INFO │ [main] │ ============================================================
+2025-12-07 16:31:57.179 │ INFO │ [main] │ Dragon V3: Multi-Service VLLM Workflow (Node-Partitioned)
+2025-12-07 16:31:57.179 │ INFO │ [main] │ ============================================================
+2025-12-07 16:31:57.179 │ INFO │ [main] │ Creating 4 VLLM services...
+2025-12-07 16:31:57.179 │ INFO │ [main] │ Service 1: port=8000, offset=0, num_nodes=1
+2025-12-07 16:31:57.179 │ INFO │ [main] │ Service 2: port=8001, offset=1, num_nodes=1
+2025-12-07 16:31:57.179 │ INFO │ [main] │ Service 3: port=8002, offset=2, num_nodes=1
+2025-12-07 16:31:57.180 │ INFO │ [main] │ Service 4: port=8003, offset=3, num_nodes=1
+2025-12-07 16:31:57.180 │ INFO │ [main] │ Initializing all 4 services concurrently...
+2025-12-07 16:31:57.180 │ INFO │ [vllm] │ Initializing VLLM service on g005.anvil.rcac.purdue.edu...
+2025-12-07 16:31:57.180 │ INFO │ [vllm] │ Batching: max_size=1024, max_wait=500ms
+2025-12-07 16:31:57.186 │ INFO │ [vllm] │ Initializing VLLM pipeline...
+2025-12-07 16:31:57.187 │ INFO │ [vllm] │ Initializing VLLM service on g005.anvil.rcac.purdue.edu...
+2025-12-07 16:31:57.187 │ INFO │ [vllm] │ Batching: max_size=1024, max_wait=500ms
+2025-12-07 16:31:57.193 │ INFO │ [vllm] │ Initializing VLLM pipeline...
+2025-12-07 16:31:57.193 │ INFO │ [vllm] │ Initializing VLLM service on g005.anvil.rcac.purdue.edu...
+2025-12-07 16:31:57.193 │ INFO │ [vllm] │ Batching: max_size=1024, max_wait=500ms
+2025-12-07 16:31:57.199 │ INFO │ [vllm] │ Initializing VLLM pipeline...
+2025-12-07 16:31:57.200 │ INFO │ [vllm] │ Initializing VLLM service on g005.anvil.rcac.purdue.edu...
+2025-12-07 16:31:57.200 │ INFO │ [vllm] │ Batching: max_size=1024, max_wait=500ms
+2025-12-07 16:31:57.209 │ INFO │ [vllm] │ Initializing VLLM pipeline...
+2025-12-07 16:33:17.256 │ INFO │ [vllm] │ VLLM pipeline initialized!
+2025-12-07 16:33:17.258 │ INFO │ [vllm] │ HTTP server started on g005.anvil.rcac.purdue.edu:8003
+2025-12-07 16:33:17.258 │ INFO │ [vllm] │ Service ready at http://g005.anvil.rcac.purdue.edu:8003
+2025-12-07 16:33:17.258 │ INFO │ [vllm] │ GET  http://g005.anvil.rcac.purdue.edu:8003/health
+2025-12-07 16:33:17.258 │ INFO │ [vllm] │ POST http://g005.anvil.rcac.purdue.edu:8003/generate
+2025-12-07 16:51:38.761 │ INFO │ [root] │ Logger configured successfully - Console: INFO, File: s4.p40.log (N/A), Structured: disabled, Style: modern
+2025-12-07 16:51:38.762 │ INFO │ [main] │ ============================================================
+2025-12-07 16:51:38.762 │ INFO │ [main] │ Dragon V3: Multi-Service VLLM Workflow (Node-Partitioned)
+2025-12-07 16:51:38.762 │ INFO │ [main] │ ============================================================
+2025-12-07 16:51:38.762 │ INFO │ [main] │ Creating 4 VLLM services...
+2025-12-07 16:51:38.762 │ INFO │ [main] │ Service 1: port=8000, offset=0, num_nodes=1
+2025-12-07 16:51:38.762 │ INFO │ [main] │ Service 2: port=8001, offset=1, num_nodes=1
+2025-12-07 16:51:38.762 │ INFO │ [main] │ Service 3: port=8002, offset=2, num_nodes=1
+2025-12-07 16:51:38.762 │ INFO │ [main] │ Service 4: port=8003, offset=3, num_nodes=1
+2025-12-07 16:51:38.762 │ INFO │ [main] │ Initializing all 4 services concurrently...
+2025-12-07 16:51:38.762 │ INFO │ [vllm] │ Initializing VLLM service on g005.anvil.rcac.purdue.edu...
+2025-12-07 16:51:38.762 │ INFO │ [vllm] │ Batching: max_size=1024, max_wait=500ms
+2025-12-07 16:51:38.769 │ INFO │ [vllm] │ Initializing VLLM pipeline...
+2025-12-07 16:51:38.769 │ INFO │ [vllm] │ Initializing VLLM service on g005.anvil.rcac.purdue.edu...
+2025-12-07 16:51:38.769 │ INFO │ [vllm] │ Batching: max_size=1024, max_wait=500ms
+2025-12-07 16:51:38.775 │ INFO │ [vllm] │ Initializing VLLM pipeline...
+2025-12-07 16:51:38.776 │ INFO │ [vllm] │ Initializing VLLM service on g005.anvil.rcac.purdue.edu...
+2025-12-07 16:51:38.776 │ INFO │ [vllm] │ Batching: max_size=1024, max_wait=500ms
+2025-12-07 16:51:38.782 │ INFO │ [vllm] │ Initializing VLLM pipeline...
+2025-12-07 16:51:38.783 │ INFO │ [vllm] │ Initializing VLLM service on g005.anvil.rcac.purdue.edu...
+2025-12-07 16:51:38.783 │ INFO │ [vllm] │ Batching: max_size=1024, max_wait=500ms
+2025-12-07 16:51:38.790 │ INFO │ [vllm] │ Initializing VLLM pipeline...
+2025-12-07 16:52:59.260 │ INFO │ [vllm] │ VLLM pipeline initialized!
+2025-12-07 16:52:59.261 │ INFO │ [vllm] │ HTTP server started on g005.anvil.rcac.purdue.edu:8001
+2025-12-07 16:52:59.261 │ INFO │ [vllm] │ Service ready at http://g005.anvil.rcac.purdue.edu:8001
+2025-12-07 16:52:59.261 │ INFO │ [vllm] │ GET  http://g005.anvil.rcac.purdue.edu:8001/health
+2025-12-07 16:52:59.261 │ INFO │ [vllm] │ POST http://g005.anvil.rcac.purdue.edu:8001/generate
+2025-12-07 16:52:59.318 │ INFO │ [vllm] │ VLLM pipeline initialized!
+2025-12-07 16:52:59.318 │ INFO │ [vllm] │ HTTP server started on g005.anvil.rcac.purdue.edu:8002
+2025-12-07 16:52:59.318 │ INFO │ [vllm] │ Service ready at http://g005.anvil.rcac.purdue.edu:8002
+2025-12-07 16:52:59.318 │ INFO │ [vllm] │ GET  http://g005.anvil.rcac.purdue.edu:8002/health
+2025-12-07 16:52:59.318 │ INFO │ [vllm] │ POST http://g005.anvil.rcac.purdue.edu:8002/generate
+2025-12-07 16:52:59.365 │ INFO │ [vllm] │ VLLM pipeline initialized!
+2025-12-07 16:52:59.366 │ INFO │ [vllm] │ HTTP server started on g005.anvil.rcac.purdue.edu:8000
+2025-12-07 16:52:59.366 │ INFO │ [vllm] │ Service ready at http://g005.anvil.rcac.purdue.edu:8000
+2025-12-07 16:52:59.366 │ INFO │ [vllm] │ GET  http://g005.anvil.rcac.purdue.edu:8000/health
+2025-12-07 16:52:59.366 │ INFO │ [vllm] │ POST http://g005.anvil.rcac.purdue.edu:8000/generate
+2025-12-07 16:52:59.639 │ INFO │ [vllm] │ VLLM pipeline initialized!
+2025-12-07 16:52:59.640 │ INFO │ [vllm] │ HTTP server started on g005.anvil.rcac.purdue.edu:8003
+2025-12-07 16:52:59.640 │ INFO │ [vllm] │ Service ready at http://g005.anvil.rcac.purdue.edu:8003
+2025-12-07 16:52:59.640 │ INFO │ [vllm] │ GET  http://g005.anvil.rcac.purdue.edu:8003/health
+2025-12-07 16:52:59.640 │ INFO │ [vllm] │ POST http://g005.anvil.rcac.purdue.edu:8003/generate
+2025-12-07 16:53:00.344 │ INFO │ [main] │ All 4 services initialized
+2025-12-07 16:53:00.344 │ INFO │ [main] │ Node allocation:
+2025-12-07 16:53:00.345 │ INFO │ [main] │ Service 1: nodes[0:1] -> http://g005.anvil.rcac.purdue.edu:8000
+2025-12-07 16:53:00.345 │ INFO │ [main] │ Service 2: nodes[1:2] -> http://g005.anvil.rcac.purdue.edu:8001
+2025-12-07 16:53:00.345 │ INFO │ [main] │ Service 3: nodes[2:3] -> http://g005.anvil.rcac.purdue.edu:8002
+2025-12-07 16:53:00.345 │ INFO │ [main] │ Service 4: nodes[3:4] -> http://g005.anvil.rcac.purdue.edu:8003
+2025-12-07 16:53:00.394 │ INFO │ [workflow_manager] │ Submitting 200 tasks/blocks for execution
+2025-12-07 16:53:00.419 │ INFO │ [execution.backend(dragon)] │ Submitted batch of 200 tasks for execution
+2025-12-07 16:53:00.957 │ INFO │ [vllm] │ Processing batch: 10 requests, 10000 total prompts
+2025-12-07 16:53:00.971 │ INFO │ [vllm] │ Processing batch: 10 requests, 10000 total prompts
+2025-12-07 16:53:00.981 │ INFO │ [vllm] │ Processing batch: 10 requests, 10000 total prompts
+2025-12-07 16:53:00.992 │ INFO │ [vllm] │ Processing batch: 10 requests, 10000 total prompts
+2025-12-07 16:54:44.570 │ INFO │ [workflow_manager] │ task.000001 is in DONE state
+2025-12-07 16:54:44.570 │ INFO │ [workflow_manager] │ task.000002 is in DONE state
+2025-12-07 16:54:44.570 │ INFO │ [workflow_manager] │ task.000003 is in DONE state
+2025-12-07 16:54:44.571 │ INFO │ [workflow_manager] │ task.000004 is in DONE state
+2025-12-07 16:54:44.571 │ INFO │ [workflow_manager] │ task.000005 is in DONE state
+2025-12-07 16:54:44.571 │ INFO │ [workflow_manager] │ task.000006 is in DONE state
+2025-12-07 16:54:44.571 │ INFO │ [workflow_manager] │ task.000007 is in DONE state
+2025-12-07 16:54:44.571 │ INFO │ [workflow_manager] │ task.000008 is in DONE state
+2025-12-07 16:54:44.571 │ INFO │ [workflow_manager] │ task.000009 is in DONE state
+2025-12-07 16:54:44.571 │ INFO │ [workflow_manager] │ task.000010 is in DONE state
+2025-12-07 16:54:44.578 │ INFO │ [workflow_manager] │ task.000011 is in DONE state
+2025-12-07 16:54:44.579 │ INFO │ [workflow_manager] │ task.000012 is in DONE state
+2025-12-07 16:54:44.579 │ INFO │ [workflow_manager] │ Submitting 11 tasks/blocks for execution
+2025-12-07 16:54:44.579 │ INFO │ [workflow_manager] │ task.000013 is in DONE state
+2025-12-07 16:54:44.580 │ INFO │ [workflow_manager] │ task.000014 is in DONE state
+2025-12-07 16:54:44.580 │ INFO │ [workflow_manager] │ task.000015 is in DONE state
+2025-12-07 16:54:44.581 │ INFO │ [workflow_manager] │ task.000016 is in DONE state
+2025-12-07 16:54:44.581 │ INFO │ [workflow_manager] │ task.000017 is in DONE state
+2025-12-07 16:54:44.581 │ INFO │ [workflow_manager] │ task.000018 is in DONE state
+2025-12-07 16:54:44.581 │ INFO │ [workflow_manager] │ task.000019 is in DONE state
+2025-12-07 16:54:44.582 │ INFO │ [workflow_manager] │ task.000020 is in DONE state
+2025-12-07 16:54:44.582 │ INFO │ [workflow_manager] │ task.000021 is in DONE state
+2025-12-07 16:54:44.582 │ INFO │ [workflow_manager] │ task.000022 is in DONE state
+2025-12-07 16:54:44.582 │ INFO │ [workflow_manager] │ task.000023 is in DONE state
+2025-12-07 16:54:44.583 │ INFO │ [workflow_manager] │ task.000024 is in DONE state
+2025-12-07 16:54:44.583 │ INFO │ [workflow_manager] │ task.000025 is in DONE state
+2025-12-07 16:54:44.584 │ INFO │ [workflow_manager] │ task.000026 is in DONE state
+2025-12-07 16:54:44.584 │ INFO │ [execution.backend(dragon)] │ Submitted batch of 11 tasks for execution
+2025-12-07 16:54:44.584 │ INFO │ [workflow_manager] │ task.000027 is in DONE state
+2025-12-07 16:54:44.585 │ INFO │ [workflow_manager] │ task.000028 is in DONE state
+2025-12-07 16:54:44.587 │ INFO │ [workflow_manager] │ task.000029 is in DONE state
+2025-12-07 16:54:44.587 │ INFO │ [workflow_manager] │ task.000030 is in DONE state
+2025-12-07 16:54:44.587 │ INFO │ [workflow_manager] │ task.000031 is in DONE state
+2025-12-07 16:54:44.587 │ INFO │ [workflow_manager] │ task.000032 is in DONE state
+2025-12-07 16:54:44.587 │ INFO │ [workflow_manager] │ task.000033 is in DONE state
+2025-12-07 16:54:44.587 │ INFO │ [workflow_manager] │ task.000034 is in DONE state
+2025-12-07 16:54:44.587 │ INFO │ [workflow_manager] │ task.000035 is in DONE state
+2025-12-07 16:54:44.587 │ INFO │ [workflow_manager] │ task.000036 is in DONE state
+2025-12-07 16:54:44.588 │ INFO │ [workflow_manager] │ task.000037 is in DONE state
+2025-12-07 16:54:44.588 │ INFO │ [workflow_manager] │ task.000038 is in DONE state
+2025-12-07 16:54:44.588 │ INFO │ [workflow_manager] │ task.000039 is in DONE state
+2025-12-07 16:54:44.588 │ INFO │ [workflow_manager] │ task.000040 is in DONE state
+2025-12-07 16:54:44.589 │ INFO │ [workflow_manager] │ task.000041 is in DONE state
+2025-12-07 16:54:44.589 │ INFO │ [workflow_manager] │ task.000042 is in DONE state
+2025-12-07 16:54:44.589 │ INFO │ [workflow_manager] │ task.000043 is in DONE state
+2025-12-07 16:54:44.590 │ INFO │ [workflow_manager] │ task.000044 is in DONE state
+2025-12-07 16:54:44.590 │ INFO │ [workflow_manager] │ task.000045 is in DONE state
+2025-12-07 16:54:44.590 │ INFO │ [workflow_manager] │ task.000046 is in DONE state
+2025-12-07 16:54:44.590 │ INFO │ [workflow_manager] │ task.000047 is in DONE state
+2025-12-07 16:54:44.590 │ INFO │ [workflow_manager] │ task.000048 is in DONE state
+2025-12-07 16:54:44.590 │ INFO │ [workflow_manager] │ task.000049 is in DONE state
+2025-12-07 16:54:44.590 │ INFO │ [workflow_manager] │ task.000050 is in DONE state
+2025-12-07 16:54:44.590 │ INFO │ [workflow_manager] │ task.000051 is in DONE state
+2025-12-07 16:54:44.590 │ INFO │ [workflow_manager] │ task.000052 is in DONE state
+2025-12-07 16:54:44.591 │ INFO │ [workflow_manager] │ task.000053 is in DONE state
+2025-12-07 16:54:44.591 │ INFO │ [workflow_manager] │ task.000054 is in DONE state
+2025-12-07 16:54:44.591 │ INFO │ [workflow_manager] │ task.000055 is in DONE state
+2025-12-07 16:54:44.591 │ INFO │ [workflow_manager] │ task.000056 is in DONE state
+2025-12-07 16:54:44.591 │ INFO │ [workflow_manager] │ task.000057 is in DONE state
+2025-12-07 16:54:44.591 │ INFO │ [workflow_manager] │ task.000058 is in DONE state
+2025-12-07 16:54:44.591 │ INFO │ [workflow_manager] │ task.000059 is in DONE state
+2025-12-07 16:54:44.591 │ INFO │ [workflow_manager] │ task.000060 is in DONE state
+2025-12-07 16:54:44.591 │ INFO │ [workflow_manager] │ task.000061 is in DONE state
+2025-12-07 16:54:44.591 │ INFO │ [workflow_manager] │ task.000062 is in DONE state
+2025-12-07 16:54:44.592 │ INFO │ [workflow_manager] │ task.000063 is in DONE state
+2025-12-07 16:54:44.592 │ INFO │ [workflow_manager] │ task.000064 is in DONE state
+2025-12-07 16:54:44.592 │ INFO │ [workflow_manager] │ task.000065 is in DONE state
+2025-12-07 16:54:44.592 │ INFO │ [workflow_manager] │ task.000066 is in DONE state
+2025-12-07 16:54:44.592 │ INFO │ [workflow_manager] │ task.000067 is in DONE state
+2025-12-07 16:54:44.592 │ INFO │ [workflow_manager] │ task.000068 is in DONE state
+2025-12-07 16:54:44.592 │ INFO │ [workflow_manager] │ task.000069 is in DONE state
+2025-12-07 16:54:44.592 │ INFO │ [workflow_manager] │ task.000070 is in DONE state
+2025-12-07 16:54:44.592 │ INFO │ [workflow_manager] │ task.000071 is in DONE state
+2025-12-07 16:54:44.592 │ INFO │ [workflow_manager] │ task.000072 is in DONE state
+2025-12-07 16:54:44.593 │ INFO │ [workflow_manager] │ task.000073 is in DONE state
+2025-12-07 16:54:44.593 │ INFO │ [workflow_manager] │ task.000074 is in DONE state
+2025-12-07 16:54:44.593 │ INFO │ [workflow_manager] │ task.000075 is in DONE state
+2025-12-07 16:54:44.593 │ INFO │ [workflow_manager] │ task.000076 is in DONE state
+2025-12-07 16:54:44.593 │ INFO │ [workflow_manager] │ task.000077 is in DONE state
+2025-12-07 16:54:44.593 │ INFO │ [workflow_manager] │ task.000078 is in DONE state
+2025-12-07 16:54:44.593 │ INFO │ [workflow_manager] │ task.000079 is in DONE state
+2025-12-07 16:54:44.593 │ INFO │ [workflow_manager] │ task.000080 is in DONE state
+2025-12-07 16:54:44.593 │ INFO │ [workflow_manager] │ task.000081 is in DONE state
+2025-12-07 16:54:44.593 │ INFO │ [workflow_manager] │ task.000082 is in DONE state
+2025-12-07 16:54:44.594 │ INFO │ [workflow_manager] │ task.000083 is in DONE state
+2025-12-07 16:54:44.594 │ INFO │ [workflow_manager] │ task.000084 is in DONE state
+2025-12-07 16:54:44.594 │ INFO │ [workflow_manager] │ task.000085 is in DONE state
+2025-12-07 16:54:44.594 │ INFO │ [workflow_manager] │ task.000086 is in DONE state
+2025-12-07 16:54:44.594 │ INFO │ [workflow_manager] │ task.000087 is in DONE state
+2025-12-07 16:54:44.594 │ INFO │ [workflow_manager] │ task.000088 is in DONE state
+2025-12-07 16:54:44.595 │ INFO │ [workflow_manager] │ task.000089 is in DONE state
+2025-12-07 16:54:44.595 │ INFO │ [workflow_manager] │ task.000090 is in DONE state
+2025-12-07 16:54:44.595 │ INFO │ [workflow_manager] │ task.000091 is in DONE state
+2025-12-07 16:54:44.595 │ INFO │ [workflow_manager] │ task.000092 is in DONE state
+2025-12-07 16:54:44.595 │ INFO │ [workflow_manager] │ task.000093 is in DONE state
+2025-12-07 16:54:44.595 │ INFO │ [workflow_manager] │ task.000094 is in DONE state
+2025-12-07 16:54:44.595 │ INFO │ [workflow_manager] │ task.000095 is in DONE state
+2025-12-07 16:54:44.595 │ INFO │ [workflow_manager] │ task.000096 is in DONE state
+2025-12-07 16:54:44.595 │ INFO │ [workflow_manager] │ task.000097 is in DONE state
+2025-12-07 16:54:44.596 │ INFO │ [workflow_manager] │ task.000098 is in DONE state
+2025-12-07 16:54:44.596 │ INFO │ [workflow_manager] │ task.000099 is in DONE state
+2025-12-07 16:54:44.596 │ INFO │ [workflow_manager] │ task.000100 is in DONE state
+2025-12-07 16:54:44.596 │ INFO │ [workflow_manager] │ task.000101 is in DONE state
+2025-12-07 16:54:44.596 │ INFO │ [workflow_manager] │ task.000102 is in DONE state
+2025-12-07 16:54:44.596 │ INFO │ [workflow_manager] │ task.000103 is in DONE state
+2025-12-07 16:54:44.596 │ INFO │ [workflow_manager] │ task.000104 is in DONE state
+2025-12-07 16:54:44.597 │ INFO │ [workflow_manager] │ Submitting 29 tasks/blocks for execution
+2025-12-07 16:54:44.597 │ INFO │ [workflow_manager] │ task.000105 is in DONE state
+2025-12-07 16:54:44.597 │ INFO │ [workflow_manager] │ task.000106 is in DONE state
+2025-12-07 16:54:44.597 │ INFO │ [workflow_manager] │ task.000107 is in DONE state
+2025-12-07 16:54:44.598 │ INFO │ [workflow_manager] │ task.000108 is in DONE state
+2025-12-07 16:54:44.598 │ INFO │ [workflow_manager] │ task.000109 is in DONE state
+2025-12-07 16:54:44.598 │ INFO │ [workflow_manager] │ task.000110 is in DONE state
+2025-12-07 16:54:44.598 │ INFO │ [workflow_manager] │ task.000111 is in DONE state
+2025-12-07 16:54:44.599 │ INFO │ [workflow_manager] │ task.000112 is in DONE state
+2025-12-07 16:54:44.599 │ INFO │ [workflow_manager] │ task.000113 is in DONE state
+2025-12-07 16:54:44.599 │ INFO │ [workflow_manager] │ task.000114 is in DONE state
+2025-12-07 16:54:44.599 │ INFO │ [workflow_manager] │ task.000115 is in DONE state
+2025-12-07 16:54:44.600 │ INFO │ [workflow_manager] │ task.000116 is in DONE state
+2025-12-07 16:54:44.600 │ INFO │ [workflow_manager] │ task.000117 is in DONE state
+2025-12-07 16:54:44.600 │ INFO │ [workflow_manager] │ task.000118 is in DONE state
+2025-12-07 16:54:44.600 │ INFO │ [workflow_manager] │ task.000119 is in DONE state
+2025-12-07 16:54:44.601 │ INFO │ [workflow_manager] │ task.000120 is in DONE state
+2025-12-07 16:54:44.601 │ INFO │ [workflow_manager] │ task.000121 is in DONE state
+2025-12-07 16:54:44.601 │ INFO │ [workflow_manager] │ task.000122 is in DONE state
+2025-12-07 16:54:44.601 │ INFO │ [workflow_manager] │ task.000123 is in DONE state
+2025-12-07 16:54:44.602 │ INFO │ [workflow_manager] │ task.000124 is in DONE state
+2025-12-07 16:54:44.602 │ INFO │ [workflow_manager] │ task.000125 is in DONE state
+2025-12-07 16:54:44.602 │ INFO │ [workflow_manager] │ task.000126 is in DONE state
+2025-12-07 16:54:44.602 │ INFO │ [workflow_manager] │ task.000127 is in DONE state
+2025-12-07 16:54:44.602 │ INFO │ [workflow_manager] │ task.000128 is in DONE state
+2025-12-07 16:54:44.603 │ INFO │ [workflow_manager] │ task.000129 is in DONE state
+2025-12-07 16:54:44.603 │ INFO │ [workflow_manager] │ task.000130 is in DONE state
+2025-12-07 16:54:44.603 │ INFO │ [workflow_manager] │ task.000131 is in DONE state
+2025-12-07 16:54:44.603 │ INFO │ [workflow_manager] │ task.000132 is in DONE state
+2025-12-07 16:54:44.604 │ INFO │ [workflow_manager] │ task.000133 is in DONE state
+2025-12-07 16:54:44.604 │ INFO │ [workflow_manager] │ task.000134 is in DONE state
+2025-12-07 16:54:44.604 │ INFO │ [execution.backend(dragon)] │ Submitted batch of 29 tasks for execution
+2025-12-07 16:54:44.605 │ INFO │ [workflow_manager] │ task.000135 is in DONE state
+2025-12-07 16:54:44.605 │ INFO │ [workflow_manager] │ task.000136 is in DONE state
+2025-12-07 16:54:44.605 │ INFO │ [workflow_manager] │ task.000137 is in DONE state
+2025-12-07 16:54:44.605 │ INFO │ [workflow_manager] │ task.000138 is in DONE state
+2025-12-07 16:54:44.605 │ INFO │ [workflow_manager] │ task.000139 is in DONE state
+2025-12-07 16:54:44.606 │ INFO │ [workflow_manager] │ task.000140 is in DONE state
+2025-12-07 16:54:44.606 │ INFO │ [workflow_manager] │ task.000141 is in DONE state
+2025-12-07 16:54:44.606 │ INFO │ [workflow_manager] │ task.000142 is in DONE state
+2025-12-07 16:54:44.606 │ INFO │ [workflow_manager] │ task.000143 is in DONE state
+2025-12-07 16:54:44.606 │ INFO │ [workflow_manager] │ task.000144 is in DONE state
+2025-12-07 16:54:44.606 │ INFO │ [workflow_manager] │ task.000145 is in DONE state
+2025-12-07 16:54:44.606 │ INFO │ [workflow_manager] │ task.000146 is in DONE state
+2025-12-07 16:54:44.606 │ INFO │ [workflow_manager] │ task.000147 is in DONE state
+2025-12-07 16:54:44.606 │ INFO │ [workflow_manager] │ task.000148 is in DONE state
+2025-12-07 16:54:44.606 │ INFO │ [workflow_manager] │ task.000149 is in DONE state
+2025-12-07 16:54:44.607 │ INFO │ [workflow_manager] │ task.000150 is in DONE state
+2025-12-07 16:54:44.607 │ INFO │ [workflow_manager] │ task.000151 is in DONE state
+2025-12-07 16:54:44.607 │ INFO │ [workflow_manager] │ task.000152 is in DONE state
+2025-12-07 16:54:44.607 │ INFO │ [workflow_manager] │ task.000153 is in DONE state
+2025-12-07 16:54:44.607 │ INFO │ [workflow_manager] │ task.000154 is in DONE state
+2025-12-07 16:54:44.607 │ INFO │ [workflow_manager] │ task.000155 is in DONE state
+2025-12-07 16:54:44.607 │ INFO │ [workflow_manager] │ task.000156 is in DONE state
+2025-12-07 16:54:44.607 │ INFO │ [workflow_manager] │ task.000157 is in DONE state
+2025-12-07 16:54:44.607 │ INFO │ [workflow_manager] │ task.000158 is in DONE state
+2025-12-07 16:54:44.607 │ INFO │ [workflow_manager] │ task.000159 is in DONE state
+2025-12-07 16:54:44.608 │ INFO │ [workflow_manager] │ task.000160 is in DONE state
+2025-12-07 16:54:44.608 │ INFO │ [workflow_manager] │ task.000161 is in DONE state
+2025-12-07 16:54:44.608 │ INFO │ [workflow_manager] │ task.000162 is in DONE state
+2025-12-07 16:54:44.608 │ INFO │ [workflow_manager] │ task.000163 is in DONE state
+2025-12-07 16:54:44.608 │ INFO │ [workflow_manager] │ task.000164 is in DONE state
+2025-12-07 16:54:44.608 │ INFO │ [workflow_manager] │ task.000165 is in DONE state
+2025-12-07 16:54:44.608 │ INFO │ [workflow_manager] │ task.000166 is in DONE state
+2025-12-07 16:54:44.608 │ INFO │ [workflow_manager] │ task.000167 is in DONE state
+2025-12-07 16:54:44.608 │ INFO │ [workflow_manager] │ task.000168 is in DONE state
+2025-12-07 16:54:44.608 │ INFO │ [workflow_manager] │ task.000169 is in DONE state
+2025-12-07 16:54:44.609 │ INFO │ [workflow_manager] │ task.000170 is in DONE state
+2025-12-07 16:54:44.609 │ INFO │ [workflow_manager] │ task.000171 is in DONE state
+2025-12-07 16:54:44.609 │ INFO │ [workflow_manager] │ task.000172 is in DONE state
+2025-12-07 16:54:44.609 │ INFO │ [workflow_manager] │ task.000173 is in DONE state
+2025-12-07 16:54:44.609 │ INFO │ [workflow_manager] │ task.000174 is in DONE state
+2025-12-07 16:54:44.609 │ INFO │ [workflow_manager] │ task.000175 is in DONE state
+2025-12-07 16:54:44.609 │ INFO │ [workflow_manager] │ task.000176 is in DONE state
+2025-12-07 16:54:44.609 │ INFO │ [workflow_manager] │ task.000177 is in DONE state
+2025-12-07 16:54:44.609 │ INFO │ [workflow_manager] │ task.000178 is in DONE state
+2025-12-07 16:54:44.610 │ INFO │ [workflow_manager] │ task.000179 is in DONE state
+2025-12-07 16:54:44.610 │ INFO │ [workflow_manager] │ task.000180 is in DONE state
+2025-12-07 16:54:44.610 │ INFO │ [workflow_manager] │ task.000181 is in DONE state
+2025-12-07 16:54:44.610 │ INFO │ [workflow_manager] │ task.000182 is in DONE state
+2025-12-07 16:54:44.610 │ INFO │ [workflow_manager] │ task.000183 is in DONE state
+2025-12-07 16:54:44.610 │ INFO │ [workflow_manager] │ task.000184 is in DONE state
+2025-12-07 16:54:44.611 │ INFO │ [workflow_manager] │ task.000185 is in DONE state
+2025-12-07 16:54:44.611 │ INFO │ [workflow_manager] │ task.000186 is in DONE state
+2025-12-07 16:54:44.611 │ INFO │ [workflow_manager] │ task.000187 is in DONE state
+2025-12-07 16:54:44.611 │ INFO │ [workflow_manager] │ task.000188 is in DONE state
+2025-12-07 16:54:44.611 │ INFO │ [workflow_manager] │ task.000189 is in DONE state
+2025-12-07 16:54:44.611 │ INFO │ [workflow_manager] │ task.000190 is in DONE state
+2025-12-07 16:54:44.611 │ INFO │ [workflow_manager] │ task.000191 is in DONE state
+2025-12-07 16:54:44.611 │ INFO │ [workflow_manager] │ task.000192 is in DONE state
+2025-12-07 16:54:44.611 │ INFO │ [workflow_manager] │ task.000193 is in DONE state
+2025-12-07 16:54:44.611 │ INFO │ [workflow_manager] │ task.000194 is in DONE state
+2025-12-07 16:54:44.611 │ INFO │ [workflow_manager] │ task.000195 is in DONE state
+2025-12-07 16:54:44.612 │ INFO │ [workflow_manager] │ task.000196 is in DONE state
+2025-12-07 16:54:44.612 │ INFO │ [workflow_manager] │ task.000197 is in DONE state
+2025-12-07 16:54:44.612 │ INFO │ [workflow_manager] │ task.000198 is in DONE state
+2025-12-07 16:54:44.612 │ INFO │ [workflow_manager] │ task.000199 is in DONE state
+2025-12-07 16:54:44.612 │ INFO │ [workflow_manager] │ task.000200 is in DONE state
+2025-12-07 16:54:45.429 │ INFO │ [workflow_manager] │ Submitting 44 tasks/blocks for execution
+2025-12-07 16:54:45.643 │ INFO │ [execution.backend(dragon)] │ Submitted batch of 44 tasks for execution
+2025-12-07 16:54:45.655 │ INFO │ [workflow_manager] │ Submitting 116 tasks/blocks for execution
+2025-12-07 16:54:45.669 │ INFO │ [execution.backend(dragon)] │ Submitted batch of 116 tasks for execution
+2025-12-07 16:54:54.587 │ INFO │ [workflow_manager] │ task.000201 is in DONE state
+2025-12-07 16:54:54.588 │ INFO │ [workflow_manager] │ task.000202 is in DONE state
+2025-12-07 16:54:54.588 │ INFO │ [workflow_manager] │ task.000203 is in DONE state
+2025-12-07 16:54:54.588 │ INFO │ [workflow_manager] │ task.000204 is in DONE state
+2025-12-07 16:54:54.588 │ INFO │ [workflow_manager] │ task.000205 is in DONE state
+2025-12-07 16:54:54.588 │ INFO │ [workflow_manager] │ task.000206 is in DONE state
+2025-12-07 16:54:54.588 │ INFO │ [workflow_manager] │ task.000207 is in DONE state
+2025-12-07 16:54:54.589 │ INFO │ [workflow_manager] │ task.000208 is in DONE state
+2025-12-07 16:54:54.589 │ INFO │ [workflow_manager] │ task.000209 is in DONE state
+2025-12-07 16:54:54.589 │ INFO │ [workflow_manager] │ task.000210 is in DONE state
+2025-12-07 16:54:54.589 │ INFO │ [workflow_manager] │ task.000211 is in DONE state
+2025-12-07 16:54:54.590 │ INFO │ [workflow_manager] │ Submitting 11 tasks/blocks for execution
+2025-12-07 16:54:54.593 │ INFO │ [execution.backend(dragon)] │ Submitted batch of 11 tasks for execution
+2025-12-07 16:55:13.646 │ INFO │ [vllm] │ Batch complete: 10000 prompts processed
+2025-12-07 16:55:13.668 │ INFO │ [access] │ 172.18.92.43 [07/Dec/2025:16:53:00 -0500] "POST /generate HTTP/1.1" 200 561765 "-" "Python/3.11 aiohttp/3.13.2"
+2025-12-07 16:55:13.674 │ INFO │ [access] │ 172.18.92.43 [07/Dec/2025:16:53:00 -0500] "POST /generate HTTP/1.1" 200 562046 "-" "Python/3.11 aiohttp/3.13.2"
+2025-12-07 16:55:13.680 │ INFO │ [access] │ 172.18.92.43 [07/Dec/2025:16:53:00 -0500] "POST /generate HTTP/1.1" 200 562302 "-" "Python/3.11 aiohttp/3.13.2"
+2025-12-07 16:55:13.686 │ INFO │ [access] │ 172.18.92.43 [07/Dec/2025:16:53:00 -0500] "POST /generate HTTP/1.1" 200 562183 "-" "Python/3.11 aiohttp/3.13.2"
+2025-12-07 16:55:13.692 │ INFO │ [access] │ 172.18.92.43 [07/Dec/2025:16:53:00 -0500] "POST /generate HTTP/1.1" 200 561981 "-" "Python/3.11 aiohttp/3.13.2"
+2025-12-07 16:55:13.697 │ INFO │ [access] │ 172.18.92.43 [07/Dec/2025:16:53:00 -0500] "POST /generate HTTP/1.1" 200 560968 "-" "Python/3.11 aiohttp/3.13.2"
+2025-12-07 16:55:13.703 │ INFO │ [access] │ 172.18.92.43 [07/Dec/2025:16:53:00 -0500] "POST /generate HTTP/1.1" 200 562281 "-" "Python/3.11 aiohttp/3.13.2"
+2025-12-07 16:55:13.709 │ INFO │ [access] │ 172.18.92.43 [07/Dec/2025:16:53:00 -0500] "POST /generate HTTP/1.1" 200 561600 "-" "Python/3.11 aiohttp/3.13.2"
+2025-12-07 16:55:13.715 │ INFO │ [access] │ 172.18.92.43 [07/Dec/2025:16:53:00 -0500] "POST /generate HTTP/1.1" 200 562288 "-" "Python/3.11 aiohttp/3.13.2"
+2025-12-07 16:55:13.721 │ INFO │ [access] │ 172.18.92.43 [07/Dec/2025:16:53:00 -0500] "POST /generate HTTP/1.1" 200 561903 "-" "Python/3.11 aiohttp/3.13.2"
+2025-12-07 16:55:13.779 │ INFO │ [vllm] │ Batch complete: 10000 prompts processed
+2025-12-07 16:55:13.882 │ INFO │ [access] │ 172.18.92.43 [07/Dec/2025:16:53:00 -0500] "POST /generate HTTP/1.1" 200 563948 "-" "Python/3.11 aiohttp/3.13.2"
+2025-12-07 16:55:13.888 │ INFO │ [access] │ 172.18.92.43 [07/Dec/2025:16:53:00 -0500] "POST /generate HTTP/1.1" 200 564053 "-" "Python/3.11 aiohttp/3.13.2"
+2025-12-07 16:55:13.894 │ INFO │ [access] │ 172.18.92.43 [07/Dec/2025:16:53:00 -0500] "POST /generate HTTP/1.1" 200 564278 "-" "Python/3.11 aiohttp/3.13.2"
+2025-12-07 16:55:13.900 │ INFO │ [access] │ 172.18.92.43 [07/Dec/2025:16:53:00 -0500] "POST /generate HTTP/1.1" 200 563872 "-" "Python/3.11 aiohttp/3.13.2"
+2025-12-07 16:55:13.906 │ INFO │ [access] │ 172.18.92.43 [07/Dec/2025:16:53:00 -0500] "POST /generate HTTP/1.1" 200 563980 "-" "Python/3.11 aiohttp/3.13.2"
+2025-12-07 16:55:13.912 │ INFO │ [access] │ 172.18.92.43 [07/Dec/2025:16:53:00 -0500] "POST /generate HTTP/1.1" 200 563661 "-" "Python/3.11 aiohttp/3.13.2"
+2025-12-07 16:55:13.918 │ INFO │ [access] │ 172.18.92.43 [07/Dec/2025:16:53:00 -0500] "POST /generate HTTP/1.1" 200 563969 "-" "Python/3.11 aiohttp/3.13.2"
+2025-12-07 16:55:13.924 │ INFO │ [access] │ 172.18.92.43 [07/Dec/2025:16:53:00 -0500] "POST /generate HTTP/1.1" 200 563601 "-" "Python/3.11 aiohttp/3.13.2"
+2025-12-07 16:55:13.929 │ INFO │ [access] │ 172.18.92.43 [07/Dec/2025:16:53:00 -0500] "POST /generate HTTP/1.1" 200 564286 "-" "Python/3.11 aiohttp/3.13.2"
+2025-12-07 16:55:13.936 │ INFO │ [access] │ 172.18.92.43 [07/Dec/2025:16:53:00 -0500] "POST /generate HTTP/1.1" 200 563567 "-" "Python/3.11 aiohttp/3.13.2"
+2025-12-07 16:55:14.056 │ INFO │ [vllm] │ Batch complete: 10000 prompts processed
+2025-12-07 16:55:14.097 │ INFO │ [vllm] │ Batch complete: 10000 prompts processed
+2025-12-07 16:55:14.107 │ INFO │ [access] │ 172.18.92.43 [07/Dec/2025:16:53:00 -0500] "POST /generate HTTP/1.1" 200 560972 "-" "Python/3.11 aiohttp/3.13.2"
+2025-12-07 16:55:14.113 │ INFO │ [access] │ 172.18.92.43 [07/Dec/2025:16:53:00 -0500] "POST /generate HTTP/1.1" 200 560953 "-" "Python/3.11 aiohttp/3.13.2"
+2025-12-07 16:55:14.119 │ INFO │ [access] │ 172.18.92.43 [07/Dec/2025:16:53:00 -0500] "POST /generate HTTP/1.1" 200 561303 "-" "Python/3.11 aiohttp/3.13.2"
+2025-12-07 16:55:14.125 │ INFO │ [access] │ 172.18.92.43 [07/Dec/2025:16:53:00 -0500] "POST /generate HTTP/1.1" 200 561036 "-" "Python/3.11 aiohttp/3.13.2"
+2025-12-07 16:55:14.131 │ INFO │ [access] │ 172.18.92.43 [07/Dec/2025:16:53:00 -0500] "POST /generate HTTP/1.1" 200 560817 "-" "Python/3.11 aiohttp/3.13.2"
+2025-12-07 16:55:14.137 │ INFO │ [access] │ 172.18.92.43 [07/Dec/2025:16:53:00 -0500] "POST /generate HTTP/1.1" 200 560661 "-" "Python/3.11 aiohttp/3.13.2"
+2025-12-07 16:55:14.143 │ INFO │ [access] │ 172.18.92.43 [07/Dec/2025:16:53:00 -0500] "POST /generate HTTP/1.1" 200 561274 "-" "Python/3.11 aiohttp/3.13.2"
+2025-12-07 16:55:14.149 │ INFO │ [access] │ 172.18.92.43 [07/Dec/2025:16:53:00 -0500] "POST /generate HTTP/1.1" 200 560319 "-" "Python/3.11 aiohttp/3.13.2"
+2025-12-07 16:55:14.155 │ INFO │ [access] │ 172.18.92.43 [07/Dec/2025:16:53:00 -0500] "POST /generate HTTP/1.1" 200 561286 "-" "Python/3.11 aiohttp/3.13.2"
+2025-12-07 16:55:14.161 │ INFO │ [access] │ 172.18.92.43 [07/Dec/2025:16:53:00 -0500] "POST /generate HTTP/1.1" 200 560905 "-" "Python/3.11 aiohttp/3.13.2"
+2025-12-07 16:55:14.168 │ INFO │ [access] │ 172.18.92.43 [07/Dec/2025:16:53:00 -0500] "POST /generate HTTP/1.1" 200 561943 "-" "Python/3.11 aiohttp/3.13.2"
+2025-12-07 16:55:14.174 │ INFO │ [access] │ 172.18.92.43 [07/Dec/2025:16:53:00 -0500] "POST /generate HTTP/1.1" 200 561956 "-" "Python/3.11 aiohttp/3.13.2"
+2025-12-07 16:55:14.180 │ INFO │ [access] │ 172.18.92.43 [07/Dec/2025:16:53:00 -0500] "POST /generate HTTP/1.1" 200 562303 "-" "Python/3.11 aiohttp/3.13.2"
+2025-12-07 16:55:14.186 │ INFO │ [access] │ 172.18.92.43 [07/Dec/2025:16:53:00 -0500] "POST /generate HTTP/1.1" 200 562183 "-" "Python/3.11 aiohttp/3.13.2"
+2025-12-07 16:55:14.191 │ INFO │ [access] │ 172.18.92.43 [07/Dec/2025:16:53:00 -0500] "POST /generate HTTP/1.1" 200 561641 "-" "Python/3.11 aiohttp/3.13.2"
+2025-12-07 16:55:14.197 │ INFO │ [access] │ 172.18.92.43 [07/Dec/2025:16:53:00 -0500] "POST /generate HTTP/1.1" 200 561659 "-" "Python/3.11 aiohttp/3.13.2"
+2025-12-07 16:55:14.203 │ INFO │ [access] │ 172.18.92.43 [07/Dec/2025:16:53:00 -0500] "POST /generate HTTP/1.1" 200 562301 "-" "Python/3.11 aiohttp/3.13.2"
+2025-12-07 16:55:14.209 │ INFO │ [access] │ 172.18.92.43 [07/Dec/2025:16:53:00 -0500] "POST /generate HTTP/1.1" 200 561265 "-" "Python/3.11 aiohttp/3.13.2"
+2025-12-07 16:55:14.215 │ INFO │ [access] │ 172.18.92.43 [07/Dec/2025:16:53:00 -0500] "POST /generate HTTP/1.1" 200 562288 "-" "Python/3.11 aiohttp/3.13.2"
+2025-12-07 16:55:14.221 │ INFO │ [access] │ 172.18.92.43 [07/Dec/2025:16:53:00 -0500] "POST /generate HTTP/1.1" 200 561904 "-" "Python/3.11 aiohttp/3.13.2"
+2025-12-07 16:55:15.162 │ INFO │ [vllm] │ Processing batch: 10 requests, 10000 total prompts
+2025-12-07 16:55:15.180 │ INFO │ [vllm] │ Processing batch: 10 requests, 10000 total prompts
+2025-12-07 16:55:15.199 │ INFO │ [vllm] │ Processing batch: 10 requests, 10000 total prompts
+2025-12-07 16:55:15.215 │ INFO │ [vllm] │ Processing batch: 10 requests, 10000 total prompts
+2025-12-07 16:55:29.607 │ INFO │ [workflow_manager] │ task.000212 is in DONE state
+2025-12-07 16:55:29.607 │ INFO │ [workflow_manager] │ task.000213 is in DONE state
+2025-12-07 16:55:29.608 │ INFO │ [workflow_manager] │ task.000214 is in DONE state
+2025-12-07 16:55:29.608 │ INFO │ [workflow_manager] │ task.000215 is in DONE state
+2025-12-07 16:55:29.608 │ INFO │ [workflow_manager] │ task.000216 is in DONE state
+2025-12-07 16:55:29.609 │ INFO │ [workflow_manager] │ Submitting 4 tasks/blocks for execution
+2025-12-07 16:55:29.609 │ INFO │ [workflow_manager] │ task.000217 is in DONE state
+2025-12-07 16:55:29.609 │ INFO │ [workflow_manager] │ task.000218 is in DONE state
+2025-12-07 16:55:29.609 │ INFO │ [workflow_manager] │ task.000219 is in DONE state
+2025-12-07 16:55:29.610 │ INFO │ [workflow_manager] │ task.000220 is in DONE state
+2025-12-07 16:55:29.610 │ INFO │ [workflow_manager] │ task.000221 is in DONE state
+2025-12-07 16:55:29.610 │ INFO │ [workflow_manager] │ task.000222 is in DONE state
+2025-12-07 16:55:29.611 │ INFO │ [workflow_manager] │ task.000223 is in DONE state
+2025-12-07 16:55:29.611 │ INFO │ [workflow_manager] │ task.000224 is in DONE state
+2025-12-07 16:55:29.611 │ INFO │ [execution.backend(dragon)] │ Submitted batch of 4 tasks for execution
+2025-12-07 16:55:29.611 │ INFO │ [workflow_manager] │ task.000225 is in DONE state
+2025-12-07 16:55:29.612 │ INFO │ [workflow_manager] │ task.000226 is in DONE state
+2025-12-07 16:55:29.612 │ INFO │ [workflow_manager] │ task.000227 is in DONE state
+2025-12-07 16:55:29.612 │ INFO │ [workflow_manager] │ task.000228 is in DONE state
+2025-12-07 16:55:29.613 │ INFO │ [workflow_manager] │ task.000229 is in DONE state
+2025-12-07 16:55:29.613 │ INFO │ [workflow_manager] │ task.000230 is in DONE state
+2025-12-07 16:55:29.613 │ INFO │ [workflow_manager] │ task.000231 is in DONE state
+2025-12-07 16:55:29.613 │ INFO │ [workflow_manager] │ task.000232 is in DONE state
+2025-12-07 16:55:29.613 │ INFO │ [workflow_manager] │ task.000233 is in DONE state
+2025-12-07 16:55:29.613 │ INFO │ [workflow_manager] │ task.000234 is in DONE state
+2025-12-07 16:55:29.613 │ INFO │ [workflow_manager] │ task.000235 is in DONE state
+2025-12-07 16:55:29.613 │ INFO │ [workflow_manager] │ task.000236 is in DONE state
+2025-12-07 16:55:29.613 │ INFO │ [workflow_manager] │ task.000237 is in DONE state
+2025-12-07 16:55:29.614 │ INFO │ [workflow_manager] │ task.000238 is in DONE state
+2025-12-07 16:55:29.614 │ INFO │ [workflow_manager] │ task.000239 is in DONE state
+2025-12-07 16:55:29.615 │ INFO │ [workflow_manager] │ task.000240 is in DONE state
+2025-12-07 16:55:29.623 │ INFO │ [workflow_manager] │ Submitting 25 tasks/blocks for execution
+2025-12-07 16:55:29.628 │ INFO │ [execution.backend(dragon)] │ Submitted batch of 25 tasks for execution
+2025-12-07 16:55:30.646 │ INFO │ [workflow_manager] │ task.000241 is in DONE state
+2025-12-07 16:55:30.646 │ INFO │ [workflow_manager] │ task.000242 is in DONE state
+2025-12-07 16:55:30.646 │ INFO │ [workflow_manager] │ task.000243 is in DONE state
+2025-12-07 16:55:30.647 │ INFO │ [workflow_manager] │ task.000244 is in DONE state
+2025-12-07 16:55:30.647 │ INFO │ [workflow_manager] │ task.000245 is in DONE state
+2025-12-07 16:55:30.647 │ INFO │ [workflow_manager] │ task.000246 is in DONE state
+2025-12-07 16:55:30.647 │ INFO │ [workflow_manager] │ task.000247 is in DONE state
+2025-12-07 16:55:30.647 │ INFO │ [workflow_manager] │ task.000248 is in DONE state
+2025-12-07 16:55:30.647 │ INFO │ [workflow_manager] │ task.000249 is in DONE state
+2025-12-07 16:55:30.647 │ INFO │ [workflow_manager] │ task.000250 is in DONE state
+2025-12-07 16:55:30.647 │ INFO │ [workflow_manager] │ task.000251 is in DONE state
+2025-12-07 16:55:30.647 │ INFO │ [workflow_manager] │ task.000252 is in DONE state
+2025-12-07 16:55:30.648 │ INFO │ [workflow_manager] │ task.000253 is in DONE state
+2025-12-07 16:55:30.648 │ INFO │ [workflow_manager] │ task.000254 is in DONE state
+2025-12-07 16:55:30.648 │ INFO │ [workflow_manager] │ task.000255 is in DONE state
+2025-12-07 16:55:30.648 │ INFO │ [workflow_manager] │ task.000256 is in DONE state
+2025-12-07 16:55:30.648 │ INFO │ [workflow_manager] │ task.000257 is in DONE state
+2025-12-07 16:55:30.648 │ INFO │ [workflow_manager] │ task.000258 is in DONE state
+2025-12-07 16:55:30.648 │ INFO │ [workflow_manager] │ task.000259 is in DONE state
+2025-12-07 16:55:30.648 │ INFO │ [workflow_manager] │ task.000260 is in DONE state
+2025-12-07 16:55:30.648 │ INFO │ [workflow_manager] │ task.000261 is in DONE state
+2025-12-07 16:55:30.649 │ INFO │ [workflow_manager] │ task.000262 is in DONE state
+2025-12-07 16:55:30.649 │ INFO │ [workflow_manager] │ task.000263 is in DONE state
+2025-12-07 16:55:30.649 │ INFO │ [workflow_manager] │ task.000264 is in DONE state
+2025-12-07 16:55:30.649 │ INFO │ [workflow_manager] │ task.000265 is in DONE state
+2025-12-07 16:55:30.649 │ INFO │ [workflow_manager] │ task.000266 is in DONE state
+2025-12-07 16:55:30.649 │ INFO │ [workflow_manager] │ task.000267 is in DONE state
+2025-12-07 16:55:30.649 │ INFO │ [workflow_manager] │ task.000268 is in DONE state
+2025-12-07 16:55:30.649 │ INFO │ [workflow_manager] │ task.000269 is in DONE state
+2025-12-07 16:55:30.650 │ INFO │ [workflow_manager] │ task.000270 is in DONE state
+2025-12-07 16:55:30.650 │ INFO │ [workflow_manager] │ task.000271 is in DONE state
+2025-12-07 16:55:30.650 │ INFO │ [workflow_manager] │ task.000272 is in DONE state
+2025-12-07 16:55:30.650 │ INFO │ [workflow_manager] │ task.000273 is in DONE state
+2025-12-07 16:55:30.650 │ INFO │ [workflow_manager] │ task.000274 is in DONE state
+2025-12-07 16:55:30.651 │ INFO │ [workflow_manager] │ task.000275 is in DONE state
+2025-12-07 16:55:30.651 │ INFO │ [workflow_manager] │ task.000276 is in DONE state
+2025-12-07 16:55:30.651 │ INFO │ [workflow_manager] │ task.000277 is in DONE state
+2025-12-07 16:55:30.651 │ INFO │ [workflow_manager] │ task.000278 is in DONE state
+2025-12-07 16:55:30.651 │ INFO │ [workflow_manager] │ task.000279 is in DONE state
+2025-12-07 16:55:30.651 │ INFO │ [workflow_manager] │ task.000280 is in DONE state
+2025-12-07 16:55:30.651 │ INFO │ [workflow_manager] │ task.000281 is in DONE state
+2025-12-07 16:55:30.651 │ INFO │ [workflow_manager] │ task.000282 is in DONE state
+2025-12-07 16:55:30.652 │ INFO │ [workflow_manager] │ task.000283 is in DONE state
+2025-12-07 16:55:30.652 │ INFO │ [workflow_manager] │ task.000284 is in DONE state
+2025-12-07 16:56:34.600 │ INFO │ [workflow_manager] │ task.000401 is in DONE state
+2025-12-07 16:56:34.600 │ INFO │ [workflow_manager] │ task.000402 is in DONE state
+2025-12-07 16:56:34.601 │ INFO │ [workflow_manager] │ task.000403 is in DONE state
+2025-12-07 16:56:34.601 │ INFO │ [workflow_manager] │ task.000404 is in DONE state
+2025-12-07 16:56:34.601 │ INFO │ [workflow_manager] │ task.000405 is in DONE state
+2025-12-07 16:56:34.601 │ INFO │ [workflow_manager] │ task.000406 is in DONE state
+2025-12-07 16:56:34.601 │ INFO │ [workflow_manager] │ task.000407 is in DONE state
+2025-12-07 16:56:34.601 │ INFO │ [workflow_manager] │ task.000408 is in DONE state
+2025-12-07 16:56:34.601 │ INFO │ [workflow_manager] │ task.000409 is in DONE state
+2025-12-07 16:56:34.601 │ INFO │ [workflow_manager] │ task.000410 is in DONE state
+2025-12-07 16:56:34.601 │ INFO │ [workflow_manager] │ task.000411 is in DONE state
+2025-12-07 16:56:34.603 │ INFO │ [workflow_manager] │ Submitting 11 tasks/blocks for execution
+2025-12-07 16:56:34.605 │ INFO │ [execution.backend(dragon)] │ Submitted batch of 11 tasks for execution
+2025-12-07 16:56:39.617 │ INFO │ [workflow_manager] │ task.000412 is in DONE state
+2025-12-07 16:56:39.617 │ INFO │ [workflow_manager] │ task.000413 is in DONE state
+2025-12-07 16:56:39.617 │ INFO │ [workflow_manager] │ task.000414 is in DONE state
+2025-12-07 16:56:39.617 │ INFO │ [workflow_manager] │ task.000415 is in DONE state
+2025-12-07 16:56:39.618 │ INFO │ [workflow_manager] │ Submitting 4 tasks/blocks for execution
+2025-12-07 16:56:39.619 │ INFO │ [execution.backend(dragon)] │ Submitted batch of 4 tasks for execution
+2025-12-07 16:56:39.633 │ INFO │ [workflow_manager] │ task.000416 is in DONE state
+2025-12-07 16:56:39.633 │ INFO │ [workflow_manager] │ task.000417 is in DONE state
+2025-12-07 16:56:39.633 │ INFO │ [workflow_manager] │ task.000418 is in DONE state
+2025-12-07 16:56:39.633 │ INFO │ [workflow_manager] │ task.000419 is in DONE state
+2025-12-07 16:56:39.633 │ INFO │ [workflow_manager] │ task.000420 is in DONE state
+2025-12-07 16:56:39.633 │ INFO │ [workflow_manager] │ task.000421 is in DONE state
+2025-12-07 16:56:39.633 │ INFO │ [workflow_manager] │ task.000422 is in DONE state
+2025-12-07 16:56:39.634 │ INFO │ [workflow_manager] │ task.000423 is in DONE state
+2025-12-07 16:56:39.634 │ INFO │ [workflow_manager] │ Submitting 7 tasks/blocks for execution
+2025-12-07 16:56:39.634 │ INFO │ [workflow_manager] │ task.000424 is in DONE state
+2025-12-07 16:56:39.635 │ INFO │ [workflow_manager] │ task.000425 is in DONE state
+2025-12-07 16:56:39.635 │ INFO │ [workflow_manager] │ task.000426 is in DONE state
+2025-12-07 16:56:39.635 │ INFO │ [workflow_manager] │ task.000427 is in DONE state
+2025-12-07 16:56:39.636 │ INFO │ [workflow_manager] │ task.000428 is in DONE state
+2025-12-07 16:56:39.636 │ INFO │ [workflow_manager] │ task.000429 is in DONE state
+2025-12-07 16:56:39.636 │ INFO │ [workflow_manager] │ task.000430 is in DONE state
+2025-12-07 16:56:39.636 │ INFO │ [execution.backend(dragon)] │ Submitted batch of 7 tasks for execution
+2025-12-07 16:56:39.636 │ INFO │ [workflow_manager] │ task.000431 is in DONE state
+2025-12-07 16:56:39.637 │ INFO │ [workflow_manager] │ task.000432 is in DONE state
+2025-12-07 16:56:39.637 │ INFO │ [workflow_manager] │ task.000433 is in DONE state
+2025-12-07 16:56:39.637 │ INFO │ [workflow_manager] │ task.000434 is in DONE state
+2025-12-07 16:56:39.638 │ INFO │ [workflow_manager] │ task.000435 is in DONE state
+2025-12-07 16:56:39.638 │ INFO │ [workflow_manager] │ task.000436 is in DONE state
+2025-12-07 16:56:39.638 │ INFO │ [workflow_manager] │ task.000437 is in DONE state
+2025-12-07 16:56:39.638 │ INFO │ [workflow_manager] │ task.000438 is in DONE state
+2025-12-07 16:56:39.638 │ INFO │ [workflow_manager] │ task.000439 is in DONE state
+2025-12-07 16:56:39.638 │ INFO │ [workflow_manager] │ task.000440 is in DONE state
+2025-12-07 16:56:39.647 │ INFO │ [workflow_manager] │ Submitting 18 tasks/blocks for execution
+2025-12-07 16:56:39.649 │ INFO │ [execution.backend(dragon)] │ Submitted batch of 18 tasks for execution
+2025-12-07 16:56:40.672 │ INFO │ [workflow_manager] │ task.000285 is in DONE state
+2025-12-07 16:56:40.672 │ INFO │ [workflow_manager] │ task.000286 is in DONE state
+2025-12-07 16:56:40.672 │ INFO │ [workflow_manager] │ task.000287 is in DONE state
+2025-12-07 16:56:40.672 │ INFO │ [workflow_manager] │ task.000288 is in DONE state
+2025-12-07 16:56:40.673 │ INFO │ [workflow_manager] │ task.000289 is in DONE state
+2025-12-07 16:56:40.673 │ INFO │ [workflow_manager] │ task.000290 is in DONE state
+2025-12-07 16:56:40.673 │ INFO │ [workflow_manager] │ task.000291 is in DONE state
+2025-12-07 16:56:40.673 │ INFO │ [workflow_manager] │ task.000292 is in DONE state
+2025-12-07 16:56:40.673 │ INFO │ [workflow_manager] │ task.000293 is in DONE state
+2025-12-07 16:56:40.673 │ INFO │ [workflow_manager] │ task.000294 is in DONE state
+2025-12-07 16:56:40.673 │ INFO │ [workflow_manager] │ task.000295 is in DONE state
+2025-12-07 16:56:40.673 │ INFO │ [workflow_manager] │ task.000296 is in DONE state
+2025-12-07 16:56:40.673 │ INFO │ [workflow_manager] │ task.000297 is in DONE state
+2025-12-07 16:56:40.674 │ INFO │ [workflow_manager] │ task.000298 is in DONE state
+2025-12-07 16:56:40.674 │ INFO │ [workflow_manager] │ task.000299 is in DONE state
+2025-12-07 16:56:40.674 │ INFO │ [workflow_manager] │ task.000300 is in DONE state
+2025-12-07 16:56:40.674 │ INFO │ [workflow_manager] │ task.000301 is in DONE state
+2025-12-07 16:56:40.674 │ INFO │ [workflow_manager] │ task.000302 is in DONE state
+2025-12-07 16:56:40.674 │ INFO │ [workflow_manager] │ task.000303 is in DONE state
+2025-12-07 16:56:40.674 │ INFO │ [workflow_manager] │ task.000304 is in DONE state
+2025-12-07 16:56:40.674 │ INFO │ [workflow_manager] │ task.000305 is in DONE state
+2025-12-07 16:56:40.674 │ INFO │ [workflow_manager] │ task.000306 is in DONE state
+2025-12-07 16:56:40.675 │ INFO │ [workflow_manager] │ task.000307 is in DONE state
+2025-12-07 16:56:40.675 │ INFO │ [workflow_manager] │ task.000308 is in DONE state
+2025-12-07 16:56:40.675 │ INFO │ [workflow_manager] │ task.000309 is in DONE state
+2025-12-07 16:56:40.675 │ INFO │ [workflow_manager] │ task.000310 is in DONE state
+2025-12-07 16:56:40.675 │ INFO │ [workflow_manager] │ task.000311 is in DONE state
+2025-12-07 16:56:40.675 │ INFO │ [workflow_manager] │ task.000312 is in DONE state
+2025-12-07 16:56:40.676 │ INFO │ [workflow_manager] │ task.000313 is in DONE state
+2025-12-07 16:56:40.676 │ INFO │ [workflow_manager] │ task.000314 is in DONE state
+2025-12-07 16:56:40.676 │ INFO │ [workflow_manager] │ task.000315 is in DONE state
+2025-12-07 16:56:40.676 │ INFO │ [workflow_manager] │ task.000316 is in DONE state
+2025-12-07 16:56:40.676 │ INFO │ [workflow_manager] │ task.000317 is in DONE state
+2025-12-07 16:56:40.676 │ INFO │ [workflow_manager] │ task.000318 is in DONE state
+2025-12-07 16:56:40.676 │ INFO │ [workflow_manager] │ task.000319 is in DONE state
+2025-12-07 16:56:40.676 │ INFO │ [workflow_manager] │ task.000320 is in DONE state
+2025-12-07 16:56:40.676 │ INFO │ [workflow_manager] │ task.000321 is in DONE state
+2025-12-07 16:56:40.676 │ INFO │ [workflow_manager] │ task.000322 is in DONE state
+2025-12-07 16:56:40.677 │ INFO │ [workflow_manager] │ task.000323 is in DONE state
+2025-12-07 16:56:40.677 │ INFO │ [workflow_manager] │ task.000324 is in DONE state
+2025-12-07 16:56:40.677 │ INFO │ [workflow_manager] │ task.000325 is in DONE state
+2025-12-07 16:56:40.677 │ INFO │ [workflow_manager] │ task.000326 is in DONE state
+2025-12-07 16:56:40.677 │ INFO │ [workflow_manager] │ task.000327 is in DONE state
+2025-12-07 16:56:40.677 │ INFO │ [workflow_manager] │ task.000328 is in DONE state
+2025-12-07 16:56:40.677 │ INFO │ [workflow_manager] │ task.000329 is in DONE state
+2025-12-07 16:56:40.677 │ INFO │ [workflow_manager] │ task.000330 is in DONE state
+2025-12-07 16:56:40.677 │ INFO │ [workflow_manager] │ task.000331 is in DONE state
+2025-12-07 16:56:40.677 │ INFO │ [workflow_manager] │ task.000332 is in DONE state
+2025-12-07 16:56:40.678 │ INFO │ [workflow_manager] │ task.000333 is in DONE state
+2025-12-07 16:56:40.678 │ INFO │ [workflow_manager] │ task.000334 is in DONE state
+2025-12-07 16:56:40.678 │ INFO │ [workflow_manager] │ task.000335 is in DONE state
+2025-12-07 16:56:40.678 │ INFO │ [workflow_manager] │ task.000336 is in DONE state
+2025-12-07 16:56:40.678 │ INFO │ [workflow_manager] │ task.000337 is in DONE state
+2025-12-07 16:56:40.678 │ INFO │ [workflow_manager] │ task.000338 is in DONE state
+2025-12-07 16:56:40.678 │ INFO │ [workflow_manager] │ task.000339 is in DONE state
+2025-12-07 16:56:40.678 │ INFO │ [workflow_manager] │ task.000340 is in DONE state
+2025-12-07 16:56:40.678 │ INFO │ [workflow_manager] │ task.000341 is in DONE state
+2025-12-07 16:56:40.679 │ INFO │ [workflow_manager] │ task.000342 is in DONE state
+2025-12-07 16:56:40.679 │ INFO │ [workflow_manager] │ task.000343 is in DONE state
+2025-12-07 16:56:40.679 │ INFO │ [workflow_manager] │ task.000344 is in DONE state
+2025-12-07 16:56:40.679 │ INFO │ [workflow_manager] │ task.000345 is in DONE state
+2025-12-07 16:56:40.679 │ INFO │ [workflow_manager] │ task.000346 is in DONE state
+2025-12-07 16:56:40.679 │ INFO │ [workflow_manager] │ task.000347 is in DONE state
+2025-12-07 16:56:40.679 │ INFO │ [workflow_manager] │ task.000348 is in DONE state
+2025-12-07 16:56:40.679 │ INFO │ [workflow_manager] │ task.000349 is in DONE state
+2025-12-07 16:56:40.679 │ INFO │ [workflow_manager] │ task.000350 is in DONE state
+2025-12-07 16:56:40.679 │ INFO │ [workflow_manager] │ task.000351 is in DONE state
+2025-12-07 16:56:40.680 │ INFO │ [workflow_manager] │ task.000352 is in DONE state
+2025-12-07 16:56:40.680 │ INFO │ [workflow_manager] │ task.000353 is in DONE state
+2025-12-07 16:56:40.680 │ INFO │ [workflow_manager] │ task.000354 is in DONE state
+2025-12-07 16:56:40.680 │ INFO │ [workflow_manager] │ task.000355 is in DONE state
+2025-12-07 16:56:40.680 │ INFO │ [workflow_manager] │ task.000356 is in DONE state
+2025-12-07 16:56:40.680 │ INFO │ [workflow_manager] │ task.000357 is in DONE state
+2025-12-07 16:56:40.681 │ INFO │ [workflow_manager] │ task.000358 is in DONE state
+2025-12-07 16:56:40.681 │ INFO │ [workflow_manager] │ task.000359 is in DONE state
+2025-12-07 16:56:40.681 │ INFO │ [workflow_manager] │ task.000360 is in DONE state
+2025-12-07 16:56:40.681 │ INFO │ [workflow_manager] │ task.000361 is in DONE state
+2025-12-07 16:56:40.681 │ INFO │ [workflow_manager] │ task.000362 is in DONE state
+2025-12-07 16:56:40.681 │ INFO │ [workflow_manager] │ task.000363 is in DONE state
+2025-12-07 16:56:40.681 │ INFO │ [workflow_manager] │ task.000364 is in DONE state
+2025-12-07 16:56:40.681 │ INFO │ [workflow_manager] │ task.000365 is in DONE state
+2025-12-07 16:56:40.681 │ INFO │ [workflow_manager] │ task.000366 is in DONE state
+2025-12-07 16:56:40.682 │ INFO │ [workflow_manager] │ task.000367 is in DONE state
+2025-12-07 16:56:40.682 │ INFO │ [workflow_manager] │ task.000368 is in DONE state
+2025-12-07 16:56:40.682 │ INFO │ [workflow_manager] │ task.000369 is in DONE state
+2025-12-07 16:56:40.682 │ INFO │ [workflow_manager] │ task.000370 is in DONE state
+2025-12-07 16:56:40.682 │ INFO │ [workflow_manager] │ task.000371 is in DONE state
+2025-12-07 16:56:40.682 │ INFO │ [workflow_manager] │ task.000372 is in DONE state
+2025-12-07 16:56:40.682 │ INFO │ [workflow_manager] │ task.000373 is in DONE state
+2025-12-07 16:56:40.682 │ INFO │ [workflow_manager] │ task.000374 is in DONE state
+2025-12-07 16:56:40.682 │ INFO │ [workflow_manager] │ task.000375 is in DONE state
+2025-12-07 16:56:40.682 │ INFO │ [workflow_manager] │ task.000376 is in DONE state
+2025-12-07 16:56:40.683 │ INFO │ [workflow_manager] │ task.000377 is in DONE state
+2025-12-07 16:56:40.683 │ INFO │ [workflow_manager] │ task.000378 is in DONE state
+2025-12-07 16:56:40.683 │ INFO │ [workflow_manager] │ task.000379 is in DONE state
+2025-12-07 16:56:40.683 │ INFO │ [workflow_manager] │ task.000380 is in DONE state
+2025-12-07 16:56:40.683 │ INFO │ [workflow_manager] │ task.000381 is in DONE state
+2025-12-07 16:56:40.683 │ INFO │ [workflow_manager] │ task.000382 is in DONE state
+2025-12-07 16:56:40.683 │ INFO │ [workflow_manager] │ task.000383 is in DONE state
+2025-12-07 16:56:40.683 │ INFO │ [workflow_manager] │ task.000384 is in DONE state
+2025-12-07 16:56:40.683 │ INFO │ [workflow_manager] │ task.000385 is in DONE state
+2025-12-07 16:56:40.684 │ INFO │ [workflow_manager] │ task.000386 is in DONE state
+2025-12-07 16:56:40.684 │ INFO │ [workflow_manager] │ task.000387 is in DONE state
+2025-12-07 16:56:40.684 │ INFO │ [workflow_manager] │ task.000388 is in DONE state
+2025-12-07 16:56:40.684 │ INFO │ [workflow_manager] │ task.000389 is in DONE state
+2025-12-07 16:56:40.684 │ INFO │ [workflow_manager] │ task.000390 is in DONE state
+2025-12-07 16:56:40.684 │ INFO │ [workflow_manager] │ task.000391 is in DONE state
+2025-12-07 16:56:40.684 │ INFO │ [workflow_manager] │ task.000392 is in DONE state
+2025-12-07 16:56:40.684 │ INFO │ [workflow_manager] │ task.000393 is in DONE state
+2025-12-07 16:56:40.684 │ INFO │ [workflow_manager] │ task.000394 is in DONE state
+2025-12-07 16:56:40.684 │ INFO │ [workflow_manager] │ task.000395 is in DONE state
+2025-12-07 16:56:40.685 │ INFO │ [workflow_manager] │ task.000396 is in DONE state
+2025-12-07 16:56:40.685 │ INFO │ [workflow_manager] │ task.000397 is in DONE state
+2025-12-07 16:56:40.685 │ INFO │ [workflow_manager] │ task.000398 is in DONE state
+2025-12-07 16:56:40.685 │ INFO │ [workflow_manager] │ task.000399 is in DONE state
+2025-12-07 16:56:40.685 │ INFO │ [workflow_manager] │ task.000400 is in DONE state
+2025-12-07 16:56:44.606 │ INFO │ [workflow_manager] │ task.000441 is in DONE state
+2025-12-07 16:56:44.606 │ INFO │ [workflow_manager] │ task.000442 is in DONE state
+2025-12-07 16:56:44.607 │ INFO │ [workflow_manager] │ task.000443 is in DONE state
+2025-12-07 16:56:44.607 │ INFO │ [workflow_manager] │ task.000444 is in DONE state
+2025-12-07 16:56:44.607 │ INFO │ [workflow_manager] │ task.000445 is in DONE state
+2025-12-07 16:56:44.607 │ INFO │ [workflow_manager] │ task.000446 is in DONE state
+2025-12-07 16:56:44.607 │ INFO │ [workflow_manager] │ task.000447 is in DONE state
+2025-12-07 16:56:44.608 │ INFO │ [workflow_manager] │ task.000448 is in DONE state
+2025-12-07 16:56:44.608 │ INFO │ [workflow_manager] │ task.000449 is in DONE state
+2025-12-07 16:56:44.608 │ INFO │ [workflow_manager] │ task.000450 is in DONE state
+2025-12-07 16:56:44.608 │ INFO │ [workflow_manager] │ task.000451 is in DONE state
+2025-12-07 16:56:49.619 │ INFO │ [workflow_manager] │ task.000452 is in DONE state
+2025-12-07 16:56:49.619 │ INFO │ [workflow_manager] │ task.000453 is in DONE state
+2025-12-07 16:56:49.620 │ INFO │ [workflow_manager] │ task.000454 is in DONE state
+2025-12-07 16:56:49.620 │ INFO │ [workflow_manager] │ task.000455 is in DONE state
+2025-12-07 16:56:49.637 │ INFO │ [workflow_manager] │ task.000456 is in DONE state
+2025-12-07 16:56:49.637 │ INFO │ [workflow_manager] │ task.000457 is in DONE state
+2025-12-07 16:56:49.638 │ INFO │ [workflow_manager] │ task.000458 is in DONE state
+2025-12-07 16:56:49.638 │ INFO │ [workflow_manager] │ task.000459 is in DONE state
+2025-12-07 16:56:49.638 │ INFO │ [workflow_manager] │ task.000460 is in DONE state
+2025-12-07 16:56:49.638 │ INFO │ [workflow_manager] │ task.000461 is in DONE state
+2025-12-07 16:56:49.638 │ INFO │ [workflow_manager] │ task.000462 is in DONE state
+2025-12-07 16:56:52.107 │ INFO │ [workflow_manager] │ task.000463 is in DONE state
+2025-12-07 16:56:52.107 │ INFO │ [workflow_manager] │ task.000464 is in DONE state
+2025-12-07 16:56:52.107 │ INFO │ [workflow_manager] │ task.000465 is in DONE state
+2025-12-07 16:56:52.107 │ INFO │ [workflow_manager] │ task.000466 is in DONE state
+2025-12-07 16:56:52.107 │ INFO │ [workflow_manager] │ task.000467 is in DONE state
+2025-12-07 16:56:52.108 │ INFO │ [workflow_manager] │ task.000468 is in DONE state
+2025-12-07 16:56:52.108 │ INFO │ [workflow_manager] │ task.000469 is in DONE state
+2025-12-07 16:56:52.108 │ INFO │ [workflow_manager] │ task.000470 is in DONE state
+2025-12-07 16:56:52.108 │ INFO │ [workflow_manager] │ task.000471 is in DONE state
+2025-12-07 16:56:52.108 │ INFO │ [workflow_manager] │ task.000472 is in DONE state
+2025-12-07 16:56:52.108 │ INFO │ [workflow_manager] │ task.000473 is in DONE state
+2025-12-07 16:56:52.108 │ INFO │ [workflow_manager] │ task.000474 is in DONE state
+2025-12-07 16:56:52.109 │ INFO │ [workflow_manager] │ task.000475 is in DONE state
+2025-12-07 16:56:52.109 │ INFO │ [workflow_manager] │ task.000476 is in DONE state
+2025-12-07 16:56:52.109 │ INFO │ [workflow_manager] │ task.000477 is in DONE state
+2025-12-07 16:56:52.109 │ INFO │ [workflow_manager] │ task.000478 is in DONE state
+2025-12-07 16:56:52.109 │ INFO │ [workflow_manager] │ task.000479 is in DONE state
+2025-12-07 16:56:52.110 │ INFO │ [workflow_manager] │ task.000480 is in DONE state
+2025-12-07 16:57:27.154 │ INFO │ [vllm] │ Batch complete: 10000 prompts processed
+2025-12-07 16:57:27.161 │ INFO │ [access] │ 172.18.92.43 [07/Dec/2025:16:55:14 -0500] "POST /generate HTTP/1.1" 200 563790 "-" "Python/3.11 aiohttp/3.13.2"
+2025-12-07 16:57:27.166 │ INFO │ [access] │ 172.18.92.43 [07/Dec/2025:16:55:14 -0500] "POST /generate HTTP/1.1" 200 564040 "-" "Python/3.11 aiohttp/3.13.2"
+2025-12-07 16:57:27.172 │ INFO │ [access] │ 172.18.92.43 [07/Dec/2025:16:55:14 -0500] "POST /generate HTTP/1.1" 200 563760 "-" "Python/3.11 aiohttp/3.13.2"
+2025-12-07 16:57:27.177 │ INFO │ [access] │ 172.18.92.43 [07/Dec/2025:16:55:14 -0500] "POST /generate HTTP/1.1" 200 564100 "-" "Python/3.11 aiohttp/3.13.2"
+2025-12-07 16:57:27.183 │ INFO │ [access] │ 172.18.92.43 [07/Dec/2025:16:55:14 -0500] "POST /generate HTTP/1.1" 200 564175 "-" "Python/3.11 aiohttp/3.13.2"
+2025-12-07 16:57:27.189 │ INFO │ [access] │ 172.18.92.43 [07/Dec/2025:16:55:14 -0500] "POST /generate HTTP/1.1" 200 564006 "-" "Python/3.11 aiohttp/3.13.2"
+2025-12-07 16:57:27.194 │ INFO │ [access] │ 172.18.92.43 [07/Dec/2025:16:55:14 -0500] "POST /generate HTTP/1.1" 200 564309 "-" "Python/3.11 aiohttp/3.13.2"
+2025-12-07 16:57:27.199 │ INFO │ [access] │ 172.18.92.43 [07/Dec/2025:16:55:14 -0500] "POST /generate HTTP/1.1" 200 564731 "-" "Python/3.11 aiohttp/3.13.2"
+2025-12-07 16:57:27.205 │ INFO │ [access] │ 172.18.92.43 [07/Dec/2025:16:55:14 -0500] "POST /generate HTTP/1.1" 200 563970 "-" "Python/3.11 aiohttp/3.13.2"
+2025-12-07 16:57:27.210 │ INFO │ [access] │ 172.18.92.43 [07/Dec/2025:16:55:14 -0500] "POST /generate HTTP/1.1" 200 564682 "-" "Python/3.11 aiohttp/3.13.2"
+2025-12-07 16:57:27.738 │ INFO │ [vllm] │ Batch complete: 10000 prompts processed
+2025-12-07 16:57:27.745 │ INFO │ [access] │ 172.18.92.43 [07/Dec/2025:16:55:14 -0500] "POST /generate HTTP/1.1" 200 560790 "-" "Python/3.11 aiohttp/3.13.2"
+2025-12-07 16:57:27.750 │ INFO │ [access] │ 172.18.92.43 [07/Dec/2025:16:55:14 -0500] "POST /generate HTTP/1.1" 200 560781 "-" "Python/3.11 aiohttp/3.13.2"
+2025-12-07 16:57:27.755 │ INFO │ [access] │ 172.18.92.43 [07/Dec/2025:16:55:14 -0500] "POST /generate HTTP/1.1" 200 561274 "-" "Python/3.11 aiohttp/3.13.2"
+2025-12-07 16:57:27.760 │ INFO │ [access] │ 172.18.92.43 [07/Dec/2025:16:55:14 -0500] "POST /generate HTTP/1.1" 200 561301 "-" "Python/3.11 aiohttp/3.13.2"
+2025-12-07 16:57:27.765 │ INFO │ [access] │ 172.18.92.43 [07/Dec/2025:16:55:14 -0500] "POST /generate HTTP/1.1" 200 561140 "-" "Python/3.11 aiohttp/3.13.2"
+2025-12-07 16:57:27.770 │ INFO │ [access] │ 172.18.92.43 [07/Dec/2025:16:55:14 -0500] "POST /generate HTTP/1.1" 200 560714 "-" "Python/3.11 aiohttp/3.13.2"
+2025-12-07 16:57:27.775 │ INFO │ [access] │ 172.18.92.43 [07/Dec/2025:16:55:14 -0500] "POST /generate HTTP/1.1" 200 561309 "-" "Python/3.11 aiohttp/3.13.2"
+2025-12-07 16:57:27.781 │ INFO │ [access] │ 172.18.92.43 [07/Dec/2025:16:55:14 -0500] "POST /generate HTTP/1.1" 200 561732 "-" "Python/3.11 aiohttp/3.13.2"
+2025-12-07 16:57:27.786 │ INFO │ [access] │ 172.18.92.43 [07/Dec/2025:16:55:14 -0500] "POST /generate HTTP/1.1" 200 560633 "-" "Python/3.11 aiohttp/3.13.2"
+2025-12-07 16:57:27.791 │ INFO │ [access] │ 172.18.92.43 [07/Dec/2025:16:55:14 -0500] "POST /generate HTTP/1.1" 200 561684 "-" "Python/3.11 aiohttp/3.13.2"
+2025-12-07 16:57:27.809 │ INFO │ [vllm] │ Batch complete: 10000 prompts processed
+2025-12-07 16:57:27.856 │ INFO │ [vllm] │ Batch complete: 10000 prompts processed
+2025-12-07 16:57:27.863 │ INFO │ [access] │ 172.18.92.43 [07/Dec/2025:16:55:14 -0500] "POST /generate HTTP/1.1" 200 563680 "-" "Python/3.11 aiohttp/3.13.2"
+2025-12-07 16:57:27.869 │ INFO │ [access] │ 172.18.92.43 [07/Dec/2025:16:55:14 -0500] "POST /generate HTTP/1.1" 200 563857 "-" "Python/3.11 aiohttp/3.13.2"
+2025-12-07 16:57:27.874 │ INFO │ [access] │ 172.18.92.43 [07/Dec/2025:16:55:14 -0500] "POST /generate HTTP/1.1" 200 564332 "-" "Python/3.11 aiohttp/3.13.2"
+2025-12-07 16:57:27.879 │ INFO │ [access] │ 172.18.92.43 [07/Dec/2025:16:55:14 -0500] "POST /generate HTTP/1.1" 200 564303 "-" "Python/3.11 aiohttp/3.13.2"
+2025-12-07 16:57:27.884 │ INFO │ [access] │ 172.18.92.43 [07/Dec/2025:16:55:14 -0500] "POST /generate HTTP/1.1" 200 563857 "-" "Python/3.11 aiohttp/3.13.2"
+2025-12-07 16:57:27.890 │ INFO │ [access] │ 172.18.92.43 [07/Dec/2025:16:55:14 -0500] "POST /generate HTTP/1.1" 200 564007 "-" "Python/3.11 aiohttp/3.13.2"
+2025-12-07 16:57:27.895 │ INFO │ [access] │ 172.18.92.43 [07/Dec/2025:16:55:14 -0500] "POST /generate HTTP/1.1" 200 564309 "-" "Python/3.11 aiohttp/3.13.2"
+2025-12-07 16:57:27.901 │ INFO │ [access] │ 172.18.92.43 [07/Dec/2025:16:55:14 -0500] "POST /generate HTTP/1.1" 200 564412 "-" "Python/3.11 aiohttp/3.13.2"
+2025-12-07 16:57:27.906 │ INFO │ [access] │ 172.18.92.43 [07/Dec/2025:16:55:14 -0500] "POST /generate HTTP/1.1" 200 563971 "-" "Python/3.11 aiohttp/3.13.2"
+2025-12-07 16:57:27.912 │ INFO │ [access] │ 172.18.92.43 [07/Dec/2025:16:55:14 -0500] "POST /generate HTTP/1.1" 200 564684 "-" "Python/3.11 aiohttp/3.13.2"
+2025-12-07 16:57:27.918 │ INFO │ [access] │ 172.18.92.43 [07/Dec/2025:16:55:14 -0500] "POST /generate HTTP/1.1" 200 562623 "-" "Python/3.11 aiohttp/3.13.2"
+2025-12-07 16:57:27.923 │ INFO │ [access] │ 172.18.92.43 [07/Dec/2025:16:55:14 -0500] "POST /generate HTTP/1.1" 200 563040 "-" "Python/3.11 aiohttp/3.13.2"
+2025-12-07 16:57:27.928 │ INFO │ [access] │ 172.18.92.43 [07/Dec/2025:16:55:14 -0500] "POST /generate HTTP/1.1" 200 563309 "-" "Python/3.11 aiohttp/3.13.2"
+2025-12-07 16:57:27.933 │ INFO │ [access] │ 172.18.92.43 [07/Dec/2025:16:55:14 -0500] "POST /generate HTTP/1.1" 200 563028 "-" "Python/3.11 aiohttp/3.13.2"
+2025-12-07 16:57:27.938 │ INFO │ [access] │ 172.18.92.43 [07/Dec/2025:16:55:14 -0500] "POST /generate HTTP/1.1" 200 563174 "-" "Python/3.11 aiohttp/3.13.2"
+2025-12-07 16:57:27.944 │ INFO │ [access] │ 172.18.92.43 [07/Dec/2025:16:55:14 -0500] "POST /generate HTTP/1.1" 200 562977 "-" "Python/3.11 aiohttp/3.13.2"
+2025-12-07 16:57:27.949 │ INFO │ [access] │ 172.18.92.43 [07/Dec/2025:16:55:14 -0500] "POST /generate HTTP/1.1" 200 563036 "-" "Python/3.11 aiohttp/3.13.2"
+2025-12-07 16:57:27.954 │ INFO │ [access] │ 172.18.92.43 [07/Dec/2025:16:55:14 -0500] "POST /generate HTTP/1.1" 200 563732 "-" "Python/3.11 aiohttp/3.13.2"
+2025-12-07 16:57:27.959 │ INFO │ [access] │ 172.18.92.43 [07/Dec/2025:16:55:14 -0500] "POST /generate HTTP/1.1" 200 562717 "-" "Python/3.11 aiohttp/3.13.2"
+2025-12-07 16:57:27.964 │ INFO │ [access] │ 172.18.92.43 [07/Dec/2025:16:55:14 -0500] "POST /generate HTTP/1.1" 200 563628 "-" "Python/3.11 aiohttp/3.13.2"
+2025-12-07 16:57:28.221 │ INFO │ [main] │ 
+============================================================
+2025-12-07 16:57:28.221 │ INFO │ [main] │ Inference Results
+2025-12-07 16:57:28.221 │ INFO │ [main] │ ============================================================
+2025-12-07 16:57:28.259 │ INFO │ [main] │ 
+============================================================
+2025-12-07 16:57:28.259 │ INFO │ [main] │ Inference Results
+2025-12-07 16:57:28.259 │ INFO │ [main] │ ============================================================
+2025-12-07 16:57:28.294 │ INFO │ [main] │ 
+============================================================
+2025-12-07 16:57:28.294 │ INFO │ [main] │ Inference Results
+2025-12-07 16:57:28.294 │ INFO │ [main] │ ============================================================
+2025-12-07 16:57:28.329 │ INFO │ [main] │ 
+============================================================
+2025-12-07 16:57:28.329 │ INFO │ [main] │ Inference Results
+2025-12-07 16:57:28.329 │ INFO │ [main] │ ============================================================
+2025-12-07 16:57:28.365 │ INFO │ [main] │ 
+============================================================
+2025-12-07 16:57:28.365 │ INFO │ [main] │ Inference Results
+2025-12-07 16:57:28.365 │ INFO │ [main] │ ============================================================
+2025-12-07 16:57:28.400 │ INFO │ [main] │ 
+============================================================
+2025-12-07 16:57:28.400 │ INFO │ [main] │ Inference Results
+2025-12-07 16:57:28.400 │ INFO │ [main] │ ============================================================
+2025-12-07 16:57:28.434 │ INFO │ [main] │ 
+============================================================
+2025-12-07 16:57:28.434 │ INFO │ [main] │ Inference Results
+2025-12-07 16:57:28.434 │ INFO │ [main] │ ============================================================
+2025-12-07 16:57:28.470 │ INFO │ [main] │ 
+============================================================
+2025-12-07 16:57:28.470 │ INFO │ [main] │ Inference Results
+2025-12-07 16:57:28.470 │ INFO │ [main] │ ============================================================
+2025-12-07 16:57:28.505 │ INFO │ [main] │ 
+============================================================
+2025-12-07 16:57:28.505 │ INFO │ [main] │ Inference Results
+2025-12-07 16:57:28.505 │ INFO │ [main] │ ============================================================
+2025-12-07 16:57:28.541 │ INFO │ [main] │ 
+============================================================
+2025-12-07 16:57:28.542 │ INFO │ [main] │ Inference Results
+2025-12-07 16:57:28.542 │ INFO │ [main] │ ============================================================
+2025-12-07 16:57:28.576 │ INFO │ [main] │ 
+============================================================
+2025-12-07 16:57:28.576 │ INFO │ [main] │ Inference Results
+2025-12-07 16:57:28.576 │ INFO │ [main] │ ============================================================
+2025-12-07 16:57:28.612 │ INFO │ [main] │ 
+============================================================
+2025-12-07 16:57:28.612 │ INFO │ [main] │ Inference Results
+2025-12-07 16:57:28.612 │ INFO │ [main] │ ============================================================
+2025-12-07 16:57:28.647 │ INFO │ [main] │ 
+============================================================
+2025-12-07 16:57:28.648 │ INFO │ [main] │ Inference Results
+2025-12-07 16:57:28.648 │ INFO │ [main] │ ============================================================
+2025-12-07 16:57:28.684 │ INFO │ [main] │ 
+============================================================
+2025-12-07 16:57:28.684 │ INFO │ [main] │ Inference Results
+2025-12-07 16:57:28.684 │ INFO │ [main] │ ============================================================
+2025-12-07 16:57:28.719 │ INFO │ [main] │ 
+============================================================
+2025-12-07 16:57:28.719 │ INFO │ [main] │ Inference Results
+2025-12-07 16:57:28.719 │ INFO │ [main] │ ============================================================
+2025-12-07 16:57:28.755 │ INFO │ [main] │ 
+============================================================
+2025-12-07 16:57:28.755 │ INFO │ [main] │ Inference Results
+2025-12-07 16:57:28.755 │ INFO │ [main] │ ============================================================
+2025-12-07 16:57:28.791 │ INFO │ [main] │ 
+============================================================
+2025-12-07 16:57:28.791 │ INFO │ [main] │ Inference Results
+2025-12-07 16:57:28.791 │ INFO │ [main] │ ============================================================
+2025-12-07 16:57:28.826 │ INFO │ [main] │ 
+============================================================
+2025-12-07 16:57:28.827 │ INFO │ [main] │ Inference Results
+2025-12-07 16:57:28.827 │ INFO │ [main] │ ============================================================
+2025-12-07 16:57:28.861 │ INFO │ [main] │ 
+============================================================
+2025-12-07 16:57:28.861 │ INFO │ [main] │ Inference Results
+2025-12-07 16:57:28.861 │ INFO │ [main] │ ============================================================
+2025-12-07 16:57:28.897 │ INFO │ [main] │ 
+============================================================
+2025-12-07 16:57:28.897 │ INFO │ [main] │ Inference Results
+2025-12-07 16:57:28.897 │ INFO │ [main] │ ============================================================
+2025-12-07 16:57:28.932 │ INFO │ [main] │ 
+============================================================
+2025-12-07 16:57:28.933 │ INFO │ [main] │ Inference Results
+2025-12-07 16:57:28.933 │ INFO │ [main] │ ============================================================
+2025-12-07 16:57:28.969 │ INFO │ [main] │ 
+============================================================
+2025-12-07 16:57:28.969 │ INFO │ [main] │ Inference Results
+2025-12-07 16:57:28.969 │ INFO │ [main] │ ============================================================
+2025-12-07 16:57:29.004 │ INFO │ [main] │ 
+============================================================
+2025-12-07 16:57:29.004 │ INFO │ [main] │ Inference Results
+2025-12-07 16:57:29.005 │ INFO │ [main] │ ============================================================
+2025-12-07 16:57:29.041 │ INFO │ [main] │ 
+============================================================
+2025-12-07 16:57:29.041 │ INFO │ [main] │ Inference Results
+2025-12-07 16:57:29.041 │ INFO │ [main] │ ============================================================
+2025-12-07 16:57:29.076 │ INFO │ [main] │ 
+============================================================
+2025-12-07 16:57:29.076 │ INFO │ [main] │ Inference Results
+2025-12-07 16:57:29.076 │ INFO │ [main] │ ============================================================
+2025-12-07 16:57:29.112 │ INFO │ [main] │ 
+============================================================
+2025-12-07 16:57:29.112 │ INFO │ [main] │ Inference Results
+2025-12-07 16:57:29.112 │ INFO │ [main] │ ============================================================
+2025-12-07 16:57:29.147 │ INFO │ [main] │ 
+============================================================
+2025-12-07 16:57:29.147 │ INFO │ [main] │ Inference Results
+2025-12-07 16:57:29.147 │ INFO │ [main] │ ============================================================
+2025-12-07 16:57:29.183 │ INFO │ [main] │ 
+============================================================
+2025-12-07 16:57:29.183 │ INFO │ [main] │ Inference Results
+2025-12-07 16:57:29.183 │ INFO │ [main] │ ============================================================
+2025-12-07 16:57:29.218 │ INFO │ [main] │ 
+============================================================
+2025-12-07 16:57:29.218 │ INFO │ [main] │ Inference Results
+2025-12-07 16:57:29.218 │ INFO │ [main] │ ============================================================
+2025-12-07 16:57:29.253 │ INFO │ [main] │ 
+============================================================
+2025-12-07 16:57:29.253 │ INFO │ [main] │ Inference Results
+2025-12-07 16:57:29.253 │ INFO │ [main] │ ============================================================
+2025-12-07 16:57:29.289 │ INFO │ [main] │ 
+============================================================
+2025-12-07 16:57:29.289 │ INFO │ [main] │ Inference Results
+2025-12-07 16:57:29.289 │ INFO │ [main] │ ============================================================
+2025-12-07 16:57:29.325 │ INFO │ [main] │ 
+============================================================
+2025-12-07 16:57:29.325 │ INFO │ [main] │ Inference Results
+2025-12-07 16:57:29.325 │ INFO │ [main] │ ============================================================
+2025-12-07 16:57:29.361 │ INFO │ [main] │ 
+============================================================
+2025-12-07 16:57:29.361 │ INFO │ [main] │ Inference Results
+2025-12-07 16:57:29.361 │ INFO │ [main] │ ============================================================
+2025-12-07 16:57:29.397 │ INFO │ [main] │ 
+============================================================
+2025-12-07 16:57:29.397 │ INFO │ [main] │ Inference Results
+2025-12-07 16:57:29.397 │ INFO │ [main] │ ============================================================
+2025-12-07 16:57:29.433 │ INFO │ [main] │ 
+============================================================
+2025-12-07 16:57:29.433 │ INFO │ [main] │ Inference Results
+2025-12-07 16:57:29.433 │ INFO │ [main] │ ============================================================
+2025-12-07 16:57:29.469 │ INFO │ [main] │ 
+============================================================
+2025-12-07 16:57:29.469 │ INFO │ [main] │ Inference Results
+2025-12-07 16:57:29.469 │ INFO │ [main] │ ============================================================
+2025-12-07 16:57:29.504 │ INFO │ [main] │ 
+============================================================
+2025-12-07 16:57:29.505 │ INFO │ [main] │ Inference Results
+2025-12-07 16:57:29.505 │ INFO │ [main] │ ============================================================
+2025-12-07 16:57:29.541 │ INFO │ [main] │ 
+============================================================
+2025-12-07 16:57:29.541 │ INFO │ [main] │ Inference Results
+2025-12-07 16:57:29.541 │ INFO │ [main] │ ============================================================
+2025-12-07 16:57:29.577 │ INFO │ [main] │ 
+============================================================
+2025-12-07 16:57:29.577 │ INFO │ [main] │ Inference Results
+2025-12-07 16:57:29.577 │ INFO │ [main] │ ============================================================
+2025-12-07 16:57:29.613 │ INFO │ [main] │ 
+============================================================
+2025-12-07 16:57:29.613 │ INFO │ [main] │ Inference Results
+2025-12-07 16:57:29.613 │ INFO │ [main] │ ============================================================
+2025-12-07 16:57:29.649 │ INFO │ [vllm] │ Shutting down service...
+2025-12-07 16:57:29.649 │ INFO │ [vllm] │ Shutting down service...
+2025-12-07 16:57:29.649 │ INFO │ [vllm] │ Shutting down service...
+2025-12-07 16:57:29.649 │ INFO │ [vllm] │ Shutting down service...
+2025-12-07 16:57:34.787 │ INFO │ [vllm] │ Service shutdown complete
+2025-12-07 16:57:40.458 │ INFO │ [vllm] │ Service shutdown complete
+2025-12-07 16:57:45.490 │ INFO │ [vllm] │ Service shutdown complete
+2025-12-07 16:57:50.111 │ INFO │ [vllm] │ Service shutdown complete
+2025-12-07 16:57:50.112 │ INFO │ [workflow_manager] │ Initiating shutdown
+2025-12-07 16:57:50.112 │ INFO │ [execution.backend(dragon)] │ Shutting down V3 backend
+2025-12-07 16:57:52.219 │ INFO │ [execution.backend(dragon)] │ Shutdown V3 complete
+2025-12-07 16:57:52.219 │ INFO │ [workflow_manager] │ Shutdown completed for all components.
+2025-12-07 16:57:52.219 │ INFO │ [workflow_manager] │ Initiating shutdown
+2025-12-07 16:57:52.220 │ INFO │ [execution.backend(dragon)] │ Shutting down V3 backend
+2025-12-07 16:57:52.720 │ INFO │ [execution.backend(dragon)] │ Shutdown V3 complete
+2025-12-07 16:57:52.720 │ INFO │ [workflow_manager] │ Shutdown completed for all components.
+2025-12-07 16:57:52.720 │ INFO │ [workflow_manager] │ Initiating shutdown
+2025-12-07 16:57:52.720 │ INFO │ [execution.backend(dragon)] │ Shutting down V3 backend
+2025-12-07 16:57:53.220 │ INFO │ [execution.backend(dragon)] │ Shutdown V3 complete
+2025-12-07 16:57:53.220 │ INFO │ [workflow_manager] │ Shutdown completed for all components.
+2025-12-07 16:57:53.220 │ INFO │ [workflow_manager] │ Initiating shutdown
+2025-12-07 16:57:53.220 │ INFO │ [execution.backend(dragon)] │ Shutting down V3 backend
+2025-12-07 16:57:53.721 │ INFO │ [execution.backend(dragon)] │ Shutdown V3 complete
+2025-12-07 16:57:53.721 │ INFO │ [workflow_manager] │ Shutdown completed for all components.
+2025-12-07 16:57:53.721 │ INFO │ [workflow_manager] │ Initiating shutdown
+2025-12-07 16:57:53.721 │ INFO │ [execution.backend(dragon)] │ Shutting down V3 backend
+2025-12-07 16:57:54.221 │ INFO │ [execution.backend(dragon)] │ Shutdown V3 complete
+2025-12-07 16:57:54.221 │ INFO │ [workflow_manager] │ Shutdown completed for all components.
+2025-12-07 16:57:54.221 │ INFO │ [workflow_manager] │ Initiating shutdown
+2025-12-07 16:57:54.221 │ INFO │ [execution.backend(dragon)] │ Shutting down V3 backend
+2025-12-07 16:57:54.721 │ INFO │ [execution.backend(dragon)] │ Shutdown V3 complete
+2025-12-07 16:57:54.721 │ INFO │ [workflow_manager] │ Shutdown completed for all components.
+2025-12-07 16:57:54.721 │ INFO │ [workflow_manager] │ Initiating shutdown
+2025-12-07 16:57:54.722 │ INFO │ [execution.backend(dragon)] │ Shutting down V3 backend
+2025-12-07 16:57:55.222 │ INFO │ [execution.backend(dragon)] │ Shutdown V3 complete
+2025-12-07 16:57:55.222 │ INFO │ [workflow_manager] │ Shutdown completed for all components.
+2025-12-07 16:57:55.222 │ INFO │ [workflow_manager] │ Initiating shutdown
+2025-12-07 16:57:55.222 │ INFO │ [execution.backend(dragon)] │ Shutting down V3 backend
+2025-12-07 16:57:55.723 │ INFO │ [execution.backend(dragon)] │ Shutdown V3 complete
+2025-12-07 16:57:55.723 │ INFO │ [workflow_manager] │ Shutdown completed for all components.
+2025-12-07 16:57:55.723 │ INFO │ [workflow_manager] │ Initiating shutdown
+2025-12-07 16:57:55.723 │ INFO │ [execution.backend(dragon)] │ Shutting down V3 backend
+2025-12-07 16:57:56.223 │ INFO │ [execution.backend(dragon)] │ Shutdown V3 complete
+2025-12-07 16:57:56.223 │ INFO │ [workflow_manager] │ Shutdown completed for all components.
+2025-12-07 16:57:56.223 │ INFO │ [workflow_manager] │ Initiating shutdown
+2025-12-07 16:57:56.223 │ INFO │ [execution.backend(dragon)] │ Shutting down V3 backend
+2025-12-07 16:57:56.723 │ INFO │ [execution.backend(dragon)] │ Shutdown V3 complete
+2025-12-07 16:57:56.723 │ INFO │ [workflow_manager] │ Shutdown completed for all components.
+2025-12-07 16:57:56.723 │ INFO │ [workflow_manager] │ Initiating shutdown
+2025-12-07 16:57:56.723 │ INFO │ [execution.backend(dragon)] │ Shutting down V3 backend
+2025-12-07 16:57:57.224 │ INFO │ [execution.backend(dragon)] │ Shutdown V3 complete
+2025-12-07 16:57:57.224 │ INFO │ [workflow_manager] │ Shutdown completed for all components.
+2025-12-07 16:57:57.224 │ INFO │ [workflow_manager] │ Initiating shutdown
+2025-12-07 16:57:57.224 │ INFO │ [execution.backend(dragon)] │ Shutting down V3 backend
+2025-12-07 16:57:57.724 │ INFO │ [execution.backend(dragon)] │ Shutdown V3 complete
+2025-12-07 16:57:57.724 │ INFO │ [workflow_manager] │ Shutdown completed for all components.
+2025-12-07 16:57:57.724 │ INFO │ [workflow_manager] │ Initiating shutdown
+2025-12-07 16:57:57.724 │ INFO │ [execution.backend(dragon)] │ Shutting down V3 backend
+2025-12-07 16:57:58.224 │ INFO │ [execution.backend(dragon)] │ Shutdown V3 complete
+2025-12-07 16:57:58.224 │ INFO │ [workflow_manager] │ Shutdown completed for all components.
+2025-12-07 16:57:58.224 │ INFO │ [workflow_manager] │ Initiating shutdown
+2025-12-07 16:57:58.224 │ INFO │ [execution.backend(dragon)] │ Shutting down V3 backend
+2025-12-07 16:57:58.725 │ INFO │ [execution.backend(dragon)] │ Shutdown V3 complete
+2025-12-07 16:57:58.725 │ INFO │ [workflow_manager] │ Shutdown completed for all components.
+2025-12-07 16:57:58.725 │ INFO │ [workflow_manager] │ Initiating shutdown
+2025-12-07 16:57:58.725 │ INFO │ [execution.backend(dragon)] │ Shutting down V3 backend
+2025-12-07 16:57:59.225 │ INFO │ [execution.backend(dragon)] │ Shutdown V3 complete
+2025-12-07 16:57:59.225 │ INFO │ [workflow_manager] │ Shutdown completed for all components.
+2025-12-07 16:57:59.225 │ INFO │ [workflow_manager] │ Initiating shutdown
+2025-12-07 16:57:59.225 │ INFO │ [execution.backend(dragon)] │ Shutting down V3 backend
+2025-12-07 16:57:59.725 │ INFO │ [execution.backend(dragon)] │ Shutdown V3 complete
+2025-12-07 16:57:59.725 │ INFO │ [workflow_manager] │ Shutdown completed for all components.
+2025-12-07 16:57:59.725 │ INFO │ [workflow_manager] │ Initiating shutdown
+2025-12-07 16:57:59.726 │ INFO │ [execution.backend(dragon)] │ Shutting down V3 backend
+2025-12-07 16:58:00.226 │ INFO │ [execution.backend(dragon)] │ Shutdown V3 complete
+2025-12-07 16:58:00.226 │ INFO │ [workflow_manager] │ Shutdown completed for all components.
+2025-12-07 16:58:00.226 │ INFO │ [workflow_manager] │ Initiating shutdown
+2025-12-07 16:58:00.226 │ INFO │ [execution.backend(dragon)] │ Shutting down V3 backend
+2025-12-07 16:58:00.726 │ INFO │ [execution.backend(dragon)] │ Shutdown V3 complete
+2025-12-07 16:58:00.726 │ INFO │ [workflow_manager] │ Shutdown completed for all components.
+2025-12-07 16:58:00.726 │ INFO │ [workflow_manager] │ Initiating shutdown
+2025-12-07 16:58:00.727 │ INFO │ [execution.backend(dragon)] │ Shutting down V3 backend
+2025-12-07 16:58:01.227 │ INFO │ [execution.backend(dragon)] │ Shutdown V3 complete
+2025-12-07 16:58:01.227 │ INFO │ [workflow_manager] │ Shutdown completed for all components.
+2025-12-07 16:58:01.227 │ INFO │ [workflow_manager] │ Initiating shutdown
+2025-12-07 16:58:01.227 │ INFO │ [execution.backend(dragon)] │ Shutting down V3 backend
+2025-12-07 16:58:01.727 │ INFO │ [execution.backend(dragon)] │ Shutdown V3 complete
+2025-12-07 16:58:01.727 │ INFO │ [workflow_manager] │ Shutdown completed for all components.
+2025-12-07 16:58:01.727 │ INFO │ [workflow_manager] │ Initiating shutdown
+2025-12-07 16:58:01.727 │ INFO │ [execution.backend(dragon)] │ Shutting down V3 backend
+2025-12-07 16:58:02.227 │ INFO │ [execution.backend(dragon)] │ Shutdown V3 complete
+2025-12-07 16:58:02.228 │ INFO │ [workflow_manager] │ Shutdown completed for all components.
+2025-12-07 16:58:02.228 │ INFO │ [workflow_manager] │ Initiating shutdown
+2025-12-07 16:58:02.228 │ INFO │ [execution.backend(dragon)] │ Shutting down V3 backend
+2025-12-07 16:58:02.728 │ INFO │ [execution.backend(dragon)] │ Shutdown V3 complete
+2025-12-07 16:58:02.728 │ INFO │ [workflow_manager] │ Shutdown completed for all components.
+2025-12-07 16:58:02.728 │ INFO │ [workflow_manager] │ Initiating shutdown
+2025-12-07 16:58:02.728 │ INFO │ [execution.backend(dragon)] │ Shutting down V3 backend
+2025-12-07 16:58:03.228 │ INFO │ [execution.backend(dragon)] │ Shutdown V3 complete
+2025-12-07 16:58:03.228 │ INFO │ [workflow_manager] │ Shutdown completed for all components.
+2025-12-07 16:58:03.228 │ INFO │ [workflow_manager] │ Initiating shutdown
+2025-12-07 16:58:03.228 │ INFO │ [execution.backend(dragon)] │ Shutting down V3 backend
+2025-12-07 16:58:03.728 │ INFO │ [execution.backend(dragon)] │ Shutdown V3 complete
+2025-12-07 16:58:03.729 │ INFO │ [workflow_manager] │ Shutdown completed for all components.
+2025-12-07 16:58:03.729 │ INFO │ [workflow_manager] │ Initiating shutdown
+2025-12-07 16:58:03.729 │ INFO │ [execution.backend(dragon)] │ Shutting down V3 backend
+2025-12-07 16:58:04.229 │ INFO │ [execution.backend(dragon)] │ Shutdown V3 complete
+2025-12-07 16:58:04.229 │ INFO │ [workflow_manager] │ Shutdown completed for all components.
+2025-12-07 16:58:04.229 │ INFO │ [workflow_manager] │ Initiating shutdown
+2025-12-07 16:58:04.229 │ INFO │ [execution.backend(dragon)] │ Shutting down V3 backend
+2025-12-07 16:58:04.729 │ INFO │ [execution.backend(dragon)] │ Shutdown V3 complete
+2025-12-07 16:58:04.729 │ INFO │ [workflow_manager] │ Shutdown completed for all components.
+2025-12-07 16:58:04.729 │ INFO │ [workflow_manager] │ Initiating shutdown
+2025-12-07 16:58:04.729 │ INFO │ [execution.backend(dragon)] │ Shutting down V3 backend
+2025-12-07 16:58:05.229 │ INFO │ [execution.backend(dragon)] │ Shutdown V3 complete
+2025-12-07 16:58:05.230 │ INFO │ [workflow_manager] │ Shutdown completed for all components.
+2025-12-07 16:58:05.230 │ INFO │ [workflow_manager] │ Initiating shutdown
+2025-12-07 16:58:05.230 │ INFO │ [execution.backend(dragon)] │ Shutting down V3 backend
+2025-12-07 16:58:05.730 │ INFO │ [execution.backend(dragon)] │ Shutdown V3 complete
+2025-12-07 16:58:05.730 │ INFO │ [workflow_manager] │ Shutdown completed for all components.
+2025-12-07 16:58:05.730 │ INFO │ [workflow_manager] │ Initiating shutdown
+2025-12-07 16:58:05.730 │ INFO │ [execution.backend(dragon)] │ Shutting down V3 backend
+2025-12-07 16:58:06.230 │ INFO │ [execution.backend(dragon)] │ Shutdown V3 complete
+2025-12-07 16:58:06.230 │ INFO │ [workflow_manager] │ Shutdown completed for all components.
+2025-12-07 16:58:06.230 │ INFO │ [workflow_manager] │ Initiating shutdown
+2025-12-07 16:58:06.230 │ INFO │ [execution.backend(dragon)] │ Shutting down V3 backend
+2025-12-07 16:58:06.731 │ INFO │ [execution.backend(dragon)] │ Shutdown V3 complete
+2025-12-07 16:58:06.731 │ INFO │ [workflow_manager] │ Shutdown completed for all components.
+2025-12-07 16:58:06.731 │ INFO │ [workflow_manager] │ Initiating shutdown
+2025-12-07 16:58:06.731 │ INFO │ [execution.backend(dragon)] │ Shutting down V3 backend
+2025-12-07 16:58:07.231 │ INFO │ [execution.backend(dragon)] │ Shutdown V3 complete
+2025-12-07 16:58:07.231 │ INFO │ [workflow_manager] │ Shutdown completed for all components.
+2025-12-07 16:58:07.231 │ INFO │ [workflow_manager] │ Initiating shutdown
+2025-12-07 16:58:07.232 │ INFO │ [execution.backend(dragon)] │ Shutting down V3 backend
+2025-12-07 16:58:07.732 │ INFO │ [execution.backend(dragon)] │ Shutdown V3 complete
+2025-12-07 16:58:07.732 │ INFO │ [workflow_manager] │ Shutdown completed for all components.
+2025-12-07 16:58:07.732 │ INFO │ [workflow_manager] │ Initiating shutdown
+2025-12-07 16:58:07.732 │ INFO │ [execution.backend(dragon)] │ Shutting down V3 backend
+2025-12-07 16:58:08.232 │ INFO │ [execution.backend(dragon)] │ Shutdown V3 complete
+2025-12-07 16:58:08.232 │ INFO │ [workflow_manager] │ Shutdown completed for all components.
+2025-12-07 16:58:08.232 │ INFO │ [workflow_manager] │ Initiating shutdown
+2025-12-07 16:58:08.232 │ INFO │ [execution.backend(dragon)] │ Shutting down V3 backend
+2025-12-07 16:58:08.732 │ INFO │ [execution.backend(dragon)] │ Shutdown V3 complete
+2025-12-07 16:58:08.732 │ INFO │ [workflow_manager] │ Shutdown completed for all components.
+2025-12-07 16:58:08.733 │ INFO │ [workflow_manager] │ Initiating shutdown
+2025-12-07 16:58:08.733 │ INFO │ [execution.backend(dragon)] │ Shutting down V3 backend
+2025-12-07 16:58:09.233 │ INFO │ [execution.backend(dragon)] │ Shutdown V3 complete
+2025-12-07 16:58:09.233 │ INFO │ [workflow_manager] │ Shutdown completed for all components.
+2025-12-07 16:58:09.233 │ INFO │ [workflow_manager] │ Initiating shutdown
+2025-12-07 16:58:09.233 │ INFO │ [execution.backend(dragon)] │ Shutting down V3 backend
+2025-12-07 16:58:09.733 │ INFO │ [execution.backend(dragon)] │ Shutdown V3 complete
+2025-12-07 16:58:09.733 │ INFO │ [workflow_manager] │ Shutdown completed for all components.
+2025-12-07 16:58:09.733 │ INFO │ [workflow_manager] │ Initiating shutdown
+2025-12-07 16:58:09.733 │ INFO │ [execution.backend(dragon)] │ Shutting down V3 backend
+2025-12-07 16:58:10.233 │ INFO │ [execution.backend(dragon)] │ Shutdown V3 complete
+2025-12-07 16:58:10.234 │ INFO │ [workflow_manager] │ Shutdown completed for all components.
+2025-12-07 16:58:10.234 │ INFO │ [workflow_manager] │ Initiating shutdown
+2025-12-07 16:58:10.234 │ INFO │ [execution.backend(dragon)] │ Shutting down V3 backend
+2025-12-07 16:58:10.734 │ INFO │ [execution.backend(dragon)] │ Shutdown V3 complete
+2025-12-07 16:58:10.734 │ INFO │ [workflow_manager] │ Shutdown completed for all components.
+2025-12-07 16:58:10.734 │ INFO │ [workflow_manager] │ Initiating shutdown
+2025-12-07 16:58:10.734 │ INFO │ [execution.backend(dragon)] │ Shutting down V3 backend
+2025-12-07 16:58:11.234 │ INFO │ [execution.backend(dragon)] │ Shutdown V3 complete
+2025-12-07 16:58:11.234 │ INFO │ [workflow_manager] │ Shutdown completed for all components.
+2025-12-07 16:58:11.234 │ INFO │ [workflow_manager] │ Initiating shutdown
+2025-12-07 16:58:11.234 │ INFO │ [execution.backend(dragon)] │ Shutting down V3 backend
+2025-12-07 16:58:11.734 │ INFO │ [execution.backend(dragon)] │ Shutdown V3 complete
+2025-12-07 16:58:11.735 │ INFO │ [workflow_manager] │ Shutdown completed for all components.

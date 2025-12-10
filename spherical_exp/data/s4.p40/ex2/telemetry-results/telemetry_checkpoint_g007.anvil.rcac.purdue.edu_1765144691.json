@@ -1,0 +1,31 @@
+{
+  "checkpoint_metadata": {
+    "hostname": "g007.anvil.rcac.purdue.edu",
+    "timestamp": 1765144691,
+    "collection_rate": 1.0,
+    "metric_prefix": "infer-asyncflow",
+    "checkpoint_id": 10,
+    "num_samples": 1
+  },
+  "metrics": [
+    {
+      "timestamp": 1765144690,
+      "hostname": "g007.anvil.rcac.purdue.edu",
+      "metrics": {
+        "cpu_percent": 1.2,
+        "load_average_1m": 6.84,
+        "load_average_5m": 8.56,
+        "load_average_15m": 5.82,
+        "memory_percent": 7.4,
+        "memory_available_gb": 466.3468017578125,
+        "memory_used_gb": 19.646343231201172,
+        "memory_total_gb": 503.4778480529785,
+        "gpu_0_utilization": 0,
+        "gpu_0_memory_percent": 1.259307861328125,
+        "gpu_0_memory_used_gb": 0.50372314453125,
+        "gpu_0_memory_total_gb": 40.0,
+        "gpu_0_power_watts": 54.365
+      }
+    }
+  ]
+}

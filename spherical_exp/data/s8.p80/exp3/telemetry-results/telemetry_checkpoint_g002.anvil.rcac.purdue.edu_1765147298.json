@@ -1,0 +1,525 @@
+{
+  "checkpoint_metadata": {
+    "hostname": "g002.anvil.rcac.purdue.edu",
+    "timestamp": 1765147298,
+    "collection_rate": 1.0,
+    "metric_prefix": "infer-asyncflow",
+    "checkpoint_id": 3,
+    "num_samples": 27
+  },
+  "metrics": [
+    {
+      "timestamp": 1765147269,
+      "hostname": "g002.anvil.rcac.purdue.edu",
+      "metrics": {
+        "cpu_percent": 10.0,
+        "load_average_1m": 8.31,
+        "load_average_5m": 8.23,
+        "load_average_15m": 6.87,
+        "memory_percent": 5.8,
+        "memory_available_gb": 474.32093811035156,
+        "memory_used_gb": 25.04845428466797,
+        "memory_total_gb": 503.4778251647949,
+        "gpu_0_utilization": 84,
+        "gpu_0_memory_percent": 96.10336303710938,
+        "gpu_0_memory_used_gb": 38.44134521484375,
+        "gpu_0_memory_total_gb": 40.0,
+        "gpu_0_power_watts": 308.066
+      }
+    },
+    {
+      "timestamp": 1765147270,
+      "hostname": "g002.anvil.rcac.purdue.edu",
+      "metrics": {
+        "cpu_percent": 5.6,
+        "load_average_1m": 8.31,
+        "load_average_5m": 8.23,
+        "load_average_15m": 6.87,
+        "memory_percent": 5.8,
+        "memory_available_gb": 474.31821060180664,
+        "memory_used_gb": 25.051170349121094,
+        "memory_total_gb": 503.4778251647949,
+        "gpu_0_utilization": 90,
+        "gpu_0_memory_percent": 96.10336303710938,
+        "gpu_0_memory_used_gb": 38.44134521484375,
+        "gpu_0_memory_total_gb": 40.0,
+        "gpu_0_power_watts": 314.079
+      }
+    },
+    {
+      "timestamp": 1765147271,
+      "hostname": "g002.anvil.rcac.purdue.edu",
+      "metrics": {
+        "cpu_percent": 5.6,
+        "load_average_1m": 8.31,
+        "load_average_5m": 8.23,
+        "load_average_15m": 6.87,
+        "memory_percent": 5.8,
+        "memory_available_gb": 474.3177070617676,
+        "memory_used_gb": 25.051658630371094,
+        "memory_total_gb": 503.4778251647949,
+        "gpu_0_utilization": 89,
+        "gpu_0_memory_percent": 96.10336303710938,
+        "gpu_0_memory_used_gb": 38.44134521484375,
+        "gpu_0_memory_total_gb": 40.0,
+        "gpu_0_power_watts": 318.253
+      }
+    },
+    {
+      "timestamp": 1765147272,
+      "hostname": "g002.anvil.rcac.purdue.edu",
+      "metrics": {
+        "cpu_percent": 5.5,
+        "load_average_1m": 8.29,
+        "load_average_5m": 8.23,
+        "load_average_15m": 6.87,
+        "memory_percent": 5.8,
+        "memory_available_gb": 474.31714248657227,
+        "memory_used_gb": 25.05221176147461,
+        "memory_total_gb": 503.4778251647949,
+        "gpu_0_utilization": 89,
+        "gpu_0_memory_percent": 96.10336303710938,
+        "gpu_0_memory_used_gb": 38.44134521484375,
+        "gpu_0_memory_total_gb": 40.0,
+        "gpu_0_power_watts": 307.535
+      }
+    },
+    {
+      "timestamp": 1765147274,
+      "hostname": "g002.anvil.rcac.purdue.edu",
+      "metrics": {
+        "cpu_percent": 5.5,
+        "load_average_1m": 8.29,
+        "load_average_5m": 8.23,
+        "load_average_15m": 6.87,
+        "memory_percent": 5.8,
+        "memory_available_gb": 474.31725692749023,
+        "memory_used_gb": 25.05209732055664,
+        "memory_total_gb": 503.4778251647949,
+        "gpu_0_utilization": 89,
+        "gpu_0_memory_percent": 96.10336303710938,
+        "gpu_0_memory_used_gb": 38.44134521484375,
+        "gpu_0_memory_total_gb": 40.0,
+        "gpu_0_power_watts": 323.977
+      }
+    },
+    {
+      "timestamp": 1765147275,
+      "hostname": "g002.anvil.rcac.purdue.edu",
+      "metrics": {
+        "cpu_percent": 5.7,
+        "load_average_1m": 8.29,
+        "load_average_5m": 8.23,
+        "load_average_15m": 6.87,
+        "memory_percent": 5.8,
+        "memory_available_gb": 474.31713104248047,
+        "memory_used_gb": 25.05217742919922,
+        "memory_total_gb": 503.4778251647949,
+        "gpu_0_utilization": 90,
+        "gpu_0_memory_percent": 96.10336303710938,
+        "gpu_0_memory_used_gb": 38.44134521484375,
+        "gpu_0_memory_total_gb": 40.0,
+        "gpu_0_power_watts": 331.781
+      }
+    },
+    {
+      "timestamp": 1765147276,
+      "hostname": "g002.anvil.rcac.purdue.edu",
+      "metrics": {
+        "cpu_percent": 5.8,
+        "load_average_1m": 8.29,
+        "load_average_5m": 8.23,
+        "load_average_15m": 6.87,
+        "memory_percent": 5.8,
+        "memory_available_gb": 474.29256439208984,
+        "memory_used_gb": 25.076854705810547,
+        "memory_total_gb": 503.4778251647949,
+        "gpu_0_utilization": 89,
+        "gpu_0_memory_percent": 96.10336303710938,
+        "gpu_0_memory_used_gb": 38.44134521484375,
+        "gpu_0_memory_total_gb": 40.0,
+        "gpu_0_power_watts": 310.931
+      }
+    },
+    {
+      "timestamp": 1765147277,
+      "hostname": "g002.anvil.rcac.purdue.edu",
+      "metrics": {
+        "cpu_percent": 5.6,
+        "load_average_1m": 8.29,
+        "load_average_5m": 8.23,
+        "load_average_15m": 6.87,
+        "memory_percent": 5.8,
+        "memory_available_gb": 474.31542587280273,
+        "memory_used_gb": 25.053974151611328,
+        "memory_total_gb": 503.4778251647949,
+        "gpu_0_utilization": 89,
+        "gpu_0_memory_percent": 96.10336303710938,
+        "gpu_0_memory_used_gb": 38.44134521484375,
+        "gpu_0_memory_total_gb": 40.0,
+        "gpu_0_power_watts": 322.661
+      }
+    },
+    {
+      "timestamp": 1765147278,
+      "hostname": "g002.anvil.rcac.purdue.edu",
+      "metrics": {
+        "cpu_percent": 5.5,
+        "load_average_1m": 8.27,
+        "load_average_5m": 8.22,
+        "load_average_15m": 6.88,
+        "memory_percent": 5.8,
+        "memory_available_gb": 474.3435287475586,
+        "memory_used_gb": 25.025863647460938,
+        "memory_total_gb": 503.4778251647949,
+        "gpu_0_utilization": 90,
+        "gpu_0_memory_percent": 96.10336303710938,
+        "gpu_0_memory_used_gb": 38.44134521484375,
+        "gpu_0_memory_total_gb": 40.0,
+        "gpu_0_power_watts": 333.09
+      }
+    },
+    {
+      "timestamp": 1765147279,
+      "hostname": "g002.anvil.rcac.purdue.edu",
+      "metrics": {
+        "cpu_percent": 8.1,
+        "load_average_1m": 8.27,
+        "load_average_5m": 8.22,
+        "load_average_15m": 6.88,
+        "memory_percent": 5.8,
+        "memory_available_gb": 474.32111740112305,
+        "memory_used_gb": 25.048324584960938,
+        "memory_total_gb": 503.4778251647949,
+        "gpu_0_utilization": 89,
+        "gpu_0_memory_percent": 96.10336303710938,
+        "gpu_0_memory_used_gb": 38.44134521484375,
+        "gpu_0_memory_total_gb": 40.0,
+        "gpu_0_power_watts": 345.493
+      }
+    },
+    {
+      "timestamp": 1765147280,
+      "hostname": "g002.anvil.rcac.purdue.edu",
+      "metrics": {
+        "cpu_percent": 5.6,
+        "load_average_1m": 8.27,
+        "load_average_5m": 8.22,
+        "load_average_15m": 6.88,
+        "memory_percent": 5.8,
+        "memory_available_gb": 474.32115936279297,
+        "memory_used_gb": 25.048282623291016,
+        "memory_total_gb": 503.4778251647949,
+        "gpu_0_utilization": 89,
+        "gpu_0_memory_percent": 96.10336303710938,
+        "gpu_0_memory_used_gb": 38.44134521484375,
+        "gpu_0_memory_total_gb": 40.0,
+        "gpu_0_power_watts": 324.131
+      }
+    },
+    {
+      "timestamp": 1765147281,
+      "hostname": "g002.anvil.rcac.purdue.edu",
+      "metrics": {
+        "cpu_percent": 5.8,
+        "load_average_1m": 8.27,
+        "load_average_5m": 8.22,
+        "load_average_15m": 6.88,
+        "memory_percent": 5.8,
+        "memory_available_gb": 474.3183479309082,
+        "memory_used_gb": 25.051063537597656,
+        "memory_total_gb": 503.4778251647949,
+        "gpu_0_utilization": 90,
+        "gpu_0_memory_percent": 96.10336303710938,
+        "gpu_0_memory_used_gb": 38.44134521484375,
+        "gpu_0_memory_total_gb": 40.0,
+        "gpu_0_power_watts": 336.865
+      }
+    },
+    {
+      "timestamp": 1765147282,
+      "hostname": "g002.anvil.rcac.purdue.edu",
+      "metrics": {
+        "cpu_percent": 5.9,
+        "load_average_1m": 8.24,
+        "load_average_5m": 8.22,
+        "load_average_15m": 6.88,
+        "memory_percent": 5.8,
+        "memory_available_gb": 474.2945442199707,
+        "memory_used_gb": 25.074817657470703,
+        "memory_total_gb": 503.4778251647949,
+        "gpu_0_utilization": 90,
+        "gpu_0_memory_percent": 96.10336303710938,
+        "gpu_0_memory_used_gb": 38.44134521484375,
+        "gpu_0_memory_total_gb": 40.0,
+        "gpu_0_power_watts": 329.311
+      }
+    },
+    {
+      "timestamp": 1765147283,
+      "hostname": "g002.anvil.rcac.purdue.edu",
+      "metrics": {
+        "cpu_percent": 5.6,
+        "load_average_1m": 8.24,
+        "load_average_5m": 8.22,
+        "load_average_15m": 6.88,
+        "memory_percent": 5.8,
+        "memory_available_gb": 474.31796646118164,
+        "memory_used_gb": 25.05146026611328,
+        "memory_total_gb": 503.4778251647949,
+        "gpu_0_utilization": 89,
+        "gpu_0_memory_percent": 96.10336303710938,
+        "gpu_0_memory_used_gb": 38.44134521484375,
+        "gpu_0_memory_total_gb": 40.0,
+        "gpu_0_power_watts": 323.353
+      }
+    },
+    {
+      "timestamp": 1765147284,
+      "hostname": "g002.anvil.rcac.purdue.edu",
+      "metrics": {
+        "cpu_percent": 5.6,
+        "load_average_1m": 8.24,
+        "load_average_5m": 8.22,
+        "load_average_15m": 6.88,
+        "memory_percent": 5.8,
+        "memory_available_gb": 474.3180351257324,
+        "memory_used_gb": 25.051376342773438,
+        "memory_total_gb": 503.4778251647949,
+        "gpu_0_utilization": 89,
+        "gpu_0_memory_percent": 96.10336303710938,
+        "gpu_0_memory_used_gb": 38.44134521484375,
+        "gpu_0_memory_total_gb": 40.0,
+        "gpu_0_power_watts": 331.396
+      }
+    },
+    {
+      "timestamp": 1765147285,
+      "hostname": "g002.anvil.rcac.purdue.edu",
+      "metrics": {
+        "cpu_percent": 5.7,
+        "load_average_1m": 8.24,
+        "load_average_5m": 8.22,
+        "load_average_15m": 6.88,
+        "memory_percent": 5.8,
+        "memory_available_gb": 474.2916564941406,
+        "memory_used_gb": 25.077747344970703,
+        "memory_total_gb": 503.4778251647949,
+        "gpu_0_utilization": 89,
+        "gpu_0_memory_percent": 96.10336303710938,
+        "gpu_0_memory_used_gb": 38.44134521484375,
+        "gpu_0_memory_total_gb": 40.0,
+        "gpu_0_power_watts": 341.035
+      }
+    },
+    {
+      "timestamp": 1765147287,
+      "hostname": "g002.anvil.rcac.purdue.edu",
+      "metrics": {
+        "cpu_percent": 5.6,
+        "load_average_1m": 8.24,
+        "load_average_5m": 8.22,
+        "load_average_15m": 6.88,
+        "memory_percent": 5.8,
+        "memory_available_gb": 474.286075592041,
+        "memory_used_gb": 25.08331298828125,
+        "memory_total_gb": 503.4778251647949,
+        "gpu_0_utilization": 89,
+        "gpu_0_memory_percent": 96.10336303710938,
+        "gpu_0_memory_used_gb": 38.44134521484375,
+        "gpu_0_memory_total_gb": 40.0,
+        "gpu_0_power_watts": 346.637
+      }
+    },
+    {
+      "timestamp": 1765147288,
+      "hostname": "g002.anvil.rcac.purdue.edu",
+      "metrics": {
+        "cpu_percent": 7.7,
+        "load_average_1m": 8.22,
+        "load_average_5m": 8.21,
+        "load_average_15m": 6.89,
+        "memory_percent": 5.8,
+        "memory_available_gb": 474.2896957397461,
+        "memory_used_gb": 25.079635620117188,
+        "memory_total_gb": 503.4778251647949,
+        "gpu_0_utilization": 89,
+        "gpu_0_memory_percent": 96.10336303710938,
+        "gpu_0_memory_used_gb": 38.44134521484375,
+        "gpu_0_memory_total_gb": 40.0,
+        "gpu_0_power_watts": 314.079
+      }
+    },
+    {
+      "timestamp": 1765147289,
+      "hostname": "g002.anvil.rcac.purdue.edu",
+      "metrics": {
+        "cpu_percent": 7.4,
+        "load_average_1m": 8.22,
+        "load_average_5m": 8.21,
+        "load_average_15m": 6.89,
+        "memory_percent": 5.8,
+        "memory_available_gb": 474.2888946533203,
+        "memory_used_gb": 25.080402374267578,
+        "memory_total_gb": 503.4778251647949,
+        "gpu_0_utilization": 89,
+        "gpu_0_memory_percent": 96.10336303710938,
+        "gpu_0_memory_used_gb": 38.44134521484375,
+        "gpu_0_memory_total_gb": 40.0,
+        "gpu_0_power_watts": 330.378
+      }
+    },
+    {
+      "timestamp": 1765147290,
+      "hostname": "g002.anvil.rcac.purdue.edu",
+      "metrics": {
+        "cpu_percent": 8.2,
+        "load_average_1m": 8.22,
+        "load_average_5m": 8.21,
+        "load_average_15m": 6.89,
+        "memory_percent": 5.8,
+        "memory_available_gb": 474.2649955749512,
+        "memory_used_gb": 25.104263305664062,
+        "memory_total_gb": 503.4778251647949,
+        "gpu_0_utilization": 89,
+        "gpu_0_memory_percent": 96.10336303710938,
+        "gpu_0_memory_used_gb": 38.44134521484375,
+        "gpu_0_memory_total_gb": 40.0,
+        "gpu_0_power_watts": 340.794
+      }
+    },
+    {
+      "timestamp": 1765147291,
+      "hostname": "g002.anvil.rcac.purdue.edu",
+      "metrics": {
+        "cpu_percent": 5.7,
+        "load_average_1m": 8.22,
+        "load_average_5m": 8.21,
+        "load_average_15m": 6.89,
+        "memory_percent": 5.8,
+        "memory_available_gb": 474.26464080810547,
+        "memory_used_gb": 25.1046142578125,
+        "memory_total_gb": 503.4778251647949,
+        "gpu_0_utilization": 89,
+        "gpu_0_memory_percent": 96.10336303710938,
+        "gpu_0_memory_used_gb": 38.44134521484375,
+        "gpu_0_memory_total_gb": 40.0,
+        "gpu_0_power_watts": 307.053
+      }
+    },
+    {
+      "timestamp": 1765147292,
+      "hostname": "g002.anvil.rcac.purdue.edu",
+      "metrics": {
+        "cpu_percent": 5.6,
+        "load_average_1m": 8.22,
+        "load_average_5m": 8.21,
+        "load_average_15m": 6.89,
+        "memory_percent": 5.8,
+        "memory_available_gb": 474.28824615478516,
+        "memory_used_gb": 25.08099365234375,
+        "memory_total_gb": 503.4778251647949,
+        "gpu_0_utilization": 90,
+        "gpu_0_memory_percent": 96.10336303710938,
+        "gpu_0_memory_used_gb": 38.44134521484375,
+        "gpu_0_memory_total_gb": 40.0,
+        "gpu_0_power_watts": 295.557
+      }
+    },
+    {
+      "timestamp": 1765147293,
+      "hostname": "g002.anvil.rcac.purdue.edu",
+      "metrics": {
+        "cpu_percent": 5.7,
+        "load_average_1m": 8.45,
+        "load_average_5m": 8.26,
+        "load_average_15m": 6.91,
+        "memory_percent": 5.8,
+        "memory_available_gb": 474.2656707763672,
+        "memory_used_gb": 25.103557586669922,
+        "memory_total_gb": 503.4778251647949,
+        "gpu_0_utilization": 90,
+        "gpu_0_memory_percent": 96.10336303710938,
+        "gpu_0_memory_used_gb": 38.44134521484375,
+        "gpu_0_memory_total_gb": 40.0,
+        "gpu_0_power_watts": 323.729
+      }
+    },
+    {
+      "timestamp": 1765147294,
+      "hostname": "g002.anvil.rcac.purdue.edu",
+      "metrics": {
+        "cpu_percent": 5.6,
+        "load_average_1m": 8.45,
+        "load_average_5m": 8.26,
+        "load_average_15m": 6.91,
+        "memory_percent": 5.8,
+        "memory_available_gb": 474.31228256225586,
+        "memory_used_gb": 25.056930541992188,
+        "memory_total_gb": 503.4778251647949,
+        "gpu_0_utilization": 89,
+        "gpu_0_memory_percent": 96.10336303710938,
+        "gpu_0_memory_used_gb": 38.44134521484375,
+        "gpu_0_memory_total_gb": 40.0,
+        "gpu_0_power_watts": 316.407
+      }
+    },
+    {
+      "timestamp": 1765147295,
+      "hostname": "g002.anvil.rcac.purdue.edu",
+      "metrics": {
+        "cpu_percent": 5.7,
+        "load_average_1m": 8.45,
+        "load_average_5m": 8.26,
+        "load_average_15m": 6.91,
+        "memory_percent": 5.8,
+        "memory_available_gb": 474.28723526000977,
+        "memory_used_gb": 25.081966400146484,
+        "memory_total_gb": 503.4778251647949,
+        "gpu_0_utilization": 89,
+        "gpu_0_memory_percent": 96.10336303710938,
+        "gpu_0_memory_used_gb": 38.44134521484375,
+        "gpu_0_memory_total_gb": 40.0,
+        "gpu_0_power_watts": 328.541
+      }
+    },
+    {
+      "timestamp": 1765147296,
+      "hostname": "g002.anvil.rcac.purdue.edu",
+      "metrics": {
+        "cpu_percent": 5.9,
+        "load_average_1m": 8.45,
+        "load_average_5m": 8.26,
+        "load_average_15m": 6.91,
+        "memory_percent": 5.8,
+        "memory_available_gb": 474.30947494506836,
+        "memory_used_gb": 25.059715270996094,
+        "memory_total_gb": 503.4778251647949,
+        "gpu_0_utilization": 90,
+        "gpu_0_memory_percent": 96.10336303710938,
+        "gpu_0_memory_used_gb": 38.44134521484375,
+        "gpu_0_memory_total_gb": 40.0,
+        "gpu_0_power_watts": 332.173
+      }
+    },
+    {
+      "timestamp": 1765147297,
+      "hostname": "g002.anvil.rcac.purdue.edu",
+      "metrics": {
+        "cpu_percent": 5.7,
+        "load_average_1m": 8.41,
+        "load_average_5m": 8.26,
+        "load_average_15m": 6.92,
+        "memory_percent": 5.8,
+        "memory_available_gb": 474.30481338500977,
+        "memory_used_gb": 25.064361572265625,
+        "memory_total_gb": 503.4778251647949,
+        "gpu_0_utilization": 89,
+        "gpu_0_memory_percent": 96.10336303710938,
+        "gpu_0_memory_used_gb": 38.44134521484375,
+        "gpu_0_memory_total_gb": 40.0,
+        "gpu_0_power_watts": 331.396
+      }
+    }
+  ]
+}
