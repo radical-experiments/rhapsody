@@ -1,41 +1,86 @@
+# **SPHERICAL Prototype Experiment (Dragon V3): AI–HPC Coupling**
 
-# SPHERICAL PROTOTYPE EXPERIMENT (Dragon V3) AI-HPC Coupling.
+**Note:** This experiment assumes you have a Redis image available on your filesystem.
+On HPC systems, this should typically be `redis-ai.sif`.
 
-Note: This exp. assumes that you have a redis image (if you run on HPC it should be redis-ai.sif) on your file system. 
+---
 
-### Installation:
+## **Installation**
 
-Use the following tutorial to setup the enviromet:
+Follow the tutorial below to set up the environment:
 
-`https://github.com/radical-cybertools/aici-dragon-inference/tree/main`
+**[https://github.com/radical-cybertools/aici-dragon-inference/tree/main](https://github.com/radical-cybertools/aici-dragon-inference/tree/main)**
 
-1-Setup your virtual env: Follow steps from section *Setup Virtual Environment*
+1. **Set up your virtual environment**
+   Follow the steps in the *Setup Virtual Environment* section.
 
-2-Configure vLLM: Follow step 1 - 4 from section *Run Application*.
-Fot the step 1 use *GreatCaptainNemo/ProLLaMA*
+2. **Configure vLLM**
+   Follow steps 1–4 in the *Run Application* section.
+   For Step 1, use the model repository: **`GreatCaptainNemo/ProLLaMA`**.
 
-3-Install the required packages: `pip install -e "..[rhapsody-spherical]"`
+3. **Install required packages**
 
-
-### Steps tp run single experiment
-
-- ask for interactive node(s):
-   
-   `sinteractive -p wholenode -N 8 -A xxxx  -t 00:60:00`
-
-- generate the dragon `slurm.yml`
-
-   `dragon-network-config --output-to-yaml`
-
-- modify the following line in *run_me.py* if you prefer to use your owm LLM
-
-`model_name="/anvil/scratch/x-mgoliyad1/cache/transformers/cache/models--GreatCaptainNemo--ProLLaMA/snapshots/983b5d4ff8fa82948bc68c5f02c65d4f4c76d650"`
-- run experiment
-
+   ```bash
+   pip install -e "..[rhapsody-spherical]"
    ```
-   dragon --w ssh --network-config slurm.yaml scripts/run_me.py \
-    ```
+
+---
+
+## **Running a Single Experiment**
+
+1. **Request interactive node(s):**
+
+   ```bash
+   sinteractive -p wholenode -N 8 -A xxxx -t 00:60:00
+   ```
+
+2. **Generate the Dragon `slurm.yml`:**
+
+   ```bash
+   cd spherical_exp/scripts
+   dragon-network-config --output-to-yaml
+   ```
+
+3. **(Optional) Use a different LLM**
+   Modify the `model_name` field in `run_me.py` if you wish to use your own model:
+
+   ```python
+   model_name = "/anvil/scratch/x-mgoliyad1/cache/transformers/cache/models--GreatCaptainNemo--ProLLaMA/snapshots/983b5d4ff8fa82948bc68c5f02c65d4f4c76d650"
+   ```
+
+4. **Run the experiment:**
+
+   ```bash
+   dragon --w ssh --network-config slurm.yaml scripts/run_me.py
+   ```
 
 
-### Plotting the results
-`python plot.py`
+
+## **Plotting the Results**
+
+```bash
+cd ../plots
+```
+
+To plot **average utilization and throughput**, run:
+
+```bash
+python3 rhapsody_plots.py ../data --out masha.png
+```
+
+To plot **utilization across all nodes for a single run**, use:
+
+```bash
+python3 plot_new_telem_infer.py ../data/s1.p10/exp4/telemetry-results --out utilization_on_all_nodes.png
+```
+
+To plot **utilization for a single node**, use:
+
+```bash
+python3 plot_new_telem_infer.py ../data/s1.p10/exp4/telemetry-results --nodes 1 --out utilization_on_1_nodes.png
+```
+
+
+---
+
+If you want, I can also prepare a **clean README-style version**, or add troubleshooting and environment notes.

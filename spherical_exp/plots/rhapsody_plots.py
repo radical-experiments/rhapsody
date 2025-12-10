@@ -15,10 +15,40 @@ EXPERIMENTS = {
     's8': 's8.p80'
     }
 
+def read_telemetry(path):
+    print(f'\nReading inference data from directoty: {path}')
+    data = {}
+    
+    for d in path.iterdir():
+        if not d.is_dir():
+            continue
+        
+        total = 0
+        for f in d.iterdir():
+
+            if not f.is_file() or 'infer' not in f.stem:
+                continue
+            print(f'Reading inference data from file: {f}')
+            with open(f, "r") as f:
+                tput_data = json.load(f)
+
+            for tput_data1 in tput_data:
+                for tput_data2 in tput_data1:
+                    tokens_per_sec = tput_data2["total_tokens_per_second"]
+                    hostname = tput_data2["hostname"]
+                    data.setdefault(hostname, []).append(tokens_per_sec)
+    
+        print(f'\nCollected data for hosts: {data.keys()}')
+        total += sum(sum(v) / len(v) for v in data.values())
+    return total
+
+
 # # --------------------------------------------------
 # # Load metrics from a JSON file
 # # --------------------------------------------------
 def load_metrics(path):
+
+    
     with open(path, "r") as f:
         data = json.load(f)
 
@@ -131,7 +161,7 @@ def main():
     parser = argparse.ArgumentParser(description="Plot CPU/GPU telemetry from JSON files.")
     parser.add_argument("directory", help="Directory containing telemetry checkpoint .json files")
     parser.add_argument("--out", default="average_utilization_throughput.png", help="Output figure filename")
-    parser.add_argument("--tpt", default="tpt.json", help="Output figure filename")
+    #parser.add_argument("--tpt", default="tpt.json", help="Output figure filename")
     args = parser.parse_args()
 
     mean_cpu = {}
@@ -143,21 +173,23 @@ def main():
 
     import json
 
-    with open(args.tpt, "r") as f:
-        tput_data = json.load(f)
+    # with open(args.tpt, "r") as f:
+    #     tput_data = json.load(f)
 
     for e, dir in EXPERIMENTS.items():
         dir = Path(args.directory, dir)
 
-        tput = np.array(tput_data[e])
-        mean_tput[e] = np.mean(tput) 
-        std_tput[e] = np.std(tput)
+        tput_data = read_telemetry(dir)
+
+        #tput = np.array(tput_data)
+        mean_tput[e] = np.mean(tput_data) 
+        std_tput[e] = np.std(tput_data)
 
         gpu_util = []
         cpu_util = []
 
         for d in dir.iterdir():
-            print('d', d)
+            #print('d', d)
             directory = Path(d, 'telemetry-results')
 
             # Find telemetry files

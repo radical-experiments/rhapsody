@@ -46,8 +46,8 @@ class Spherical_manager():
         self.time_between_predictions = 0.20     # Delay between prediction checks
 
         # Inference parameters
-        self.total_num_prompts = kwargs.get('total_num_prompts', 1000)
-        self.prompt_batch_size = kwargs.get('prompt_batch_size', 1000)
+        self.total_num_prompts = kwargs.get('total_num_prompts', 2000)
+        self.prompt_batch_size = kwargs.get('prompt_batch_size', 2000)
         self.num_services = kwargs.get('num_services', 2)
         self.inf_batches = self.total_num_prompts // self.prompt_batch_size
 
