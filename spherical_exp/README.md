@@ -51,7 +51,7 @@ Follow the tutorial below to set up the environment:
 4. **Run the experiment:**
 
    ```bash
-   dragon --w ssh --network-config slurm.yaml scripts/run_me.py
+   dragon -w ssh --network-config slurm.yaml -t hsta run_me.py --directory data/s2.p20/exp10 --num_services 2 --num_pipelines 20
    ```
 
 
@@ -65,7 +65,7 @@ cd ../plots
 To plot **average utilization and throughput**, run:
 
 ```bash
-python3 rhapsody_plots.py ../data --out masha.png
+python3 rhapsody_plots.py ../data data --out spherical_plot.png
 ```
 
 To plot **utilization across all nodes for a single run**, use:

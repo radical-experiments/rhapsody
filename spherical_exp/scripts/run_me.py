@@ -20,20 +20,18 @@ from spherical_manager import Spherical_manager
 
 logger = logging.getLogger(__name__)
 
-collector_dir = 'telemetry-results'
-num_services = 1            # Number of VLLM services will be shared between all pipelines
 num_gpus_per_serv = 1       # GPUs per service
 nodes_per_serv = 1          # Number of nodes per service - each service uses different nodes via offset
-num_pipelines = 10           # Number of parallel Spherical_manager workflows
-# nodes = 2                   # Total nodes in allocation
 
-def post_process_output(infer_num, results):
+def post_process_output(infer_num, results, out_dir):
 
     logger.info("\n" + "=" * 60)
     logger.info("Inference Results")
     logger.info("=" * 60)
 
-    with open(f"infer_{infer_num}.log", "w") as f:
+    out_file = os.path.join(out_dir, f"infer_{infer_num}.log")
+
+    with open(out_file, "w") as f:
         json.dump(results, f, indent=2)
 
     # Total number of prompts across all services
@@ -67,7 +65,7 @@ def post_process_output(infer_num, results):
 
         for batch in results:
             # Each batch contains many requests from ONE service
-            first = batch[i]
+            first = batch  #[i]
             service_total_tokens.append(first['total_tokens_per_second'])
             service_output_tokens.append(first['total_output_tokens_per_second'])
 
@@ -83,7 +81,7 @@ def post_process_output(infer_num, results):
     print("=" * 60)
 
 
-async def run_Sph():
+async def run_Sph(out_dir, num_services, num_pipelines):
     """
     + Start Radical.Asyncflow with Dragon execution backend.
     + Start the VLLM inference engine as a service using Dragon
@@ -98,8 +96,7 @@ async def run_Sph():
     """
     mp.set_start_method("dragon")
 
-    collector_dir = 'telemetry-results'
-    import os
+    collector_dir = os.path.join(out_dir, 'telemetry-results')
 
     if os.path.isdir("path/to/directory"):
         shutil.rmtree(collector_dir)  # deletes dir and all contents
@@ -112,7 +109,7 @@ async def run_Sph():
         disable_background_batching=False)
 
     #init_default_logger(logging.INFO)
-    init_default_logger(logging.INFO, output_file=f's{num_services}.p{num_pipelines}.log')
+    init_default_logger(logging.INFO, output_file=os.path.join(out_dir, f's{num_services}.p{num_pipelines}.log'))
 
     logger.info("=" * 60)
     logger.info("Dragon V3: Multi-Service VLLM Workflow (Node-Partitioned)")
@@ -151,8 +148,6 @@ async def run_Sph():
     # Get endpoints
     service_endpoints = [service.get_endpoint() for service in services]
 
-    
-
     collector = DragonTelemetryCollector(
         collection_rate=1.0,              # Collect every second
         checkpoint_interval=30.0,         # Checkpoint every 30 seconds
@@ -188,7 +183,7 @@ async def run_Sph():
         results = await asyncio.gather(*[workflow.teach() 
                                    for workflow in workflows])
         for i, res in enumerate(results):
-            post_process_output(i, res)
+            post_process_output(i, res, out_dir)
     except Exception as e:
         print(f"An error occurred during teaching: {e}")
     finally:
@@ -200,7 +195,13 @@ async def run_Sph():
 
 if __name__ == '__main__':
 
-    asyncio.run(run_Sph())
+    parser = argparse.ArgumentParser(description="Spherical experiment")
+    parser.add_argument("--directory", type=str, help="Directory to store all data from experiment")
+    parser.add_argument("--num_services", type=int, help="Total number of vLLM services")
+    parser.add_argument("--num_pipelines", type=int, help="Total number of pipeline (each pipeline will use single vLLM service)")
+    args = parser.parse_args()
+
+    asyncio.run(run_Sph(out_dir=args.directory, num_services=int(args.num_services), num_pipelines=int(args.num_pipelines)))
 
     # dragon-network-config --output-to-yaml
 

@@ -7,7 +7,7 @@ import seaborn as sns
 import argparse
 from pathlib import Path
 
-
+using_old_data = True
 EXPERIMENTS = {
     's1': 's1.p10',
     's2': 's2.p20',
@@ -63,7 +63,7 @@ def load_metrics(path):
     return pd.DataFrame(rows)
    
 
-def _plot(outfile, mean_gpu, std_gpu, mean_cpu, std_cpu, mean_tput, std_tput):
+def _plot(outfile, single_df, mean_gpu, std_gpu, mean_cpu, std_cpu, mean_tput, std_tput):
     # ------------------------------------------------------
     # Data and labels
     # ------------------------------------------------------
@@ -92,7 +92,7 @@ def _plot(outfile, mean_gpu, std_gpu, mean_cpu, std_cpu, mean_tput, std_tput):
     # ------------------------------------------------------
     # Create figure with 2 subplots
     # ------------------------------------------------------
-    fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(16, 7))  # increased width
+    fig, (ax1, ax2, ax3) = plt.subplots(1, 3, figsize=(16, 4))  # increased width
     plt.subplots_adjust(wspace=0.3)  # add space between subplots
 
     # -------------------------------
@@ -149,6 +149,39 @@ def _plot(outfile, mean_gpu, std_gpu, mean_cpu, std_cpu, mean_tput, std_tput):
     ax2.yaxis.set_major_formatter(ScalarFormatter(useMathText=True))
     ax2.ticklabel_format(style='sci', axis='y', scilimits=(0,0))
 
+    # -------------------------------
+    # Plot 3 — Urilization from single run
+    # -------------------------------
+
+    # GPU0
+    if "gpu_0_utilization" in single_df:
+        ax3.fill_between(
+            single_df["timestamp"],
+            single_df["gpu_0_utilization"],
+            step="mid",
+            alpha=0.2  ,
+            color=gpu_color,
+            label=f"GPU (%)",
+        )
+
+    # CPU
+    if "cpu_percent" in single_df:
+        ax3.fill_between(
+            single_df["timestamp"],
+            single_df["cpu_percent"],
+            step="mid",
+            alpha=0.4,
+            color=cpu_color,
+            label=f"CPU (%)",
+        )
+
+    ax3.set_title(f"CPU + GPU Utilization", fontsize=16, fontweight='bold')
+    ax3.set_ylabel("Utilization (%)", fontsize=13)
+    ax3.grid(True, alpha=0.2)
+    ax3.legend(loc="upper right")
+    ax3.set_xlabel("\n\nTime (s)", fontsize=13)
+    
+
     # ------------------------------------------------------
     # Save and show figure
     # ------------------------------------------------------
@@ -161,7 +194,7 @@ def main():
     parser = argparse.ArgumentParser(description="Plot CPU/GPU telemetry from JSON files.")
     parser.add_argument("directory", help="Directory containing telemetry checkpoint .json files")
     parser.add_argument("--out", default="average_utilization_throughput.png", help="Output figure filename")
-    #parser.add_argument("--tpt", default="tpt.json", help="Output figure filename")
+    parser.add_argument("--experiment", default="s4", help="Output figure filename")
     args = parser.parse_args()
 
     mean_cpu = {}
@@ -171,17 +204,19 @@ def main():
     mean_tput = {}
     std_tput = {}
 
-    import json
-
-    # with open(args.tpt, "r") as f:
-    #     tput_data = json.load(f)
+    if using_old_data:
+        import json
+        with open('tpt.json', "r") as f:
+            tputs = json.load(f)
 
     for e, dir in EXPERIMENTS.items():
         dir = Path(args.directory, dir)
 
-        tput_data = read_telemetry(dir)
+        if not using_old_data:
+            tput_data = read_telemetry(dir)
+        else:
+            tput_data = np.array(tputs[e])
 
-        #tput = np.array(tput_data)
         mean_tput[e] = np.mean(tput_data) 
         std_tput[e] = np.std(tput_data)
 
@@ -212,12 +247,13 @@ def main():
             df["timestamp"] = df["timestamp"] - df["timestamp"].min()
             df = df.sort_values(["hostname", "timestamp"])
 
-            df = df[(df["gpu_0_utilization"] > 5)]
-            
+            if e == args.experiment:
+                single_df = df
 
+            df = df[(df["gpu_0_utilization"] > 5)]
             gpu_util.extend(df["gpu_0_utilization"].to_list())
             cpu_util.extend(df["cpu_percent"].to_list())
-
+        
 
         std_cpu[e] = np.std(cpu_util)
         std_gpu[e] = np.std(gpu_util)
@@ -232,7 +268,11 @@ def main():
     std_tput = dict(sorted(std_tput.items()))
     mean_tput = dict(sorted(mean_tput.items()))
 
-    _plot(args.out, mean_gpu, std_gpu, mean_cpu, std_cpu, mean_tput, std_tput)
+    hosts = sorted(single_df["hostname"].unique())
+    first_host = hosts[0]
+    single_df = single_df[single_df["hostname"] == first_host]
+
+    _plot(args.out, single_df, mean_gpu, std_gpu, mean_cpu, std_cpu, mean_tput, std_tput)
 
 
 if __name__ == "__main__":
