@@ -12,10 +12,10 @@ Follow the tutorial below to set up the environment:
 **[https://github.com/radical-cybertools/aici-dragon-inference/tree/main](https://github.com/radical-cybertools/aici-dragon-inference/tree/main)**
 
 1. **Set up your virtual environment**
-   Follow the steps in the *Setup Virtual Environment* section.
+   Follow the steps in the **Setup Virtual Environment** section.
 
 2. **Configure vLLM**
-   Follow steps 1–4 in the *Run Application* section.
+   Follow steps 1–4 in the **Run Application** section.
    For Step 1, use the model repository: **`GreatCaptainNemo/ProLLaMA`**.
 
 3. **Install required packages**
@@ -65,7 +65,7 @@ cd ../plots
 To plot **average utilization and throughput**, run:
 
 ```bash
-python3 rhapsody_plots.py ../data data --out spherical_plot.png
+python3 rhapsody_plots.py ../data --out spherical_plot.png
 ```
 
 To plot **utilization across all nodes for a single run**, use:
