@@ -16,7 +16,7 @@ from dragon.infrastructure.policy import Policy
 from rose import Learner
 from radical.asyncflow import WorkflowEngine, DragonExecutionBackendV2
 from radical.asyncflow.logging import init_default_logger
-from radical.asyncflow.backends.execution.dragon import WorkerGroupConfig, WorkerType, PolicyConfig
+from radical.asyncflow.backends.execution.dragon import WorkerGroupConfigV2, WorkerTypeV2, PolicyConfigV2
 from smartredis import Client
 
 logger = logging.getLogger(__name__)
@@ -25,24 +25,24 @@ def get_hostnames():
     import yaml
     with open('slurm.yaml', "r") as f:
         data = yaml.safe_load(f)
-    return [node_info.get("host_name") for node_info in data.values() 
+    return [node_info.get("host_name") for node_info in data.values()
             if node_info.get("host_name")]
 
 def get_worker_configs(num_nodes: int, num_workers: int, nprocs: int = 128):
     if num_nodes % num_workers != 0:
         raise ValueError(f"Cannot evenly distribute {num_nodes} nodes among {num_workers} workers")
-    
+
     nodes_per_worker = num_nodes // num_workers
     hostnames = get_hostnames()
     policies = [Policy(host_name=name, placement=Policy.Placement.HOST_NAME) for name in hostnames]
-    
+
     workers = []
     for worker_idx in range(num_workers):
         start_node = worker_idx * nodes_per_worker
         end_node = start_node + nodes_per_worker
-        worker_policies = [PolicyConfig(policy=policies[node_idx], nprocs=nprocs) 
+        worker_policies = [PolicyConfigV2(policy=policies[node_idx], nprocs=nprocs)
                            for node_idx in range(start_node, end_node)]
-        worker = WorkerGroupConfig(name=f"worker{worker_idx}", worker_type=WorkerType.COMPUTE, policies=worker_policies)
+        worker = WorkerGroupConfigV2(name=f"worker{worker_idx}", worker_type=WorkerTypeV2.COMPUTE, policies=worker_policies)
         workers.append(worker)
     return workers
 
@@ -84,43 +84,51 @@ async def run_benchmark():
     @learner.utility_task()
     async def setup_redis_on_worker(task_description={}):
         import os
-        executable = os.path.join(os.getcwd(),
-                                 'prepare-and-or-run-redis-ai.sh',
-                                 'prepare_and_run')
+
+        socket_file = Path("/tmp/redis.sock")
+        socket_file.unlink(missing_ok=True)
+        socket_file.touch(mode=0o777)
+
+        redis_server= "/home/users/shao/dev/SmartSim/smartsim/_core/bin/redis-server"
+        redisai_lib = "/home/users/shao/dev/SmartSim/smartsim/_core/lib/redisai.so"
+        redisai_opt = f"--loadmodule {redisai_lib}"
+        uds_opt =f"--unixsocket {str(socket_file)} --unixsocketperm 777"
+        misc_opts = "--daemonize yes --protected-mode no --logfile uds.log --port 0 --save ''"
+
+        executable = " ".join([redis_server, redisai_opt, uds_opt, misc_opts])
+
         return executable
 
     @learner.utility_task()
     async def shutdown_redis_on_worker(task_description={}):
-        import os
-        executable = os.path.join(os.getcwd(),
-                                 'prepare-and-or-run-redis-ai.sh',
-                                 'shutdown')
+        redis_cli = "/home/users/shao/dev/SmartSim/smartsim/_core/bin/redis-cli"
+        executable = " ".join([redis_cli, "-s /tmp/redis.sock", "STOP"])
         return executable
 
     @learner.utility_task(as_executable=False)
-    async def simulation_redis(sim_id: int, redis_address: str, num_steps: int, 
+    async def simulation_redis(sim_id: int, redis_address: str, num_steps: int,
                             payload_size: int, task_description={}):
         import time
         client = Client(address=redis_address, cluster=False)
-        
+
         total_start = time.perf_counter()
         data_transfer_time = 0
         put_latencies = []  # NEW: Per-operation latencies
-        
+
         for step in range(num_steps):
             # Simulation work
             data = np.random.rand(payload_size).astype(np.float32)
             result = data * 2.0 + np.random.rand(*data.shape)
-            
+
             # Data transfer to training
             transfer_start = time.perf_counter()
             client.put_tensor(f"sim{sim_id}_step{step}", result)
             latency = time.perf_counter() - transfer_start
             put_latencies.append(latency)
             data_transfer_time += latency
-        
+
         total_time = time.perf_counter() - total_start
-        
+
         return {
             'sim_id': sim_id,
             'total_time': total_time,
@@ -130,15 +138,15 @@ async def run_benchmark():
         }
 
     @learner.utility_task(as_executable=False)
-    async def training_redis(sim_id: int, redis_address: str, num_steps: int, 
+    async def training_redis(sim_id: int, redis_address: str, num_steps: int,
                             task_description={}):
         import time
         client = Client(address=redis_address, cluster=False)
-        
+
         total_start = time.perf_counter()
         data_transfer_time = 0
         get_latencies = []  # NEW: Per-operation latencies
-        
+
         for step in range(num_steps):
             # Data transfer from simulation
             transfer_start = time.perf_counter()
@@ -146,12 +154,12 @@ async def run_benchmark():
             latency = time.perf_counter() - transfer_start
             get_latencies.append(latency)
             data_transfer_time += latency
-            
+
             # Training work
             trained = data * 1.5
-        
+
         total_time = time.perf_counter() - total_start
-        
+
         return {
             'sim_id': sim_id,
             'total_time': total_time,
@@ -161,20 +169,20 @@ async def run_benchmark():
         }
 
     @learner.utility_task(as_executable=False)
-    async def simulation_filesystem(sim_id: int, shared_dir: str, num_steps: int, 
+    async def simulation_filesystem(sim_id: int, shared_dir: str, num_steps: int,
                                     payload_size: int, task_description={}):
         import time
         import os
-        
+
         total_start = time.perf_counter()
         data_transfer_time = 0
         write_latencies = []  # NEW
-        
+
         for step in range(num_steps):
             # Simulation work
             data = np.random.rand(payload_size).astype(np.float32)
             result = data * 2.0 + np.random.rand(*data.shape)
-            
+
             # Data transfer to training (write file)
             transfer_start = time.perf_counter()
             filepath = f"{shared_dir}/sim{sim_id}_step{step}.npy"
@@ -183,9 +191,9 @@ async def run_benchmark():
             latency = time.perf_counter() - transfer_start
             write_latencies.append(latency)
             data_transfer_time += latency
-        
+
         total_time = time.perf_counter() - total_start
-        
+
         return {
             'sim_id': sim_id,
             'total_time': total_time,
@@ -195,34 +203,34 @@ async def run_benchmark():
         }
 
     @learner.utility_task(as_executable=False)
-    async def training_filesystem(sim_id: int, shared_dir: str, num_steps: int, 
+    async def training_filesystem(sim_id: int, shared_dir: str, num_steps: int,
                                 task_description={}):
         import time
         import os
-        
+
         total_start = time.perf_counter()
         data_transfer_time = 0
         read_latencies = []  # NEW
-        
+
         for step in range(num_steps):
             # Data transfer from simulation (read file)
             transfer_start = time.perf_counter()
             filepath = f"{shared_dir}/sim{sim_id}_step{step}.npy"
-            
+
             # Wait for file to exist
             while not os.path.exists(filepath):
                 time.sleep(0.001)
-            
+
             data = np.load(filepath)
             latency = time.perf_counter() - transfer_start
             read_latencies.append(latency)
             data_transfer_time += latency
-            
+
             # Training work
             trained = data * 1.5
-        
+
         total_time = time.perf_counter() - total_start
-        
+
         return {
             'sim_id': sim_id,
             'total_time': total_time,
@@ -234,7 +242,7 @@ async def run_benchmark():
     async def main():
         db_redis_map = {}
         shared_dir = "/tmp/coupling_benchmark_data"
-        
+
         try:
             logger.info(f"="*70)
             logger.info(f"COUPLING BENCHMARK: {args.mode.upper()}")
@@ -249,11 +257,12 @@ async def run_benchmark():
                 redis_tasks = [setup_redis_on_worker(task_description={
                     "ranks": 1, "worker_hint": f"worker{i}", "pinning_policy": "strict"
                 }) for i in range(args.num_database_nodes)]
-                
+
                 redis_endpoints_raw = await asyncio.gather(*redis_tasks)
-                
+
                 for i, endpoint in enumerate(redis_endpoints_raw):
                     db_redis_map[i] = parse_redis_endpoint(endpoint)
+                    db_redis_map[i] = "unix:///tmp/redis.sock"
                     logger.info(f"  Database {i} -> {db_redis_map[i]}")
             else:
                 # Create shared directory
@@ -262,52 +271,52 @@ async def run_benchmark():
 
             # Launch simulations and training
             logger.info("\nLaunching tasks...")
-            
+
             wall_clock_start = time.perf_counter()
-            
+
             # Process each simulation sequentially to ensure sim+train go to same worker
             all_results = []
 
             for sim_id in range(args.num_simulations):
                 worker_id = sim_id % args.num_nodes
                 task_desc = {"ranks": 1, "worker_hint": f"worker{worker_id}", "pinning_policy": "strict"}
-                
+
                 if args.mode == 'redis':
                     db_id = sim_id % args.num_database_nodes
                     redis_addr = db_redis_map[db_id]
-                    
+
                     # Run simulation first
-                    sim_result = await simulation_redis(sim_id, redis_addr, args.num_training_steps, 
+                    sim_result = await simulation_redis(sim_id, redis_addr, args.num_training_steps,
                                                     args.payload_size, task_desc)
-                    
+
                     # Then run training (same worker, same Redis)
                     train_result = await training_redis(sim_id, redis_addr, args.num_training_steps, task_desc)
-                    
+
                 else:
                     # Run simulation first
-                    sim_result = await simulation_filesystem(sim_id, shared_dir, args.num_training_steps, 
+                    sim_result = await simulation_filesystem(sim_id, shared_dir, args.num_training_steps,
                                                             args.payload_size, task_desc)
-                    
+
                     # Then run training (same worker)
                     train_result = await training_filesystem(sim_id, shared_dir, args.num_training_steps, task_desc)
-                
+
                 all_results.append((sim_result, train_result))
-            
+
             wall_clock_time = time.perf_counter() - wall_clock_start
-            
+
             logger.info(f"✅ Completed in {wall_clock_time:.2f}s")
 
             # Aggregate results
             sim_results = [r[0] for r in all_results]
             train_results = [r[1] for r in all_results]
-            
+
             total_sim_time = sum(r['total_time'] for r in sim_results)
             total_train_time = sum(r['total_time'] for r in train_results)
             total_sim_transfer = sum(r['data_transfer_time'] for r in sim_results)
             total_train_transfer = sum(r['data_transfer_time'] for r in train_results)
             total_sim_compute = sum(r['computation_time'] for r in sim_results)
             total_train_compute = sum(r['computation_time'] for r in train_results)
-            
+
             # Collect all latencies
             if args.mode == 'redis':
                 all_put_latencies = []
@@ -316,7 +325,7 @@ async def run_benchmark():
                     all_put_latencies.extend(r['put_latencies'])
                 for r in train_results:
                     all_get_latencies.extend(r['get_latencies'])
-                
+
                 put_latencies_ms = np.array(all_put_latencies) * 1000
                 get_latencies_ms = np.array(all_get_latencies) * 1000
             else:
@@ -326,10 +335,10 @@ async def run_benchmark():
                     all_write_latencies.extend(r['write_latencies'])
                 for r in train_results:
                     all_read_latencies.extend(r['read_latencies'])
-                
+
                 write_latencies_ms = np.array(all_write_latencies) * 1000
                 read_latencies_ms = np.array(all_read_latencies) * 1000
-            
+
             stats = {
                 'config': {
                     'mode': args.mode,
@@ -353,7 +362,7 @@ async def run_benchmark():
                     'computation_pct': (total_sim_compute + total_train_compute) / wall_clock_time * 100
                 }
             }
-            
+
             # Add latency statistics
             if args.mode == 'redis':
                 stats['coupling_latencies'] = {
@@ -401,7 +410,7 @@ async def run_benchmark():
                         'all_values': read_latencies_ms.tolist()
                     }
                 }
-            
+
             # Save
             output_dir = Path(args.output_dir)
             output_dir.mkdir(parents=True, exist_ok=True)
@@ -409,12 +418,12 @@ async def run_benchmark():
 
             with open(output_file, 'w') as f:
                 json.dump(stats, f, indent=2)
-            
+
             logger.info(f"\nResults saved to {output_file}")
             logger.info(f"  Wall-clock: {wall_clock_time:.3f}s")
             logger.info(f"  Data transfer: {stats['breakdown']['data_transfer_pct']:.1f}%")
             logger.info(f"  Computation: {stats['breakdown']['computation_pct']:.1f}%")
-            
+
             if args.mode == 'redis':
                 logger.info(f"  PUT latency: {stats['coupling_latencies']['put_ms']['mean']:.3f}ms ± {stats['coupling_latencies']['put_ms']['std']:.3f}ms")
                 logger.info(f"  GET latency: {stats['coupling_latencies']['get_ms']['mean']:.3f}ms ± {stats['coupling_latencies']['get_ms']['std']:.3f}ms")

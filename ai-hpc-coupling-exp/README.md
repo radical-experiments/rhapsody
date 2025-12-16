@@ -1,7 +1,7 @@
 
 # ROSE + SmartSim + RHAPSODY (Dragon V2) AI-HPC Coupling Exp.
 
-Note: This exp. assumes that you have a redis image (if you run on HPC it should be redis-ai.sif) on your file system. 
+Note: This exp. assumes that you have a redis image (if you run on HPC it should be redis-ai.sif) on your file system.
 
 ### Installation:
 
@@ -12,7 +12,7 @@ Note: This exp. assumes that you have a redis image (if you run on HPC it should
 3-Install the required packages: `pip install -e "..[rhapsody-ai-hpc]"`
 
 
-### Steps to the complete experiment 
+### Steps to the complete experiment
 
 1-8 nodes for each datapoint we do X3 times run
 
@@ -21,7 +21,7 @@ Note: This exp. assumes that you have a redis image (if you run on HPC it should
 ### Steps tp run single experiment
 
 - ask for interactive node(s):
-   
+
    `sinteractive -p wholenode -N 8 -A xxxx  -t 00:60:00`
 
 - generate the dragon `slurm.yml`
@@ -31,13 +31,13 @@ Note: This exp. assumes that you have a redis image (if you run on HPC it should
 - run redis (in-mempry coupling) or file-system couploing mode
 
    ```
-   dragon --w ssh --network-config slurm.yaml scripts/ai-hpc-coupling.py \
+   dragon --w ssh --network-config slurm.yaml scripts/ai-hpc-couple.py \
                 --num_nodes 8 \
-                --num_database_nodes 8 \
-                --num_simulations 1600 \
+                --num_database_nodes 8\
+                --num_simulations 320 \
                 --mode redis \
-                --run_id 1
-                --output_dir 8nodes-results
+                --run_id 1 \
+                --output_dir dev-run
     ```
 
 

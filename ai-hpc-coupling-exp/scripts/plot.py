@@ -7,11 +7,15 @@ Updated: Single figure with 3 subplots
 import json
 import numpy as np
 import matplotlib.pyplot as plt
+from tqdm import tqdm
 from pathlib import Path
 import re
 from collections import defaultdict
 from datetime import datetime
 import glob
+
+
+from argparse import ArgumentParser
 
 # -----------------------------
 # 1-Parse RHAPSODY log
@@ -78,39 +82,40 @@ def parse_rhapsody_log(log_file):
 # -----------------------------
 # 2- Load JSON results
 # -----------------------------
-def load_results(results_dir='../data/1-8nodes-results/results'):
-    results_dir = Path(results_dir)
-    
+def load_results(results_dir):
+
     redis_results = defaultdict(list)
     fs_results = defaultdict(list)
 
     # Expect filenames like: redis_nodes4_run2.json
     pattern = re.compile(r'(redis|filesystem)_nodes(\d+)_run\d+\.json')
-    
-    for json_file in results_dir.glob('*.json'):
+
+    for json_file in tqdm(results_dir.glob('*.json'), desc="Parsing JSON data"):
         m = pattern.match(json_file.name)
         if not m:
             continue
         mode, nodes = m.groups()
         nodes = int(nodes)
-        
+
         with open(json_file, 'r') as f:
             data = json.load(f)
-        
+
         if mode == 'redis':
             redis_results[nodes].append(data)
         else:
             fs_results[nodes].append(data)
-    
+
     return redis_results, fs_results
 
 # -----------------------------
 # 3- Attach RHAPSODY overhead to results
 # -----------------------------
-def attach_rhapsody_overhead(redis_results, logs_pattern="../data/1-8nodes-results/rose.dragon.*.log"):
-    log_files = glob.glob(logs_pattern)
-    for log_file in log_files:
-        m = re.search(r"n(\d+)\.w(\d+)\.sim(\d+)\.train(\d+)\.r(\d+)", log_file)
+def attach_rhapsody_overhead(redis_results, results_dir):
+    logs_pattern = "rose.dragon.*.log"
+
+    log_files = results_dir.glob(logs_pattern)
+    for log_file in tqdm(log_files, desc="Parsing RHAPSODY logs"):
+        m = re.search(r"n(\d+)\.w(\d+)\.sim(\d+)\.train(\d+)\.r(\d+)", str(log_file))
         if not m:
             continue
         n, w, sim, train, r = map(int, m.groups())
@@ -138,6 +143,7 @@ def attach_rhapsody_overhead(redis_results, logs_pattern="../data/1-8nodes-resul
 # 4- Plotting function (3 subplots)
 # -----------------------------
 def plot_all_in_one(redis_results, fs_results, output_file='combined_plots.png'):
+    yrange = [1, 3000]
     nodes = sorted(set(list(redis_results.keys()) + list(fs_results.keys())))
     fig, (ax1, ax2, ax3) = plt.subplots(1, 3, figsize=(16, 4))
     x = np.arange(len(nodes))
@@ -162,24 +168,26 @@ def plot_all_in_one(redis_results, fs_results, output_file='combined_plots.png')
             fs_times.append(0)
             fs_err.append(0)
 
-    bars1 = ax1.bar(x - width/2, fs_times, width, yerr=fs_err,
-                    label='File System Coupling', color='#FFD93D', edgecolor='black', linewidth=1.5, hatch='/', capsize=5)
-    bars2 = ax1.bar(x + width/2, redis_times, width, yerr=redis_err,
-                    label='Memory Coupling', color='#4ECDC4', edgecolor='black', linewidth=1.5, hatch='\\', capsize=5)
+    bars1 = ax1.bar(x - width/2, fs_times, width,
+                    label='File System Coupling', color='#FFD93D', edgecolor='black', linewidth=1.5, hatch='/')
+    bars2 = ax1.bar(x + width/2, redis_times, width,
+                    label='Memory Coupling', color='#4ECDC4', edgecolor='black', linewidth=1.5, hatch='\\')
 
     ax1.set_xlabel('Number of Nodes', fontsize=12, fontweight='bold')
     ax1.set_ylabel('Time (s)', fontsize=12, fontweight='bold')
     ax1.set_title('Total Runtime', fontsize=10, fontweight='bold')
     ax1.set_xticks(x)
     ax1.set_xticklabels([str(n) for n in nodes])
+    ax1.set_yscale("log")
     ax1.legend(fontsize=12)
     ax1.grid(True, alpha=0.3, axis='y')
+    ax1.set_ylim(yrange)
 
-    for bars in [bars1, bars2]:
-        for bar in bars:
-            height = bar.get_height()
-            ax1.text(bar.get_x() + bar.get_width()/2., height, f'{height:.1f}s',
-                     ha='center', va='bottom', fontsize=8, fontweight='bold')
+    # for bars in [bars1, bars2]:
+    #     for bar in bars:
+    #         height = bar.get_height()
+    #         ax1.text(bar.get_x() + bar.get_width()/2., height, f'{height:.1f}s',
+    #                  ha='center', va='bottom', fontsize=8, fontweight='bold')
 
     # --------- Subplot 2: Latency vs Runtime ---------
     avg_latencies, latency_stds, total_runtimes, runtime_stds = [], [], [], []
@@ -198,9 +206,9 @@ def plot_all_in_one(redis_results, fs_results, output_file='combined_plots.png')
     ax2_twin = ax2.twinx()
     bars_runtime = ax2.bar(x, total_runtimes, width=0.4, alpha=0.7,
                            label='Total Runtime', color='#4ECDC4', edgecolor='black', linewidth=1.5,
-                           yerr=runtime_stds, capsize=5)
-    line_latency = ax2_twin.errorbar(x, avg_latencies, yerr=latency_stds, fmt='o-', linewidth=3, markersize=10,
-                                     label='Avg Latency', color='#FF6B6B', alpha=0.5, capsize=5)
+                           yerr=runtime_stds)
+    line_latency = ax2_twin.plot(x, avg_latencies, linewidth=3, markersize=10,
+                                     label='Avg Latency', color='#FF6B6B', alpha=0.5)
 
     ax2.set_xlabel('Number of Nodes', fontsize=12, fontweight='bold')
     ax2.set_ylabel('Total Runtime (s)', fontsize=12, fontweight='bold', color='#4ECDC4')
@@ -211,10 +219,12 @@ def plot_all_in_one(redis_results, fs_results, output_file='combined_plots.png')
     ax2.tick_params(axis='y', labelcolor='#4ECDC4')
     ax2_twin.tick_params(axis='y', labelcolor='#FF6B6B')
     ax2.grid(True, alpha=0.3)
+    ax2.set_yscale("log")
+    ax2.set_ylim(yrange)
 
-    for i, bar in enumerate(bars_runtime):
-        ax2.text(bar.get_x() + bar.get_width()/2., total_runtimes[i], f'{total_runtimes[i]:.1f}s',
-                 ha='center', va='bottom', fontsize=8, fontweight='bold')
+    # for i, bar in enumerate(bars_runtime):
+    #     ax2.text(bar.get_x() + bar.get_width()/2., total_runtimes[i], f'{total_runtimes[i]:.1f}s',
+    #              ha='center', va='bottom', fontsize=8, fontweight='bold')
 
     lines1, labels1 = ax2.get_legend_handles_labels()
     lines2, labels2 = ax2_twin.get_legend_handles_labels()
@@ -228,7 +238,7 @@ def plot_all_in_one(redis_results, fs_results, output_file='combined_plots.png')
             transfer = np.mean([d['breakdown']['total_data_transfer_time'] for d in data_list])
             rhap = np.mean([d.get("rhapsody_overhead", 0) for d in data_list])
             rose = np.mean([d.get("rose_overhead", 0) for d in data_list])
-            
+
             # Log per-node breakdown
             print(f"Node {n}: compute={compute:.2f}, transfer={transfer:.2f}, "
                   f"rhapsody={rhap:.2f}, rose={rose:.2f}")
@@ -238,11 +248,12 @@ def plot_all_in_one(redis_results, fs_results, output_file='combined_plots.png')
                     color='grey', edgecolor='black', linewidth=1.5, hatch='..')
             ax3.bar(x_pos, transfer, width=0.4, bottom=compute, label='Data Transfer' if i==0 else '',
                     color='#4ECDC4', edgecolor='black', linewidth=1.5, hatch='\\')
-            ax3.bar(x_pos, rhap, width=0.4, bottom=compute+transfer, label='RHAPSODY Overhead' if i==0 else '',
+            ax3.bar(x_pos, rhap, width=0.4, bottom=compute+transfer, label='RHAPSODY' if i==0 else '',
                     color='#FFA500', edgecolor='black', linewidth=1.5, hatch='//')
-            ax3.bar(x_pos, rose, width=0.4, bottom=compute+transfer+rhap, label='ROSE Overhead' if i==0 else '',
+            ax3.bar(x_pos, rose, width=0.4, bottom=compute+transfer+rhap, label='Orchestration' if i==0 else '',
                     color='#FF6B6B', edgecolor='black', linewidth=1.5, hatch='**')
 
+    ax3.set_yscale("log")
     ax3.set_xlabel('Number of Nodes', fontsize=12, fontweight='bold')
     ax3.set_ylabel('Time (s)', fontsize=12, fontweight='bold')
     ax3.set_title('Memory Coupling Time Breakdown', fontsize=10, fontweight='bold')
@@ -250,37 +261,44 @@ def plot_all_in_one(redis_results, fs_results, output_file='combined_plots.png')
     ax3.set_xticklabels([str(n) for n in nodes])
     ax3.legend(fontsize=12)
     ax3.grid(True, alpha=0.3, axis='y')
+    ax3.set_ylim(yrange)
 
     data_volumes = {
         1: "320 MB",
         2: "640 MB",
         4: "1.28 GB",
-        8: "2.56 GB"
+        8: "2.56 GB",
+        16: "5.12 GB",
+        32: "10.24 GB",
+        64: "20.48 GB",
+        128: "40.96 GB",
+        256: "81.92 GB",
+        512: "163.84 GB",
         }
 
     volume_labels = [f"{n} nodes: {data_volumes[n]}" for n in nodes]
 
-    import matplotlib.patches as mpatches
-    dummy_handles = [mpatches.Patch(color='none', label=lbl) for lbl in volume_labels]
+    # import matplotlib.patches as mpatches
+    # dummy_handles = [mpatches.Patch(color='none', label=lbl) for lbl in volume_labels]
 
-    # First legend: computation / transfer / orchestration
-    handles, labels = ax3.get_legend_handles_labels()
-    first_leg = ax3.legend(handles[::-1], labels[::-1], fontsize=12)
+    # # First legend: computation / transfer / orche
+    # handles, labels = ax3.get_legend_handles_labels()
+    # first_leg = ax3.legend(handles[::-1], labels[::-1], fontsize=12)
 
-    # Second legend: data volumes
-    second_leg = ax3.legend(
-        handles=dummy_handles,
-        labels=volume_labels,
-        title="Transfered Data per Node Count",
-        loc='center left',
-        fontsize=12,
-        title_fontsize=12,
-        frameon=False,
-        bbox_to_anchor=(-0.025, 0.425),    # (x, y) you can edit
-    )
+    # # Second legend: data volumes
+    # second_leg = ax3.legend(
+    #     handles=dummy_handles,
+    #     labels=volume_labels,
+    #     title="Transfered Data per Node Count",
+    #     loc='center left',
+    #     fontsize=12,
+    #     title_fontsize=12,
+    #     frameon=False,
+    #     bbox_to_anchor=(-0.025, 0.425),    # (x, y) you can edit
+    # )
 
-    # Add the first legend back
-    ax3.add_artist(first_leg)
+    # # Add the first legend back
+    # ax3.add_artist(first_leg)
 
 
     plt.tight_layout()
@@ -291,11 +309,11 @@ def plot_all_in_one(redis_results, fs_results, output_file='combined_plots.png')
 
 def print_summary(redis_results, fs_results):
     nodes = sorted(set(list(redis_results.keys()) + list(fs_results.keys())))
-    
+
     print("\n" + "="*150)
     print("SUMMARY OF METRICS: Memory Coupling (Redis) vs Filesystem with Overheads")
     print("="*150)
-    
+
     header = (
         f"{'Nodes':<6} "
         f"{'#Tasks':<8} "
@@ -305,14 +323,14 @@ def print_summary(redis_results, fs_results):
         f"{'MC Compute (s)':<18} "
         f"{'MC Transfer (s)':<18} "
         f"{'RHAPSODY Overhead (s)':<22} "
-        f"{'ROSE Overhead (s)':<18}"
+        f"{'Orchestration Overhead (s)':<18}"
     )
     print(header)
     print("-" * 150)
-    
+
     for n in nodes:
         total_tasks = n * 200   # total number of tasks
-        
+
         # ---- Filesystem ----
         if n in fs_results:
             fs_times = [d['timing']['wall_clock_time'] for d in fs_results[n]]
@@ -320,7 +338,7 @@ def print_summary(redis_results, fs_results):
             fs_std = np.std(fs_times)
         else:
             fs_mean = fs_std = 0.0
-        
+
         # ---- Memory Coupling ----
         if n in redis_results:
             data_list = redis_results[n]
@@ -328,23 +346,23 @@ def print_summary(redis_results, fs_results):
             mc_times = [d['timing']['wall_clock_time'] for d in data_list]
             mc_mean = np.mean(mc_times)
             mc_std = np.std(mc_times)
-            
+
             # Latency (PUT+GET avg)
             put_means = [d['coupling_latencies']['put_ms']['mean'] for d in data_list]
             get_means = [d['coupling_latencies']['get_ms']['mean'] for d in data_list]
             lat_runs = [(p + g) / 2 for p, g in zip(put_means, get_means)]
             lat_mean = np.mean(lat_runs)
             lat_std = np.std(lat_runs)
-            
+
             # Breakdown
             compute_vals = [d['breakdown']['total_computation_time'] for d in data_list]
             compute = np.mean(compute_vals)
             compute_std = np.std(compute_vals)
-            
+
             transfer_vals = [d['breakdown']['total_data_transfer_time'] for d in data_list]
             transfer = np.mean(transfer_vals)
             transfer_std = np.std(transfer_vals)
-            
+
             # Overheads
             rhapsody_vals = [d.get("rhapsody_overhead", 0.0) for d in data_list]
             rose_vals = [d.get("rose_overhead", 0.0) for d in data_list]
@@ -359,7 +377,7 @@ def print_summary(redis_results, fs_results):
             transfer = transfer_std = 0.0
             rhapsody_mean = rhapsody_std = 0.0
             rose_mean = rose_std = 0.0
-        
+
         # Print row with mean ± std
         print(
             f"{n:<6} "
@@ -372,15 +390,25 @@ def print_summary(redis_results, fs_results):
             f"{rhapsody_mean:5.2f} ± {rhapsody_std:4.2f}         "
             f"{rose_mean:5.2f} ± {rose_std:4.2f}"
         )
-    
+
     print("="*150 + "\n")
 
 # -----------------------------
 # 5- Main
 # -----------------------------
 if __name__ == "__main__":
-    redis_results, fs_results = load_results()
-    attach_rhapsody_overhead(redis_results)
+
+    parser = ArgumentParser()
+    parser.add_argument(
+        "--result-directory",
+        help="Directory where logs and data files are stored",
+        default="../data/1-8nodes-results/results"
+    )
+    args = parser.parse_args()
+    result_dir = Path(args.result_directory)
+
+    redis_results, fs_results = load_results(result_dir)
+    attach_rhapsody_overhead(redis_results, result_dir)
     if redis_results and fs_results:
         plot_all_in_one(redis_results, fs_results)
         print_summary(redis_results, fs_results)
