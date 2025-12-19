@@ -65,7 +65,16 @@ cd ../plots
 To plot **average utilization and throughput**, run:
 
 ```bash
-python3 rhapsody_plots.py ../data --out spherical_plot.png
+To plot three plots together - original version:
+python3 rhapsody_combined_plots.py ../data --out spherical_combined.png
+
+To plot utilization only:
+python3 rhapsody_single_plot.py ../data --plot_type util --out spherical_util.png
+
+To plot throughput only:
+python3 rhapsody_single_plot.py ../data --plot_type htp --out spherical_htp.png
+
+
 ```
 
 To plot **utilization across all nodes for a single run**, use:

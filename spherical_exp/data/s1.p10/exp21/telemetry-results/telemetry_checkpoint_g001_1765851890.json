@@ -1,0 +1,563 @@
+{
+  "checkpoint_metadata": {
+    "hostname": "g001",
+    "timestamp": 1765851890,
+    "collection_rate": 1.0,
+    "metric_prefix": "infer-asyncflow",
+    "checkpoint_id": 5,
+    "num_samples": 29
+  },
+  "metrics": [
+    {
+      "timestamp": 1765851860,
+      "hostname": "g001",
+      "metrics": {
+        "cpu_percent": 8.1,
+        "load_average_1m": 15.12,
+        "load_average_5m": 12.59,
+        "load_average_15m": 6.43,
+        "memory_percent": 7.8,
+        "memory_available_gb": 464.0643844604492,
+        "memory_used_gb": 21.361492156982422,
+        "memory_total_gb": 503.4763488769531,
+        "gpu_0_utilization": 89,
+        "gpu_0_memory_percent": 96.1199951171875,
+        "gpu_0_memory_used_gb": 38.447998046875,
+        "gpu_0_memory_total_gb": 40.0,
+        "gpu_0_power_watts": 284.935
+      }
+    },
+    {
+      "timestamp": 1765851861,
+      "hostname": "g001",
+      "metrics": {
+        "cpu_percent": 8.4,
+        "load_average_1m": 14.63,
+        "load_average_5m": 12.53,
+        "load_average_15m": 6.44,
+        "memory_percent": 7.8,
+        "memory_available_gb": 464.05865478515625,
+        "memory_used_gb": 21.36722183227539,
+        "memory_total_gb": 503.4763488769531,
+        "gpu_0_utilization": 89,
+        "gpu_0_memory_percent": 96.1199951171875,
+        "gpu_0_memory_used_gb": 38.447998046875,
+        "gpu_0_memory_total_gb": 40.0,
+        "gpu_0_power_watts": 308.296
+      }
+    },
+    {
+      "timestamp": 1765851862,
+      "hostname": "g001",
+      "metrics": {
+        "cpu_percent": 8.3,
+        "load_average_1m": 14.63,
+        "load_average_5m": 12.53,
+        "load_average_15m": 6.44,
+        "memory_percent": 7.8,
+        "memory_available_gb": 464.0585517883301,
+        "memory_used_gb": 21.367313385009766,
+        "memory_total_gb": 503.4763488769531,
+        "gpu_0_utilization": 90,
+        "gpu_0_memory_percent": 96.1199951171875,
+        "gpu_0_memory_used_gb": 38.447998046875,
+        "gpu_0_memory_total_gb": 40.0,
+        "gpu_0_power_watts": 312.376
+      }
+    },
+    {
+      "timestamp": 1765851863,
+      "hostname": "g001",
+      "metrics": {
+        "cpu_percent": 8.3,
+        "load_average_1m": 14.63,
+        "load_average_5m": 12.53,
+        "load_average_15m": 6.44,
+        "memory_percent": 7.8,
+        "memory_available_gb": 464.05855560302734,
+        "memory_used_gb": 21.3673095703125,
+        "memory_total_gb": 503.4763488769531,
+        "gpu_0_utilization": 90,
+        "gpu_0_memory_percent": 96.1199951171875,
+        "gpu_0_memory_used_gb": 38.447998046875,
+        "gpu_0_memory_total_gb": 40.0,
+        "gpu_0_power_watts": 293.616
+      }
+    },
+    {
+      "timestamp": 1765851864,
+      "hostname": "g001",
+      "metrics": {
+        "cpu_percent": 8.3,
+        "load_average_1m": 14.63,
+        "load_average_5m": 12.53,
+        "load_average_15m": 6.44,
+        "memory_percent": 7.8,
+        "memory_available_gb": 464.05858612060547,
+        "memory_used_gb": 21.367279052734375,
+        "memory_total_gb": 503.4763488769531,
+        "gpu_0_utilization": 89,
+        "gpu_0_memory_percent": 96.1199951171875,
+        "gpu_0_memory_used_gb": 38.447998046875,
+        "gpu_0_memory_total_gb": 40.0,
+        "gpu_0_power_watts": 301.763
+      }
+    },
+    {
+      "timestamp": 1765851865,
+      "hostname": "g001",
+      "metrics": {
+        "cpu_percent": 8.2,
+        "load_average_1m": 14.63,
+        "load_average_5m": 12.53,
+        "load_average_15m": 6.44,
+        "memory_percent": 7.8,
+        "memory_available_gb": 464.057918548584,
+        "memory_used_gb": 21.36794662475586,
+        "memory_total_gb": 503.4763488769531,
+        "gpu_0_utilization": 89,
+        "gpu_0_memory_percent": 96.1199951171875,
+        "gpu_0_memory_used_gb": 38.447998046875,
+        "gpu_0_memory_total_gb": 40.0,
+        "gpu_0_power_watts": 287.034
+      }
+    },
+    {
+      "timestamp": 1765851866,
+      "hostname": "g001",
+      "metrics": {
+        "cpu_percent": 8.2,
+        "load_average_1m": 13.94,
+        "load_average_5m": 12.42,
+        "load_average_15m": 6.44,
+        "memory_percent": 7.8,
+        "memory_available_gb": 464.05793380737305,
+        "memory_used_gb": 21.367931365966797,
+        "memory_total_gb": 503.4763488769531,
+        "gpu_0_utilization": 89,
+        "gpu_0_memory_percent": 96.1199951171875,
+        "gpu_0_memory_used_gb": 38.447998046875,
+        "gpu_0_memory_total_gb": 40.0,
+        "gpu_0_power_watts": 295.424
+      }
+    },
+    {
+      "timestamp": 1765851867,
+      "hostname": "g001",
+      "metrics": {
+        "cpu_percent": 8.1,
+        "load_average_1m": 13.94,
+        "load_average_5m": 12.42,
+        "load_average_15m": 6.44,
+        "memory_percent": 7.8,
+        "memory_available_gb": 464.0579261779785,
+        "memory_used_gb": 21.367938995361328,
+        "memory_total_gb": 503.4763488769531,
+        "gpu_0_utilization": 90,
+        "gpu_0_memory_percent": 96.1199951171875,
+        "gpu_0_memory_used_gb": 38.447998046875,
+        "gpu_0_memory_total_gb": 40.0,
+        "gpu_0_power_watts": 285.766
+      }
+    },
+    {
+      "timestamp": 1765851868,
+      "hostname": "g001",
+      "metrics": {
+        "cpu_percent": 8.1,
+        "load_average_1m": 13.94,
+        "load_average_5m": 12.42,
+        "load_average_15m": 6.44,
+        "memory_percent": 7.8,
+        "memory_available_gb": 464.0581283569336,
+        "memory_used_gb": 21.36773681640625,
+        "memory_total_gb": 503.4763488769531,
+        "gpu_0_utilization": 89,
+        "gpu_0_memory_percent": 96.1199951171875,
+        "gpu_0_memory_used_gb": 38.447998046875,
+        "gpu_0_memory_total_gb": 40.0,
+        "gpu_0_power_watts": 317.635
+      }
+    },
+    {
+      "timestamp": 1765851869,
+      "hostname": "g001",
+      "metrics": {
+        "cpu_percent": 8.2,
+        "load_average_1m": 13.94,
+        "load_average_5m": 12.42,
+        "load_average_15m": 6.44,
+        "memory_percent": 7.8,
+        "memory_available_gb": 464.0578956604004,
+        "memory_used_gb": 21.367969512939453,
+        "memory_total_gb": 503.4763488769531,
+        "gpu_0_utilization": 89,
+        "gpu_0_memory_percent": 96.1199951171875,
+        "gpu_0_memory_used_gb": 38.447998046875,
+        "gpu_0_memory_total_gb": 40.0,
+        "gpu_0_power_watts": 304.347
+      }
+    },
+    {
+      "timestamp": 1765851870,
+      "hostname": "g001",
+      "metrics": {
+        "cpu_percent": 8.2,
+        "load_average_1m": 13.94,
+        "load_average_5m": 12.42,
+        "load_average_15m": 6.44,
+        "memory_percent": 7.8,
+        "memory_available_gb": 464.0578804016113,
+        "memory_used_gb": 21.367984771728516,
+        "memory_total_gb": 503.4763488769531,
+        "gpu_0_utilization": 90,
+        "gpu_0_memory_percent": 96.1199951171875,
+        "gpu_0_memory_used_gb": 38.447998046875,
+        "gpu_0_memory_total_gb": 40.0,
+        "gpu_0_power_watts": 292.542
+      }
+    },
+    {
+      "timestamp": 1765851871,
+      "hostname": "g001",
+      "metrics": {
+        "cpu_percent": 8.5,
+        "load_average_1m": 13.46,
+        "load_average_5m": 12.35,
+        "load_average_15m": 6.45,
+        "memory_percent": 7.8,
+        "memory_available_gb": 464.05558013916016,
+        "memory_used_gb": 21.370285034179688,
+        "memory_total_gb": 503.4763488769531,
+        "gpu_0_utilization": 89,
+        "gpu_0_memory_percent": 96.1199951171875,
+        "gpu_0_memory_used_gb": 38.447998046875,
+        "gpu_0_memory_total_gb": 40.0,
+        "gpu_0_power_watts": 276.836
+      }
+    },
+    {
+      "timestamp": 1765851872,
+      "hostname": "g001",
+      "metrics": {
+        "cpu_percent": 8.2,
+        "load_average_1m": 13.46,
+        "load_average_5m": 12.35,
+        "load_average_15m": 6.45,
+        "memory_percent": 7.8,
+        "memory_available_gb": 464.0557441711426,
+        "memory_used_gb": 21.370121002197266,
+        "memory_total_gb": 503.4763488769531,
+        "gpu_0_utilization": 89,
+        "gpu_0_memory_percent": 96.1199951171875,
+        "gpu_0_memory_used_gb": 38.447998046875,
+        "gpu_0_memory_total_gb": 40.0,
+        "gpu_0_power_watts": 313.028
+      }
+    },
+    {
+      "timestamp": 1765851873,
+      "hostname": "g001",
+      "metrics": {
+        "cpu_percent": 8.3,
+        "load_average_1m": 13.46,
+        "load_average_5m": 12.35,
+        "load_average_15m": 6.45,
+        "memory_percent": 7.8,
+        "memory_available_gb": 464.0557518005371,
+        "memory_used_gb": 21.370113372802734,
+        "memory_total_gb": 503.4763488769531,
+        "gpu_0_utilization": 89,
+        "gpu_0_memory_percent": 96.1199951171875,
+        "gpu_0_memory_used_gb": 38.447998046875,
+        "gpu_0_memory_total_gb": 40.0,
+        "gpu_0_power_watts": 295.957
+      }
+    },
+    {
+      "timestamp": 1765851874,
+      "hostname": "g001",
+      "metrics": {
+        "cpu_percent": 8.2,
+        "load_average_1m": 13.46,
+        "load_average_5m": 12.35,
+        "load_average_15m": 6.45,
+        "memory_percent": 7.8,
+        "memory_available_gb": 464.05532455444336,
+        "memory_used_gb": 21.370540618896484,
+        "memory_total_gb": 503.4763488769531,
+        "gpu_0_utilization": 90,
+        "gpu_0_memory_percent": 96.1199951171875,
+        "gpu_0_memory_used_gb": 38.447998046875,
+        "gpu_0_memory_total_gb": 40.0,
+        "gpu_0_power_watts": 321.289
+      }
+    },
+    {
+      "timestamp": 1765851875,
+      "hostname": "g001",
+      "metrics": {
+        "cpu_percent": 8.3,
+        "load_average_1m": 13.46,
+        "load_average_5m": 12.35,
+        "load_average_15m": 6.45,
+        "memory_percent": 7.8,
+        "memory_available_gb": 464.0551414489746,
+        "memory_used_gb": 21.370723724365234,
+        "memory_total_gb": 503.4763488769531,
+        "gpu_0_utilization": 89,
+        "gpu_0_memory_percent": 96.1199951171875,
+        "gpu_0_memory_used_gb": 38.447998046875,
+        "gpu_0_memory_total_gb": 40.0,
+        "gpu_0_power_watts": 308.296
+      }
+    },
+    {
+      "timestamp": 1765851876,
+      "hostname": "g001",
+      "metrics": {
+        "cpu_percent": 8.2,
+        "load_average_1m": 12.87,
+        "load_average_5m": 12.25,
+        "load_average_15m": 6.45,
+        "memory_percent": 7.8,
+        "memory_available_gb": 464.0551986694336,
+        "memory_used_gb": 21.37066650390625,
+        "memory_total_gb": 503.4763488769531,
+        "gpu_0_utilization": 89,
+        "gpu_0_memory_percent": 96.1199951171875,
+        "gpu_0_memory_used_gb": 38.447998046875,
+        "gpu_0_memory_total_gb": 40.0,
+        "gpu_0_power_watts": 302.439
+      }
+    },
+    {
+      "timestamp": 1765851877,
+      "hostname": "g001",
+      "metrics": {
+        "cpu_percent": 8.2,
+        "load_average_1m": 12.87,
+        "load_average_5m": 12.25,
+        "load_average_15m": 6.45,
+        "memory_percent": 7.8,
+        "memory_available_gb": 464.05422592163086,
+        "memory_used_gb": 21.371639251708984,
+        "memory_total_gb": 503.4763488769531,
+        "gpu_0_utilization": 89,
+        "gpu_0_memory_percent": 96.1199951171875,
+        "gpu_0_memory_used_gb": 38.447998046875,
+        "gpu_0_memory_total_gb": 40.0,
+        "gpu_0_power_watts": 296.833
+      }
+    },
+    {
+      "timestamp": 1765851878,
+      "hostname": "g001",
+      "metrics": {
+        "cpu_percent": 8.3,
+        "load_average_1m": 12.87,
+        "load_average_5m": 12.25,
+        "load_average_15m": 6.45,
+        "memory_percent": 7.8,
+        "memory_available_gb": 464.05469131469727,
+        "memory_used_gb": 21.371173858642578,
+        "memory_total_gb": 503.4763488769531,
+        "gpu_0_utilization": 89,
+        "gpu_0_memory_percent": 96.1199951171875,
+        "gpu_0_memory_used_gb": 38.447998046875,
+        "gpu_0_memory_total_gb": 40.0,
+        "gpu_0_power_watts": 323.143
+      }
+    },
+    {
+      "timestamp": 1765851879,
+      "hostname": "g001",
+      "metrics": {
+        "cpu_percent": 8.3,
+        "load_average_1m": 12.87,
+        "load_average_5m": 12.25,
+        "load_average_15m": 6.45,
+        "memory_percent": 7.8,
+        "memory_available_gb": 464.0550231933594,
+        "memory_used_gb": 21.37084197998047,
+        "memory_total_gb": 503.4763488769531,
+        "gpu_0_utilization": 89,
+        "gpu_0_memory_percent": 96.1199951171875,
+        "gpu_0_memory_used_gb": 38.447998046875,
+        "gpu_0_memory_total_gb": 40.0,
+        "gpu_0_power_watts": 317.219
+      }
+    },
+    {
+      "timestamp": 1765851881,
+      "hostname": "g001",
+      "metrics": {
+        "cpu_percent": 8.5,
+        "load_average_1m": 12.87,
+        "load_average_5m": 12.25,
+        "load_average_15m": 6.45,
+        "memory_percent": 7.8,
+        "memory_available_gb": 464.0544242858887,
+        "memory_used_gb": 21.371440887451172,
+        "memory_total_gb": 503.4763488769531,
+        "gpu_0_utilization": 89,
+        "gpu_0_memory_percent": 96.1199951171875,
+        "gpu_0_memory_used_gb": 38.447998046875,
+        "gpu_0_memory_total_gb": 40.0,
+        "gpu_0_power_watts": 316.562
+      }
+    },
+    {
+      "timestamp": 1765851882,
+      "hostname": "g001",
+      "metrics": {
+        "cpu_percent": 8.4,
+        "load_average_1m": 12.64,
+        "load_average_5m": 12.21,
+        "load_average_15m": 6.47,
+        "memory_percent": 7.8,
+        "memory_available_gb": 464.0563507080078,
+        "memory_used_gb": 21.36951446533203,
+        "memory_total_gb": 503.4763488769531,
+        "gpu_0_utilization": 89,
+        "gpu_0_memory_percent": 96.1199951171875,
+        "gpu_0_memory_used_gb": 38.447998046875,
+        "gpu_0_memory_total_gb": 40.0,
+        "gpu_0_power_watts": 309.079
+      }
+    },
+    {
+      "timestamp": 1765851883,
+      "hostname": "g001",
+      "metrics": {
+        "cpu_percent": 8.3,
+        "load_average_1m": 12.64,
+        "load_average_5m": 12.21,
+        "load_average_15m": 6.47,
+        "memory_percent": 7.8,
+        "memory_available_gb": 464.05652618408203,
+        "memory_used_gb": 21.369338989257812,
+        "memory_total_gb": 503.4763488769531,
+        "gpu_0_utilization": 89,
+        "gpu_0_memory_percent": 96.1199951171875,
+        "gpu_0_memory_used_gb": 38.447998046875,
+        "gpu_0_memory_total_gb": 40.0,
+        "gpu_0_power_watts": 297.516
+      }
+    },
+    {
+      "timestamp": 1765851884,
+      "hostname": "g001",
+      "metrics": {
+        "cpu_percent": 8.2,
+        "load_average_1m": 12.64,
+        "load_average_5m": 12.21,
+        "load_average_15m": 6.47,
+        "memory_percent": 7.8,
+        "memory_available_gb": 464.0563163757324,
+        "memory_used_gb": 21.369548797607422,
+        "memory_total_gb": 503.4763488769531,
+        "gpu_0_utilization": 89,
+        "gpu_0_memory_percent": 96.1199951171875,
+        "gpu_0_memory_used_gb": 38.447998046875,
+        "gpu_0_memory_total_gb": 40.0,
+        "gpu_0_power_watts": 287.034
+      }
+    },
+    {
+      "timestamp": 1765851885,
+      "hostname": "g001",
+      "metrics": {
+        "cpu_percent": 8.4,
+        "load_average_1m": 12.64,
+        "load_average_5m": 12.21,
+        "load_average_15m": 6.47,
+        "memory_percent": 7.8,
+        "memory_available_gb": 464.05416107177734,
+        "memory_used_gb": 21.3717041015625,
+        "memory_total_gb": 503.4763488769531,
+        "gpu_0_utilization": 90,
+        "gpu_0_memory_percent": 96.1199951171875,
+        "gpu_0_memory_used_gb": 38.447998046875,
+        "gpu_0_memory_total_gb": 40.0,
+        "gpu_0_power_watts": 282.836
+      }
+    },
+    {
+      "timestamp": 1765851886,
+      "hostname": "g001",
+      "metrics": {
+        "cpu_percent": 8.2,
+        "load_average_1m": 12.42,
+        "load_average_5m": 12.17,
+        "load_average_15m": 6.49,
+        "memory_percent": 7.8,
+        "memory_available_gb": 464.0534362792969,
+        "memory_used_gb": 21.37242889404297,
+        "memory_total_gb": 503.4763488769531,
+        "gpu_0_utilization": 89,
+        "gpu_0_memory_percent": 96.1199951171875,
+        "gpu_0_memory_used_gb": 38.447998046875,
+        "gpu_0_memory_total_gb": 40.0,
+        "gpu_0_power_watts": 319.732
+      }
+    },
+    {
+      "timestamp": 1765851887,
+      "hostname": "g001",
+      "metrics": {
+        "cpu_percent": 8.2,
+        "load_average_1m": 12.42,
+        "load_average_5m": 12.17,
+        "load_average_15m": 6.49,
+        "memory_percent": 7.8,
+        "memory_available_gb": 464.05320739746094,
+        "memory_used_gb": 21.372657775878906,
+        "memory_total_gb": 503.4763488769531,
+        "gpu_0_utilization": 89,
+        "gpu_0_memory_percent": 96.1199951171875,
+        "gpu_0_memory_used_gb": 38.447998046875,
+        "gpu_0_memory_total_gb": 40.0,
+        "gpu_0_power_watts": 307.763
+      }
+    },
+    {
+      "timestamp": 1765851888,
+      "hostname": "g001",
+      "metrics": {
+        "cpu_percent": 8.3,
+        "load_average_1m": 12.42,
+        "load_average_5m": 12.17,
+        "load_average_15m": 6.49,
+        "memory_percent": 7.8,
+        "memory_available_gb": 464.0528144836426,
+        "memory_used_gb": 21.373050689697266,
+        "memory_total_gb": 503.4763488769531,
+        "gpu_0_utilization": 89,
+        "gpu_0_memory_percent": 96.1199951171875,
+        "gpu_0_memory_used_gb": 38.447998046875,
+        "gpu_0_memory_total_gb": 40.0,
+        "gpu_0_power_watts": 304.88
+      }
+    },
+    {
+      "timestamp": 1765851889,
+      "hostname": "g001",
+      "metrics": {
+        "cpu_percent": 8.2,
+        "load_average_1m": 12.42,
+        "load_average_5m": 12.17,
+        "load_average_15m": 6.49,
+        "memory_percent": 7.8,
+        "memory_available_gb": 464.05309677124023,
+        "memory_used_gb": 21.37276840209961,
+        "memory_total_gb": 503.4763488769531,
+        "gpu_0_utilization": 90,
+        "gpu_0_memory_percent": 96.1199951171875,
+        "gpu_0_memory_used_gb": 38.447998046875,
+        "gpu_0_memory_total_gb": 40.0,
+        "gpu_0_power_watts": 306.867
+      }
+    }
+  ]
+}

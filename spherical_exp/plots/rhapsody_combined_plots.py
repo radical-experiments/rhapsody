@@ -7,7 +7,7 @@ import seaborn as sns
 import argparse
 from pathlib import Path
 
-using_old_data = False
+using_old_data = True
 EXPERIMENTS = {
     's1': 's1.p10',
     's2': 's2.p20',
