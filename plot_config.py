@@ -10,29 +10,71 @@ import matplotlib.pyplot as plt
 # Publication-quality settings
 # -----------------------------
 
-# Figure dimensions (optimized for 4-panel subfigure layout at 0.24\linewidth each)
-# Using consistent aspect ratio for all plots
-FIGURE_WIDTH = 3.5   # inches
-FIGURE_HEIGHT = 2.8  # inches (increased for better readability)
-FIGURE_SIZE = (FIGURE_WIDTH, FIGURE_HEIGHT)
-
 # DPI settings
 DPI = 600
 
-# Font settings (optimized for strong publication-quality appearance)
+# Size presets for different figure layouts in LaTeX
+# SMALL: 4-panel layout (0.24\linewidth each in 2-column format)
+# MEDIUM: Single-column figures (0.4-0.5\textwidth)
+# LARGE: Full 2-column figures (0.8-1.0\textwidth)
+
+SIZE_PRESETS = {
+    'small': {
+        'figsize': (3.5, 2.8),
+        'font_base': 11,
+        'font_title': 12,
+        'font_label': 11,
+        'font_tick': 10,
+        'font_legend': 10,
+        'font_annotation': 9,
+        'line_width': 2.0,
+        'marker_size': 7,
+        'capsize': 4,
+    },
+    'medium': {
+        'figsize': (3.5, 3.0),
+        'font_base': 11,
+        'font_title': 12,
+        'font_label': 11,
+        'font_tick': 10,
+        'font_legend': 10,
+        'font_annotation': 9,
+        'line_width': 2.0,
+        'marker_size': 7,
+        'capsize': 4,
+    },
+    'large': {
+        'figsize': (7.0, 3.5),
+        'font_base': 12,
+        'font_title': 13,
+        'font_label': 12,
+        'font_tick': 11,
+        'font_legend': 11,
+        'font_annotation': 10,
+        'line_width': 2.2,
+        'marker_size': 8,
+        'capsize': 5,
+    },
+}
+
+# Default to SMALL preset (backward compatibility)
+_current_preset = SIZE_PRESETS['small']
+
+# Expose current settings as module-level variables
+FIGURE_SIZE = _current_preset['figsize']
+FONT_SIZE_BASE = _current_preset['font_base']
+FONT_SIZE_TITLE = _current_preset['font_title']
+FONT_SIZE_LABEL = _current_preset['font_label']
+FONT_SIZE_TICK = _current_preset['font_tick']
+FONT_SIZE_LEGEND = _current_preset['font_legend']
+FONT_SIZE_ANNOTATION = _current_preset['font_annotation']
+LINE_WIDTH = _current_preset['line_width']
+MARKER_SIZE = _current_preset['marker_size']
+CAPSIZE = _current_preset['capsize']
+
+# Font settings
 FONT_FAMILY = 'sans-serif'
 FONT_SANS_SERIF = ['Arial', 'Helvetica', 'DejaVu Sans']
-FONT_SIZE_BASE = 11
-FONT_SIZE_TITLE = 12
-FONT_SIZE_LABEL = 11
-FONT_SIZE_TICK = 10
-FONT_SIZE_LEGEND = 10
-FONT_SIZE_ANNOTATION = 9
-
-# Line and marker settings
-LINE_WIDTH = 2.0
-MARKER_SIZE = 7
-CAPSIZE = 4
 
 # Grid settings
 GRID_ALPHA = 0.3
@@ -45,11 +87,38 @@ BBOX_INCHES = 'tight'
 PAD_INCHES = 0.02
 
 
-def configure_matplotlib():
+def configure_matplotlib(size='small'):
     """
     Configure matplotlib with publication-quality settings.
     Call this function at the start of your plotting script.
+
+    Parameters
+    ----------
+    size : str, optional
+        Size preset: 'small', 'medium', or 'large' (default: 'small')
     """
+    global _current_preset, FIGURE_SIZE, FONT_SIZE_BASE, FONT_SIZE_TITLE
+    global FONT_SIZE_LABEL, FONT_SIZE_TICK, FONT_SIZE_LEGEND, FONT_SIZE_ANNOTATION
+    global LINE_WIDTH, MARKER_SIZE, CAPSIZE
+
+    # Update current preset
+    if size not in SIZE_PRESETS:
+        raise ValueError(f"Unknown size preset: {size}. Choose from {list(SIZE_PRESETS.keys())}")
+
+    _current_preset = SIZE_PRESETS[size]
+
+    # Update module-level variables
+    FIGURE_SIZE = _current_preset['figsize']
+    FONT_SIZE_BASE = _current_preset['font_base']
+    FONT_SIZE_TITLE = _current_preset['font_title']
+    FONT_SIZE_LABEL = _current_preset['font_label']
+    FONT_SIZE_TICK = _current_preset['font_tick']
+    FONT_SIZE_LEGEND = _current_preset['font_legend']
+    FONT_SIZE_ANNOTATION = _current_preset['font_annotation']
+    LINE_WIDTH = _current_preset['line_width']
+    MARKER_SIZE = _current_preset['marker_size']
+    CAPSIZE = _current_preset['capsize']
+
     # Font settings
     mpl.rcParams['font.family'] = FONT_FAMILY
     mpl.rcParams['font.sans-serif'] = FONT_SANS_SERIF

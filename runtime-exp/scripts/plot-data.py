@@ -1,11 +1,21 @@
 #!/usr/bin/env python3
-from datetime import datetime
 import argparse
 import glob
 import os
+import re
+import sys
+from datetime import datetime
+from pathlib import Path
+
 import matplotlib.pyplot as plt
 import numpy as np
-import re
+
+# Add parent directory to path to import plot_config
+sys.path.insert(0, str(Path(__file__).parent.parent.parent))
+import plot_config
+
+# Configure matplotlib with consistent settings (MEDIUM size for 0.5\textwidth)
+plot_config.configure_matplotlib(size='medium')
 
 def process_log(log_path):
     earliest_running = None
@@ -67,11 +77,8 @@ def plot_results(results):
     weak_results = [r for r in results if r["mode"] == "weak"]
     strong_results = [r for r in results if r["mode"] == "strong"]
 
-    plt.style.use("seaborn-v0_8-whitegrid")
-    # Smaller figsize for smaller plot area on paper, increased dpi for better clarity.
-    fig, axes = plt.subplots(2, 2, figsize=(6.5, 5.5), dpi=300) 
-    # Larger font size for suptitle
-    #fig.suptitle("Dragon.Batch + Rhapsody Integration Scaling (1-16 nodes)", fontsize=14, fontweight="bold", y=0.98)
+    # Create figure with plot_config settings
+    fig, axes = plt.subplots(2, 2, figsize=(6.5, 5.5))
 
     def aggregate(data, x_key):
         """Aggregate multiple runs with same x value."""
@@ -91,9 +98,11 @@ def plot_results(results):
         return xs, (means_th, stds_th), (means_wl, stds_wl)
 
     def plot_metric(ax, x, ymean, ystd, xlabel, ylabel, title, color):
-        # Larger markersize and linewidth
+        # Plot with consistent styling from plot_config
         ax.plot(
-            x, ymean, "-o", markersize=8, linewidth=3.5,
+            x, ymean, "-o",
+            markersize=plot_config.MARKER_SIZE,
+            linewidth=plot_config.LINE_WIDTH,
             color=color, markerfacecolor="white", markeredgewidth=2, label="mean"
         )
 
@@ -106,32 +115,23 @@ def plot_results(results):
         if xlabel == "#Nodes":
             ax.set_xlim(0,18)
 
-        # MODIFICATION 1: Smaller font size for data labels
-        #for i, val in enumerate(ymean):
-        #    ax.text(x[i], val + 0.3, f"{val:.1f}", fontsize=5, ha="center", va="bottom") # Reduced fontsize to 8
-        # MODIFICATION 2: Added labelpad to x-axis labels
-        ax.set_xlabel(xlabel, fontweight="bold", fontsize=10, labelpad=8) 
-        ax.set_ylabel(ylabel, fontweight="bold", fontsize=10)
+        ax.set_xlabel(xlabel, labelpad=8)
+        ax.set_ylabel(ylabel)
         ax.grid(alpha=0.4, linestyle="--")
-        # Larger font size for legend
-        ax.legend(fontsize=9, loc="best")
-        # Ensure tick labels are also readable
-        ax.tick_params(axis='both', which='major', labelsize=9)
+        ax.legend(loc="best")
 
     # --- Weak Scaling (top row) ---
     if weak_results:
         wx, (wth_m, wth_s), (wwl_m, wwl_s) = aggregate(weak_results, "tasks")
-        
-        # MODIFICATION 3: Adjusted y-coordinate for row titles
-        weak_title = "Weak Scaling (2K-32K no-op funcs)"
-        fig.text(0.5, 0.9, weak_title, ha='center', va='center', fontweight="bold", fontsize=11)
-        
+
         plot_metric(axes[0, 0], wx, wth_m, wth_s, "#Tasks", "Throughput (tasks/s)", None, "#F57C00")
         plot_metric(axes[0, 1], wx, wwl_m, wwl_s, "#Tasks", "Overhead (s)", None, "#1565C0")
+
+        # Add title above the row
+        axes[0, 0].set_title("Weak Scaling (2K-32K no-op funcs)", loc='left', pad=15)
     else:
-        # Larger font size for "No Logs" text
         for j in (0, 1):
-            axes[0, j].text(0.5, 0.5, "No Weak Logs", ha="center", va="center", fontsize=14)
+            axes[0, j].text(0.5, 0.5, "No Weak Logs", ha="center", va="center")
 
     # --- Strong Scaling (bottom row) ---
     if strong_results:
@@ -139,25 +139,19 @@ def plot_results(results):
             r["nodes"] = parse_nodes_from_name(r["file"]) or 1
         sx, (sth_m, sth_s), (swl_m, swl_s) = aggregate(strong_results, "nodes")
 
-        # MODIFICATION 3: Adjusted y-coordinate for row titles
-        strong_title = "Strong Scaling (50K no-op funcs)"
-        fig.text(0.5, 0.44, strong_title, ha='center', va='center', fontweight="bold", fontsize=11) # Adjusted y
-        
-        # MODIFICATION 4: Corrected xlabel for strong scaling plots to "#Nodes"
         plot_metric(axes[1, 0], sx, sth_m, sth_s, "#Nodes", "Throughput (tasks/s)", None, "#F57C00")
         plot_metric(axes[1, 1], sx, swl_m, swl_s, "#Nodes", "Overhead (s)", None, "#1565C0")
+
+        # Add title above the row
+        axes[1, 0].set_title("Strong Scaling (50K no-op funcs)", loc='left', pad=15)
     else:
-        # Larger font size for "No Logs" text
         for j in (0, 1):
-            axes[1, j].text(0.5, 0.5, "No Strong Logs", ha="center", va="center", fontsize=14)
+            axes[1, j].text(0.5, 0.5, "No Strong Logs", ha="center", va="center")
 
 
-    # Force a large vertical space between subplot rows (e.g., hspace=1.0 or 2.0)
-    plt.subplots_adjust(hspace=0.5, wspace=0.3)
+    plt.subplots_adjust(hspace=0.6, wspace=0.3)
 
-    # REMOVED plt.tight_layout() because it overrides plt.subplots_adjust()
-    # If the image is still cropped, you might need to adjust the `y` coordinates for the fig.text row titles.
-    plt.savefig("n_sessions.png")
+    plot_config.save_figure(fig, "n_sessions.png")
     print("Plot with error bars saved to n_sessions.png")
 
 def main():
@@ -184,4 +178,5 @@ def main():
 
 
 if __name__ == "__main__":
+    main()
     main()
