@@ -1,5 +1,15 @@
-import numpy as np
+import sys
+from pathlib import Path
+
 import matplotlib.pyplot as plt
+import numpy as np
+
+# Add parent directory to path to import plot_config
+sys.path.insert(0, str(Path(__file__).parent.parent))
+import plot_config
+
+# Configure matplotlib with consistent settings
+plot_config.configure_matplotlib()
 
 # -----------------------------
 # Exact data from the figure
@@ -16,7 +26,7 @@ y_labels = [65536, 98304, 131072]
 # -----------------------------
 # Plot
 # -----------------------------
-fig, ax = plt.subplots(figsize=(6, 4))
+fig, ax = plot_config.create_figure(1, 1)
 
 im = ax.imshow(
     throughput,
@@ -25,26 +35,22 @@ im = ax.imshow(
 )
 
 # Colorbar
-cbar = fig.colorbar(im, ax=ax)
-cbar.set_label("tokens/s", fontsize=14, fontweight="bold",)
-cbar.ax.tick_params(labelsize=14)
+cbar = fig.colorbar(im, ax=ax, fraction=0.046, pad=0.04)
+cbar.set_label("tokens/s")
+cbar.ax.tick_params(labelsize=plot_config.FONT_SIZE_TICK)
 
 # Axis labels
-ax.set_xlabel("max_num_seqs", fontsize=14, fontweight="bold",)
-ax.set_ylabel("max_num_batched_tokens", fontsize=14, fontweight="bold",)
+ax.set_xlabel("max_num_seqs")
+ax.set_ylabel("max_num_batched_tokens")
 
 # Ticks
 ax.set_xticks(np.arange(len(x_labels)))
 ax.set_yticks(np.arange(len(y_labels)))
-ax.set_xticklabels(x_labels, fontsize=13)
-ax.set_yticklabels(y_labels, fontsize=13)
+ax.set_xticklabels(x_labels)
+ax.set_yticklabels(y_labels)
 
 # Title
-ax.set_title(
-    "Throughput (total tokens / s)",
-    fontsize=14,
-    fontweight="bold"
-)
+ax.set_title("Throughput (total tokens / s)")
 
 # -----------------------------
 # Annotate cells
@@ -57,11 +63,9 @@ for i in range(throughput.shape[0]):
             f"{throughput[i, j]:.1f}",
             ha="center",
             va="center",
-            fontsize=12,
+            fontsize=plot_config.FONT_SIZE_ANNOTATION,
             fontweight="bold",
             color="white" if j < 2 else "black"
         )
 
-plt.tight_layout()
-plt.savefig('throughput_heatmap_cividis_improved.png', dpi=600)
-
+plot_config.save_figure(fig, 'throughput_heatmap_cividis_improved.png')

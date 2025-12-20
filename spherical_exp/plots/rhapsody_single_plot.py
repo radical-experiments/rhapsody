@@ -1,11 +1,20 @@
-import json
-import pandas as pd
-import matplotlib.pyplot as plt
-from matplotlib.ticker import ScalarFormatter
-import numpy as np
-import seaborn as sns
 import argparse
+import json
+import sys
 from pathlib import Path
+
+import matplotlib.pyplot as plt
+import numpy as np
+import pandas as pd
+import seaborn as sns
+from matplotlib.ticker import ScalarFormatter
+
+# Add parent directory to path to import plot_config
+sys.path.insert(0, str(Path(__file__).parent.parent.parent))
+import plot_config
+
+# Configure matplotlib with consistent settings
+plot_config.configure_matplotlib()
 
 using_old_data = True
 EXPERIMENTS = {
@@ -18,11 +27,11 @@ EXPERIMENTS = {
 def read_telemetry(path):
     print(f'\nReading inference data from directoty: {path}')
     data = {}
-    
+
     for d in path.iterdir():
         if not d.is_dir():
             continue
-        
+
         total = 0
         for f in d.iterdir():
 
@@ -37,7 +46,7 @@ def read_telemetry(path):
                     tokens_per_sec = tput_data2["total_tokens_per_second"]
                     hostname = tput_data2["hostname"]
                     data.setdefault(hostname, []).append(tokens_per_sec)
-    
+
         print(f'\nCollected data for hosts: {data.keys()}')
         total += sum(sum(v) / len(v) for v in data.values())
     return total
@@ -48,7 +57,7 @@ def read_telemetry(path):
 # # --------------------------------------------------
 def load_metrics(path):
 
-    
+
     with open(path, "r") as f:
         data = json.load(f)
 
@@ -61,7 +70,7 @@ def load_metrics(path):
         rows.append(metrics)
 
     return pd.DataFrame(rows)
-   
+
 
 def _plot(plot_type, outfile, single_df, mean_gpu, std_gpu, mean_cpu, std_cpu, mean_tput, std_tput):
     # ------------------------------------------------------
@@ -80,8 +89,8 @@ def _plot(plot_type, outfile, single_df, mean_gpu, std_gpu, mean_cpu, std_cpu, m
     std_gpu_vals  = np.array(list(std_gpu.values()))
     mean_cpu_vals = np.array(list(mean_cpu.values()))
     std_cpu_vals  = np.array(list(std_cpu.values()))
-    mean_tput_vals = np.array(list(mean_tput.values())) 
-    std_tput_vals  = np.array(list(std_tput.values())) 
+    mean_tput_vals = np.array(list(mean_tput.values()))
+    std_tput_vals  = np.array(list(std_tput.values()))
 
     # ------------------------------------------------------
     # Colors
@@ -95,7 +104,7 @@ def _plot(plot_type, outfile, single_df, mean_gpu, std_gpu, mean_cpu, std_cpu, m
     #fig, (ax2, ax3) = plt.subplots(2, 1, figsize=(5, 7))  # increased width
 
     if plot_type == 'htp':
-        fig, ax2 = plt.subplots(1, 1, figsize=(6, 3))  # increased width
+        fig, ax2 = plot_config.create_figure(1, 1)
 
 
 
@@ -107,19 +116,19 @@ def _plot(plot_type, outfile, single_df, mean_gpu, std_gpu, mean_cpu, std_cpu, m
     # # Plot 1 — Resource Utilization
     # # -------------------------------
     # ax1.errorbar(x, mean_gpu_vals, yerr=std_gpu_vals,
-    #              fmt='o-', 
+    #              fmt='o-',
     #              capsize=5, label='GPU Util (%)',
-    #              color=gpu_color, 
+    #              color=gpu_color,
     #              markersize=8, linewidth=2
     #              )
-    
+
     # ax1.errorbar(x, mean_cpu_vals, yerr=std_cpu_vals,
-    #              fmt='o-', 
+    #              fmt='o-',
     #              capsize=5, label='CPU Util (%)',
-    #              color=cpu_color, 
+    #              color=cpu_color,
     #              markersize=8, linewidth=2
     #              )
-    
+
     # ax1.set_title("Resource Utilization", fontsize=12, fontweight='bold')
     # ax1.set_ylabel("Utilization (%)", fontsize=12, fontweight='bold')
     # ax1.set_xlabel("Node | Service Instance | Inference Client", fontsize=10, fontweight='bold')
@@ -141,12 +150,12 @@ def _plot(plot_type, outfile, single_df, mean_gpu, std_gpu, mean_cpu, std_cpu, m
 
         # Annotate bar values (small adjustment for clarity)
         for i, val in enumerate(mean_tput_vals):
-            ax2.text(x[i], val + std_tput_vals[i]*0.5, f'{val:.1e}', 
-                    ha='center', va='bottom', fontsize=7)
+            ax2.text(x[i], val + std_tput_vals[i]*0.5, f'{val:.1e}',
+                    ha='center', va='bottom', fontsize=plot_config.FONT_SIZE_ANNOTATION)
 
-        ax2.set_title("Throughput", fontsize=12, fontweight='bold')
-        ax2.set_ylabel("Combined Tokens / second", fontsize=12, fontweight='bold')
-        ax2.set_xlabel("Node | Service Instance | Inference Client", fontsize=10, fontweight='bold')
+        ax2.set_title("Throughput")
+        ax2.set_ylabel("Combined Tokens / second")
+        ax2.set_xlabel("Node | Service Instance | Inference Client")
         ax2.set_xticks(x+0.4)
         ax2.set_xticklabels(x_labels, rotation=0, ha="right")
         ax2.grid(axis="y", linestyle="--", alpha=0.4)
@@ -157,7 +166,7 @@ def _plot(plot_type, outfile, single_df, mean_gpu, std_gpu, mean_cpu, std_cpu, m
         ax2.yaxis.set_major_formatter(ScalarFormatter(useMathText=True))
         ax2.ticklabel_format(style='sci', axis='y', scilimits=(0,0))
     elif plot_type == 'util':
-        fig, ax3 = plt.subplots(1, 1, figsize=(6, 3))  # increased width
+        fig, ax3 = plot_config.create_figure(1, 1)
 
 
         # -------------------------------
@@ -188,17 +197,20 @@ def _plot(plot_type, outfile, single_df, mean_gpu, std_gpu, mean_cpu, std_cpu, m
 
 
 
-        ax3.set_title(f"CPU + GPU Utilization", fontsize=12, fontweight='bold')
-        ax3.set_ylabel("Utilization (%)", fontsize=12, fontweight='bold')
+        ax3.set_title(f"CPU + GPU Utilization")
+        ax3.set_ylabel("Utilization (%)")
         ax3.grid(True, alpha=0.2)
-        ax3.legend(loc="upper right", fontsize=8)
-        ax3.set_xlabel("Time (s)", fontsize=12, fontweight='bold')
-    
+        ax3.legend(loc="upper right")
+        ax3.set_xlabel("Time (s)")
+
+    else:
+        print(f"Unknown plot_type: {plot_type}. Expected 'htp' or 'util'.")
+        return
 
     # ------------------------------------------------------
     # Save and show figure
     # ------------------------------------------------------
-    plt.savefig(outfile, dpi=300, bbox_inches='tight')
+    plot_config.save_figure(fig, outfile)
 
 # --------------------------------------------------
 # Main
@@ -231,7 +243,7 @@ def main():
         else:
             tput_data = np.array(tputs[e])
 
-        mean_tput[e] = np.mean(tput_data) 
+        mean_tput[e] = np.mean(tput_data)
         std_tput[e] = np.std(tput_data)
 
         gpu_util = []
@@ -267,14 +279,14 @@ def main():
             df = df[(df["gpu_0_utilization"] > 5)]
             gpu_util.extend(df["gpu_0_utilization"].to_list())
             cpu_util.extend(df["cpu_percent"].to_list())
-        
+
 
         std_cpu[e] = np.std(cpu_util)
         std_gpu[e] = np.std(gpu_util)
         mean_cpu[e] = np.mean(cpu_util)
         mean_gpu[e] = np.mean(gpu_util)
 
-   
+
     std_cpu = dict(sorted(std_cpu.items()))
     std_gpu = dict(sorted(std_gpu.items()))
     mean_cpu = dict(sorted(mean_cpu.items()))
