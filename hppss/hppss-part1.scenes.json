@@ -1,0 +1,72 @@
+[
+ {
+  "scene": "P1 title",
+  "kind": "Card",
+  "caption": "P1 title",
+  "start": 0.0,
+  "end": 5.0
+ },
+ {
+  "scene": "P1.1 card",
+  "kind": "Card",
+  "caption": "P1.1 card",
+  "start": 5.0,
+  "end": 8.0
+ },
+ {
+  "scene": "P1.1 code python",
+  "kind": "Code",
+  "caption": "1  Plugin interface: the case definition (Python)",
+  "start": 8.0,
+  "end": 26.0
+ },
+ {
+  "scene": "P1.1 code cpp",
+  "kind": "Code",
+  "caption": "1  Plugin interface: radexWrite in controlDict (C++ side), the driver loop",
+  "start": 26.0,
+  "end": 42.0
+ },
+ {
+  "scene": "P1.2 card",
+  "kind": "Card",
+  "caption": "P1.2 card",
+  "start": 42.0,
+  "end": 45.0
+ },
+ {
+  "scene": "P1.2 submit",
+  "kind": "Term",
+  "caption": "2  Submit the part-1 job and follow it into the node",
+  "start": 45.0,
+  "end": 61.64
+ },
+ {
+  "scene": "P1.3 card",
+  "kind": "Card",
+  "caption": "P1.3 card",
+  "start": 61.64,
+  "end": 64.64
+ },
+ {
+  "scene": "P1.3 run",
+  "kind": "Term",
+  "caption": "3  Solvers run concurrently and write into radex; Python reads the results; the optimizer proposes the next batch",
+  "start": 64.64,
+  "end": 162.72
+ },
+ {
+  "scene": "P1.3 loss",
+  "kind": "Image",
+  "caption": "3  Best loss per batch",
+  "start": 162.72,
+  "end": 172.72
+ },
+ {
+  "scene": "P1 end",
+  "kind": "Card",
+  "caption": "P1 end",
+  "start": 172.72,
+  "end": 174.72
+ }
+]

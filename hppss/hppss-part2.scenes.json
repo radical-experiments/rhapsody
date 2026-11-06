@@ -1,0 +1,65 @@
+[
+ {
+  "scene": "P2 title",
+  "kind": "Card",
+  "caption": "P2 title",
+  "start": 0.0,
+  "end": 5.0
+ },
+ {
+  "scene": "P2.1 card",
+  "kind": "Card",
+  "caption": "P2.1 card",
+  "start": 5.0,
+  "end": 8.0
+ },
+ {
+  "scene": "P2.1 endpoint",
+  "kind": "Term",
+  "caption": "1  The client hosts the broker, starts the endpoint through ORBIT psij, waits until it registers",
+  "start": 8.0,
+  "end": 60.08
+ },
+ {
+  "scene": "P2.2 card",
+  "kind": "Card",
+  "caption": "P2.2 card",
+  "start": 60.08,
+  "end": 64.08
+ },
+ {
+  "scene": "P2.2 run",
+  "kind": "Term",
+  "caption": "2+3  Both clients run side by side: solvers on Perlmutter, each client with its own radex store",
+  "start": 64.08,
+  "end": 164.88
+ },
+ {
+  "scene": "P2.4 card",
+  "kind": "Card",
+  "caption": "P2.4 card",
+  "start": 164.88,
+  "end": 167.88
+ },
+ {
+  "scene": "P2.4 results",
+  "kind": "Term",
+  "caption": "4  Results reported back to the laptop; isolation check; endpoint cancelled through ORBIT",
+  "start": 167.88,
+  "end": 189.72
+ },
+ {
+  "scene": "P2.4 loss",
+  "kind": "Image",
+  "caption": "4  Best loss per batch, both clients",
+  "start": 189.72,
+  "end": 199.72
+ },
+ {
+  "scene": "P2 end",
+  "kind": "Card",
+  "caption": "P2 end",
+  "start": 199.72,
+  "end": 201.72
+ }
+]
