@@ -1,32 +1,37 @@
 #!/usr/bin/env python3
 
+import copy
 import glob
 import math
 import os
 import pprint
-import copy
-
-from collections import defaultdict
 import statistics as st
+import sys
+from collections import defaultdict
+from pathlib import Path
 
-import matplotlib              as mpl
+import matplotlib as mpl
+import matplotlib.colors as mcolors
 import matplotlib.font_manager as fm
-import matplotlib.pyplot       as plt
-import matplotlib.ticker       as mticker
-import matplotlib.colors       as mcolors
-
+import matplotlib.pyplot as plt
+import matplotlib.ticker as mticker
+import numpy as np
+import radical.analytics as ra
+import radical.pilot as rp
+import radical.utils as ru
 from matplotlib.colors import BoundaryNorm
-
-import numpy                   as np
-
-import radical.analytics       as ra
-import radical.pilot           as rp
-import radical.utils           as ru
-
 from radical.analytics.utils import to_latex
 
+# Add parent directory to path to import plot_config
+sys.path.insert(0, str(Path(__file__).parent.parent))
 import warnings
+
+import plot_config
+
 warnings.simplefilter(action='ignore', category=FutureWarning)
+
+# Configure matplotlib with consistent settings (LARGE size for \linewidth)
+plot_config.configure_matplotlib(size='large')
 
 DEBUG = False
 
@@ -688,7 +693,8 @@ with open(datfile, 'w') as fout:
 s1 = 'rp.session.frontier00123.matitov.020260.0000'  #  256 nodes null
 s2 = 'rp.session.frontier00110.matitov.020261.0000'  # 1024 nodes null
 
-fig, axes = plt.subplots(1, 2, figsize=(6.5, 2.), dpi=300)
+# Create figure using plot_config for consistent styling
+fig, axes = plot_config.create_figure(1, 2, figsize=(7.0, 2.5))
 
 xlabel = 'time (s)'
 ylabel = '#task types'
@@ -705,24 +711,23 @@ for i,sid in enumerate([s1, s2]):
     data_y = [p[1] for p in data]
 
     ax   = axes[i]
-    ax.step(data_x, data_y, color='red', linewidth=1.2)
+    ax.step(data_x, data_y, color='red', linewidth=1.5)
 
     ax.set_ylim(0, 25)
-    ax.set_xlabel(xlabel, fontweight="bold", fontsize=10, labelpad=8)
+    ax.set_xlabel(xlabel, labelpad=8)
     if not i:
-        ax.set_ylabel(ylabel, fontweight="bold", fontsize=10)
+        ax.set_ylabel(ylabel)
     ax.grid(alpha=0.4, linestyle="--")
-    ax.tick_params(axis='both', which='major', labelsize=9)
 
-    if i == 0: label = ' 256 nodes'
-    else     : label = '1024 nodes'
-    ax.legend(labels=[label], fontsize=9, loc="best")
+    if i == 0:
+        label = ' 256 nodes'
+        ax.set_title(title, loc='left', pad=15, fontweight='bold')
+    else:
+        label = '1024 nodes'
+    ax.legend(labels=[label], loc="best")
 
-fig.text(0.5, 0.95, title, ha='center', va='center', fontweight="bold", fontsize=11)
+plt.tight_layout()
 
-fname = 'impeccable_task_types.pdf'
-fig.savefig(fname, dpi=600, bbox_inches='tight')
-
-fname = 'impeccable_task_types.png'
-fig.savefig(fname, dpi=600, bbox_inches='tight')
+plot_config.save_figure(fig, 'impeccable_task_types.pdf')
+plot_config.save_figure(fig, 'impeccable_task_types.png')
 
